@@ -10,6 +10,7 @@ public class PlayerLocomotion : MonoBehaviour
     private Quaternion targetRotation;
 
     private Vector2 playerInput;
+    private Vector3 movement;
 
     public Transform activeCam;
 

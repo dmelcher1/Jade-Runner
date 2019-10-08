@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Fruit
   - Ground
+  - Path1
+  - Path2
+  - Killbox
+  - Checkpoint
+  - OldPoint
   layers:
   - Default
   - TransparentFX

@@ -17,6 +17,7 @@ public class PlayerLocomotion : MonoBehaviour
     public bool airBorne = false;
     public bool dblJump = false;
     public bool inKillbox = false;
+    [SerializeField]
     private float killTimer = 10.0f;
     [SerializeField]
     private float jumpTimer;

@@ -726,7 +726,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304093871}
-  m_LocalRotation: {x: 0.1930353, y: 0.69957715, z: -0.20569533, w: 0.65652007}
+  m_LocalRotation: {x: 0.19303533, y: 0.69957715, z: -0.20569533, w: 0.65652007}
   m_LocalPosition: {x: -491.0534, y: 6.369999, z: 43.115597}
   m_LocalScale: {x: 1.000001, y: 1.0000001, z: 1.000001}
   m_Children: []
@@ -2151,7 +2151,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056240385}
-  m_LocalRotation: {x: 0.1930353, y: 0.69957715, z: -0.20569533, w: 0.65652007}
+  m_LocalRotation: {x: 0.19303533, y: 0.69957715, z: -0.20569533, w: 0.65652007}
   m_LocalPosition: {x: -75.11716, y: 16.561134, z: 8.100548}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3769,6 +3769,6 @@ PrefabInstance:
         type: 3}
       propertyPath: recentCheckpoint
       value: 
-      objectReference: {fileID: 1408959635}
+      objectReference: {fileID: 1408959634}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12ea14b1475a38e4fa5232b2990ef718, type: 3}

@@ -181,7 +181,11 @@ public class PlayerLocomotion : MonoBehaviour
         {
             inKillbox = true;
         }
-        else
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag == ("Killbox"))
         {
             inKillbox = false;
         }

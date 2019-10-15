@@ -11,6 +11,7 @@ TagManager:
   - Killbox
   - Checkpoint
   - OldPoint
+  - LevelEnd
   layers:
   - Default
   - TransparentFX

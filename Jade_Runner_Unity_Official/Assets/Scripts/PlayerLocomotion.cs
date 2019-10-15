@@ -17,6 +17,7 @@ public class PlayerLocomotion : MonoBehaviour
     public bool airBorne = false;
     public bool dblJump = false;
     public bool inKillbox = false;
+    public bool canJump = true;
     [SerializeField]
     private float killTimer = 10.0f;
     [SerializeField]
@@ -27,6 +28,8 @@ public class PlayerLocomotion : MonoBehaviour
     private int jumpCount;
     public float jumpForce;
     public float dblJumpForce;
+    [SerializeField]
+    public float fadeDelay = 10.0f;
 
     public Cinemachine.CinemachineVirtualCamera pathOneCam;
 
@@ -43,13 +46,16 @@ public class PlayerLocomotion : MonoBehaviour
     //private float hitLayerWeight;
     public bool dead;
 
-    public GameObject recentCheckpoint;
+    public GameObject currentCheckpoint;
 
-    public GameObject[] checkpointList;
+    //public GameObject recentCheckpoint;
+
+    //public GameObject[] checkpointList;
 
     // Start is called before the first frame update
     void Start()
     {
+        this.transform.position = currentCheckpoint.transform.position;
         rb = GetComponent<Rigidbody>();
         activeCam = pathOneCam;
         pathTwoCam.gameObject.SetActive(false);
@@ -88,20 +94,32 @@ public class PlayerLocomotion : MonoBehaviour
         //if(!noInput) <- will be used to decide if player is moving or not for idle animation
         //{ }
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             if (!airBorne && jumpTimer <= 0)
             {
                 jumpTimer = 3.0f;
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
                 airBorne = true;
+                canJump = false;
             }
         }
-        if(Input.GetButton("Jump") && dblJumpTimer < 0)
+        if(Input.GetButtonDown("Jump") && dblJumpTimer < 0)
         {
             rb.AddForce(Vector3.up * dblJumpForce, ForceMode.Impulse);
             dblJump = false;
             dblJumpTimer = 0;
+        }
+
+        if(Input.GetButtonUp("Jump"))
+        {
+            canJump = true;
+        }
+
+        if (health <= 0)
+        {
+            dead = true;
+            fadeDelay -= 0.1f;
         }
 
         PlayerInput();
@@ -138,9 +156,9 @@ public class PlayerLocomotion : MonoBehaviour
         transform.position += transform.forward * moveSpeed * Time.deltaTime;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground") && !Input.GetButton("Jump"))
+        if (collision.gameObject.CompareTag("Ground") && canJump == true)
         {
             airBorne = false;
             dblJump = false;
@@ -153,8 +171,8 @@ public class PlayerLocomotion : MonoBehaviour
     {
         if(other.gameObject.tag == ("Checkpoint"))
         {
-            recentCheckpoint.tag = ("OldPoint");
-            recentCheckpoint = other.gameObject;
+            currentCheckpoint = other.gameObject;
+            currentCheckpoint.tag = ("OldPoint");
         }
         if (other.gameObject.tag == ("Path1"))
         {

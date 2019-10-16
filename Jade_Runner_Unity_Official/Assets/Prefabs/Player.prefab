@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6647139574025393751}
   - component: {fileID: 6647139572573410757}
   - component: {fileID: 6647139572573410756}
+  - component: {fileID: 3923019598364535295}
   - component: {fileID: 6647139572573410755}
   - component: {fileID: 6647139572573410754}
   - component: {fileID: 6647139572573410753}
@@ -81,6 +82,25 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!95 &3923019598364535295
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6647139572573410752}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: b5e58e897e284f241bd448acd01ea900, type: 3}
+  m_Controller: {fileID: 9100000, guid: fd84c4162c9b8cb48873f8c9b4fd48a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!54 &6647139572573410755
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -125,10 +145,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   lookSpeed: 5
+  fruitCount: 0
   airBorne: 0
+  dblJump: 0
+  inKillbox: 0
+  canJump: 1
+  killTimer: 10
   jumpTimer: 0
+  dblJumpTimer: 0
+  jumpCount: 0
   jumpForce: 4
+  dblJumpForce: 0
+  fadeDelay: 10
+  pathOneCam: {fileID: 0}
+  pathTwoCam: {fileID: 0}
   activeCam: {fileID: 0}
+  health: 0
+  dead: 0
+  currentCheckpoint: {fileID: 0}
 --- !u!1 &6647139573051509653
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6647139573051509654
 Transform:
   m_ObjectHideFlags: 0

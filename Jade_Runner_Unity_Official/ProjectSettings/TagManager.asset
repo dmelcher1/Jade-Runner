@@ -12,6 +12,7 @@ TagManager:
   - Checkpoint
   - OldPoint
   - LevelEnd
+  - TigerClaw
   layers:
   - Default
   - TransparentFX

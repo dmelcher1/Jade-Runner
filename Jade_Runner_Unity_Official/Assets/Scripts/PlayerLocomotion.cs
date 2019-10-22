@@ -42,7 +42,19 @@ public class PlayerLocomotion : MonoBehaviour
 
     public Cinemachine.CinemachineVirtualCamera pathTwoCam;
 
+    public Cinemachine.CinemachineVirtualCamera pathThreeCam;
+
+    public Cinemachine.CinemachineVirtualCamera pathFourCam;
+
+    public Cinemachine.CinemachineVirtualCamera pathFiveCam;
+
+    public Cinemachine.CinemachineVirtualCamera pathSixCam;
+
+    public Cinemachine.CinemachineVirtualCamera pathSevenCam;
+
     public Cinemachine.CinemachineVirtualCamera activeCam;
+
+    public Cinemachine.CinemachineVirtualCamera checkPtCam;
 
     private Rigidbody rb;
 
@@ -65,7 +77,6 @@ public class PlayerLocomotion : MonoBehaviour
         this.transform.position = currentCheckpoint.transform.position;
         rb = GetComponent<Rigidbody>();
         activeCam = pathOneCam;
-        pathTwoCam.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -209,6 +220,7 @@ public class PlayerLocomotion : MonoBehaviour
         {
             currentCheckpoint = other.gameObject;
             currentCheckpoint.tag = ("OldPoint");
+            checkPtCam = activeCam;
         }
         if (other.gameObject.tag == ("Path1"))
         {
@@ -216,14 +228,124 @@ public class PlayerLocomotion : MonoBehaviour
             activeCam = pathOneCam;
             pathOneCam.Priority = 11;
             pathTwoCam.Priority = 1;
+            pathThreeCam.Priority = 1;
+            pathFourCam.Priority = 1;
+            pathFiveCam.Priority = 1;
+            pathSixCam.Priority = 1;
+            pathSevenCam.Priority = 1;
             pathTwoCam.gameObject.SetActive(false);
+            pathThreeCam.gameObject.SetActive(false);
+            pathFourCam.gameObject.SetActive(false);
+            pathFiveCam.gameObject.SetActive(false);
+            pathSixCam.gameObject.SetActive(false);
+            pathSevenCam.gameObject.SetActive(false);
         }
         else if (other.gameObject.tag == ("Path2"))
         {
             pathTwoCam.gameObject.SetActive(true);
             activeCam = pathTwoCam;
-            pathTwoCam.Priority = 11;
             pathOneCam.Priority = 1;
+            pathTwoCam.Priority = 11;
+            pathThreeCam.Priority = 1;
+            pathFourCam.Priority = 1;
+            pathFiveCam.Priority = 1;
+            pathSixCam.Priority = 1;
+            pathSevenCam.Priority = 1;
+            pathOneCam.gameObject.SetActive(false);
+            pathThreeCam.gameObject.SetActive(false);
+            pathFourCam.gameObject.SetActive(false);
+            pathFiveCam.gameObject.SetActive(false);
+            pathSixCam.gameObject.SetActive(false);
+            pathSevenCam.gameObject.SetActive(false);
+        }
+        else if (other.gameObject.tag == ("Path3"))
+        {
+            pathThreeCam.gameObject.SetActive(true);
+            activeCam = pathThreeCam;
+            pathOneCam.Priority = 1;
+            pathTwoCam.Priority = 1;
+            pathThreeCam.Priority = 11;
+            pathFourCam.Priority = 1;
+            pathFiveCam.Priority = 1;
+            pathSixCam.Priority = 1;
+            pathSevenCam.Priority = 1;
+            pathTwoCam.gameObject.SetActive(false);
+            pathOneCam.gameObject.SetActive(false);
+            pathFourCam.gameObject.SetActive(false);
+            pathFiveCam.gameObject.SetActive(false);
+            pathSixCam.gameObject.SetActive(false);
+            pathSevenCam.gameObject.SetActive(false);
+        }
+        else if (other.gameObject.tag == ("Path4"))
+        {
+            pathFourCam.gameObject.SetActive(true);
+            activeCam = pathFourCam;
+            pathOneCam.Priority = 1;
+            pathTwoCam.Priority = 1;
+            pathThreeCam.Priority = 1;
+            pathFourCam.Priority = 11;
+            pathFiveCam.Priority = 1;
+            pathSixCam.Priority = 1;
+            pathSevenCam.Priority = 1;
+            pathTwoCam.gameObject.SetActive(false);
+            pathThreeCam.gameObject.SetActive(false);
+            pathOneCam.gameObject.SetActive(false);
+            pathFiveCam.gameObject.SetActive(false);
+            pathSixCam.gameObject.SetActive(false);
+            pathSevenCam.gameObject.SetActive(false);
+        }
+        else if (other.gameObject.tag == ("Path5"))
+        {
+            pathFiveCam.gameObject.SetActive(true);
+            activeCam = pathFiveCam;
+            pathOneCam.Priority = 1;
+            pathTwoCam.Priority = 1;
+            pathThreeCam.Priority = 1;
+            pathFourCam.Priority = 1;
+            pathFiveCam.Priority = 11;
+            pathSixCam.Priority = 1;
+            pathSevenCam.Priority = 1;
+            pathTwoCam.gameObject.SetActive(false);
+            pathThreeCam.gameObject.SetActive(false);
+            pathFourCam.gameObject.SetActive(false);
+            pathOneCam.gameObject.SetActive(false);
+            pathSixCam.gameObject.SetActive(false);
+            pathSevenCam.gameObject.SetActive(false);
+        }
+        else if (other.gameObject.tag == ("Path6"))
+        {
+            pathSixCam.gameObject.SetActive(true);
+            activeCam = pathSixCam;
+            pathOneCam.Priority = 1;
+            pathTwoCam.Priority = 1;
+            pathThreeCam.Priority = 1;
+            pathFourCam.Priority = 1;
+            pathFiveCam.Priority = 1;
+            pathSixCam.Priority = 11;
+            pathSevenCam.Priority = 1;
+            pathTwoCam.gameObject.SetActive(false);
+            pathThreeCam.gameObject.SetActive(false);
+            pathFourCam.gameObject.SetActive(false);
+            pathFiveCam.gameObject.SetActive(false);
+            pathOneCam.gameObject.SetActive(false);
+            pathSevenCam.gameObject.SetActive(false);
+        }
+        else if (other.gameObject.tag == ("Path7"))
+        {
+            pathSevenCam.gameObject.SetActive(true);
+            activeCam = pathSevenCam;
+            pathOneCam.Priority = 1;
+            pathTwoCam.Priority = 1;
+            pathThreeCam.Priority = 1;
+            pathFourCam.Priority = 1;
+            pathFiveCam.Priority = 1;
+            pathSixCam.Priority = 1;
+            pathSevenCam.Priority = 11;
+            pathTwoCam.gameObject.SetActive(false);
+            pathThreeCam.gameObject.SetActive(false);
+            pathFourCam.gameObject.SetActive(false);
+            pathFiveCam.gameObject.SetActive(false);
+            pathSixCam.gameObject.SetActive(false);
             pathOneCam.gameObject.SetActive(false);
         }
         if (other.gameObject.tag == ("Fruit"))

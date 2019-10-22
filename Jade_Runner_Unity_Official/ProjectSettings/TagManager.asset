@@ -13,6 +13,11 @@ TagManager:
   - OldPoint
   - LevelEnd
   - TigerClaw
+  - Path3
+  - Path4
+  - Path5
+  - Path6
+  - Path7
   layers:
   - Default
   - TransparentFX

@@ -72,6 +72,7 @@ public class GameController : MonoBehaviour
     {
         player.transform.position = playerLocomotion.currentCheckpoint.transform.position;
         player.transform.rotation = playerLocomotion.currentCheckpoint.transform.rotation;
+        playerLocomotion.activeCam = playerLocomotion.checkPtCam;
         playerLocomotion.health = startHealth;
         playerLocomotion.dead = false;
         playerLocomotion.fadeDelay = startFadeDelay;

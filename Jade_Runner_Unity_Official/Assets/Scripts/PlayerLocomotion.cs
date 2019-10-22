@@ -36,8 +36,7 @@ public class PlayerLocomotion : MonoBehaviour
     private int jumpCount;
     public float jumpForce;
     public float dblJumpForce;
-    [SerializeField]
-    public float fadeDelay = 10.0f;
+    public float fadeDelay;
 
     public Cinemachine.CinemachineVirtualCamera pathOneCam;
 
@@ -88,7 +87,7 @@ public class PlayerLocomotion : MonoBehaviour
         }
         else
         {
-            killTimer = 3.0f;
+            killTimer = 1.0f;
         }
         if(killTimer < 0)
         {

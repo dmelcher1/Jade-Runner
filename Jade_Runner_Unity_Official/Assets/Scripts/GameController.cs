@@ -23,6 +23,8 @@ public class GameController : MonoBehaviour
     public Image fader;
     //public GameObject fader;
     //public Color alpha;
+    private int startHealth;
+    private float startFadeDelay;
 
     
     // Start is called before the first frame update
@@ -34,6 +36,8 @@ public class GameController : MonoBehaviour
         playerLocomotion = GameObject.FindObjectOfType<PlayerLocomotion>();
         //fader = GetComponent<Image>();
         //alpha = fader.color;
+        startHealth = playerLocomotion.health;
+        startFadeDelay = playerLocomotion.fadeDelay;
     }
 
     // Update is called once per frame
@@ -68,9 +72,9 @@ public class GameController : MonoBehaviour
     {
         player.transform.position = playerLocomotion.currentCheckpoint.transform.position;
         player.transform.rotation = playerLocomotion.currentCheckpoint.transform.rotation;
-        playerLocomotion.health = 5;
+        playerLocomotion.health = startHealth;
         playerLocomotion.dead = false;
-        playerLocomotion.fadeDelay = 10.0f;
+        playerLocomotion.fadeDelay = startFadeDelay;
         animator.SetBool("FadeOut", false);
         //faded = false;
     }

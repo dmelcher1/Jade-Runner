@@ -3094,6 +3094,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: -4473984409997532297, guid: dea18495f96ea6744b48e61e78d27027,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: -4861924686910468554, guid: dea18495f96ea6744b48e61e78d27027,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -16509,6 +16514,11 @@ PrefabInstance:
       propertyPath: pathSevenCam
       value: 
       objectReference: {fileID: 1817805875}
+    - target: {fileID: 2780943127168992045, guid: 608d96a89718e7343bc714f464fa66f7,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 608d96a89718e7343bc714f464fa66f7, type: 3}
 --- !u!4 &582647834 stripped
@@ -21816,6 +21826,11 @@ PrefabInstance:
       value: villagebridge (2)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: dea18495f96ea6744b48e61e78d27027,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: -4473984409997532297, guid: dea18495f96ea6744b48e61e78d27027,
         type: 3}
       propertyPath: m_TagString
       value: Ground
@@ -36752,6 +36767,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: -4473984409997532297, guid: dea18495f96ea6744b48e61e78d27027,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: -4861924686910468554, guid: dea18495f96ea6744b48e61e78d27027,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -39967,6 +39987,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: -4473984409997532297, guid: dea18495f96ea6744b48e61e78d27027,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: -4861924686910468554, guid: dea18495f96ea6744b48e61e78d27027,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -40672,8 +40697,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232652481}
-  m_LocalRotation: {x: 0.045668013, y: 0.7133075, z: -0.046682782, w: 0.69780195}
-  m_LocalPosition: {x: -14.4920635, y: 2.4024832, z: -2.3098419}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51942,6 +51967,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: -4473984409997532297, guid: dea18495f96ea6744b48e61e78d27027,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: -4861924686910468554, guid: dea18495f96ea6744b48e61e78d27027,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -54529,6 +54559,11 @@ PrefabInstance:
       value: villagebridge
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: dea18495f96ea6744b48e61e78d27027,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: -4473984409997532297, guid: dea18495f96ea6744b48e61e78d27027,
         type: 3}
       propertyPath: m_TagString
       value: Ground

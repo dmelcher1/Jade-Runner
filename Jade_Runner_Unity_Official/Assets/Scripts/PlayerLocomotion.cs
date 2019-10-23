@@ -127,8 +127,8 @@ public class PlayerLocomotion : MonoBehaviour
             {
                 jumpTimer = 3.0f;
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-                airBorne = true;
                 canJump = false;
+                airBorne = true;
             }
         }
         if(Input.GetButtonDown(jumpControl) && dblJumpTimer < 0)
@@ -205,12 +205,16 @@ public class PlayerLocomotion : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground") && canJump == true)
+        if (collision.gameObject.CompareTag("Ground"))
         {
-            airBorne = false;
-            dblJump = false;
-            dblJumpTimer = 0;
-            jumpCount = 0;
+            Debug.Log("landed!");
+            if(canJump)
+            {
+                airBorne = false;
+                dblJump = false;
+                dblJumpTimer = 0;
+                jumpCount = 0;
+            }
         }
     }
 

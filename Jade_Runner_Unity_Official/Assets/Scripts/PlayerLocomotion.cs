@@ -123,6 +123,7 @@ public class PlayerLocomotion : MonoBehaviour
 
         if (Input.GetButtonDown(jumpControl))
         {
+            Debug.Log("Jumping");
             if (!airBorne && jumpTimer <= 0)
             {
                 jumpTimer = 3.0f;

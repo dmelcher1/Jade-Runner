@@ -58,14 +58,26 @@ public class PlayerLocomotion : MonoBehaviour
 
     private Rigidbody rb;
 
-    //public Animator playerAnim;
-    //public bool noInput;
-    public int health;
+    public Collider triggerCollider;
 
-    //private float hitLayerWeight;
+    public int health;
+    public bool hit = false;
+   
     public bool dead;
 
     public GameObject currentCheckpoint;
+
+    //public Color flashColor;
+    //public Color regularColor;
+    public float flashDuration;
+    public int numberOfFlashes;
+    public GameObject characterBody;
+
+    //public Animator playerAnim;
+
+    //public bool noInput;
+
+    //private float hitLayerWeight;
 
     //public GameObject recentCheckpoint;
 
@@ -82,44 +94,71 @@ public class PlayerLocomotion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(keyboardActive && !controllerActive)
+
+        //if(!noInput) <- will be used to decide if player is moving or not for idle animation
+        //{ }
+        JumpControls();
+
+        KillBox();
+        DamageDeath();
+
+        //Debug.Log("Can Move?");
+        if (keyboardActive)
+        {
+            playerInput.x = Input.GetAxisRaw("Horizontal");
+            playerInput.y = Input.GetAxisRaw("Vertical");
+        }
+        else if (controllerActive)
+        {
+            //controlstick input here
+            playerInput.x = Input.GetAxisRaw("Horizontal2");
+            playerInput.y = Input.GetAxisRaw("Vertical2");
+
+            if (playerInput.magnitude < stickDeadZone)
+            {
+                playerInput = Vector2.zero;
+            }
+            else
+            {
+                playerInput = playerInput.normalized * ((playerInput.magnitude - stickDeadZone) / (1 - stickDeadZone));
+            }
+        }
+
+        //Keeps player facing direction of last input
+        if (Mathf.Abs(playerInput.x) < 1 && Mathf.Abs(playerInput.y) < 1) return;
+
+        
+        //PlayerInput();
+        CalcDirect();
+        PlayerRotate();
+        PlayerMove();
+        //PlayerMoveKeyboard()
+        //PlayerMoveController()
+    }
+
+    void JumpControls()
+    {
+        if (keyboardActive && !controllerActive)
         {
             jumpControl = jumpKeyboard;
         }
-        else if(controllerActive && !keyboardActive)
+        else if (controllerActive && !keyboardActive)
         {
             jumpControl = jumpJoystick;
         }
 
         jumpTimer -= 0.1f;
-        if(inKillbox)
-        {
-            killTimer -= 0.1f;
-        }
-        else
-        {
-            killTimer = 1.0f;
-        }
-        if(killTimer < 0)
-        {
-            health -= 1;
-            killTimer = 3.0f;
-        }
-        //NEED CONDITION + CODE FOR DEATH, FADE TO BLACK, AND RESPAWN. GO BACK AND REVIEW PRISONER CODE
 
-        if(airBorne && dblJump)
+        if (airBorne && dblJump)
         {
             dblJumpTimer -= 0.1f;
         }
-       
-        if(Input.GetButtonUp(jumpControl) && airBorne && jumpTimer <= 2.5f && jumpCount < 1)
+
+        if (Input.GetButtonUp(jumpControl) && airBorne && jumpTimer <= 2.5f && jumpCount < 1)
         {
             dblJump = true;
             jumpCount += 1;
         }
-
-        //if(!noInput) <- will be used to decide if player is moving or not for idle animation
-        //{ }
 
         if (Input.GetButtonDown(jumpControl))
         {
@@ -132,59 +171,23 @@ public class PlayerLocomotion : MonoBehaviour
                 airBorne = true;
             }
         }
-        if(Input.GetButtonDown(jumpControl) && dblJumpTimer < 0)
+        if (Input.GetButtonDown(jumpControl) && dblJumpTimer < 0)
         {
             rb.AddForce(Vector3.up * dblJumpForce, ForceMode.Impulse);
             dblJump = false;
             dblJumpTimer = 0;
         }
 
-        if(Input.GetButtonUp(jumpControl))
+        if (Input.GetButtonUp(jumpControl))
         {
             canJump = true;
         }
-
-        if (health <= 0)
-        {
-            dead = true;
-            fadeDelay -= 0.1f;
-        }
-
-        PlayerInput();
-
-        //Keeps player facing direction of last input
-        if (Mathf.Abs(playerInput.x) < 1 && Mathf.Abs(playerInput.y) < 1) return;
-
-        CalcDirect();
-        PlayerRotate();
-        PlayerMove();
-        //PlayerMoveKeyboard()
-        //PlayerMoveController()
     }
 
-    void PlayerInput()
-    {
-        if(keyboardActive)
-        {
-            playerInput.x = Input.GetAxisRaw("Horizontal");
-            playerInput.y = Input.GetAxisRaw("Vertical");
-        }
-        else if(controllerActive)
-        {
-            //controlstick input here
-            playerInput.x = Input.GetAxisRaw("Horizontal2");
-            playerInput.y = Input.GetAxisRaw("Vertical2");
-
-            if(playerInput.magnitude < stickDeadZone)
-            {
-                playerInput = Vector2.zero;
-            }
-            else
-            {
-                playerInput = playerInput.normalized * ((playerInput.magnitude - stickDeadZone) / (1 - stickDeadZone));
-            }
-        }
-    }
+    //void PlayerInput()
+   //{
+       
+   // }
 
     void CalcDirect()
     {
@@ -204,11 +207,46 @@ public class PlayerLocomotion : MonoBehaviour
         transform.position += transform.forward * moveSpeed * Time.deltaTime;
     }
 
+    void KillBox()
+    {
+        if (inKillbox)
+        {
+            killTimer -= 0.1f;
+        }
+        else
+        {
+            killTimer = 1.0f;
+        }
+        if (killTimer < 0)
+        {
+            health = 0;
+            killTimer = 3.0f;
+        }
+    }
+
+    void DamageDeath()
+    {
+        if (health <= 0)
+        {
+            dead = true;
+            fadeDelay -= 0.1f;
+        }
+        if (hit && health > 1)
+        {
+            StartCoroutine("InvisiFrames");
+        }
+        else if(hit && health <= 1)
+        {
+            health -= 1;
+        }
+        
+    }
+
     private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            Debug.Log("landed!");
+            //Debug.Log("landed!");
             if(canJump)
             {
                 airBorne = false;
@@ -371,6 +409,26 @@ public class PlayerLocomotion : MonoBehaviour
         {
             inKillbox = false;
         }
+    }
+
+    IEnumerator InvisiFrames()
+    {
+        int temp = 0;
+        triggerCollider.enabled = false;
+        health -= 1;
+        while (temp < numberOfFlashes)
+        {
+            characterBody.SetActive(false);
+            yield return new WaitForSeconds(flashDuration);
+            characterBody.SetActive(true);
+            yield return new WaitForSeconds(flashDuration);
+            characterBody.SetActive(false);
+            yield return new WaitForSeconds(flashDuration);
+            characterBody.SetActive(true);
+            yield return new WaitForSeconds(flashDuration);
+            temp++;
+        }
+        triggerCollider.enabled = true;
     }
 
 }

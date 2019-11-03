@@ -18,6 +18,7 @@ TagManager:
   - Path5
   - Path6
   - Path7
+  - Fireworks
   layers:
   - Default
   - TransparentFX

@@ -21,6 +21,7 @@ public class PlayerLocomotion : MonoBehaviour
     [SerializeField]
     private int fruitCount;
 
+    public bool lastLeg = false;
     public bool airBorne = false;
     public bool dblJump = false;
     public bool inKillbox = false;
@@ -232,16 +233,17 @@ public class PlayerLocomotion : MonoBehaviour
         if (health <= 0)
         {
             dead = true;
+            hit = false;
             fadeDelay -= 0.1f;
         }
-        if (hit && health > 1)
+        if (hit & !dead && health > 1)
         {
             StartCoroutine("InvisiFrames");
         }
-        else if(hit && health <= 1)
-        {
-            health -= 1;
-        }
+        //else if(hit && health <= 1)
+        //{
+        //    return;
+        //}
         
     }
 

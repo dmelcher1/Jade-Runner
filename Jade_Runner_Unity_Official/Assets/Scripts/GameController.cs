@@ -12,7 +12,8 @@ public class GameController : MonoBehaviour
     public bool levelComplete;
     public bool beatLevel = false;
     //public bool faded = false;
-    public float changeLevelDelay = 15.0f;
+   
+    private float changeLevelDelay = 5.0f;
     public PlayerLocomotion playerLocomotion;
     //public Animator levelAnim;
     public Animator animator; 
@@ -25,12 +26,13 @@ public class GameController : MonoBehaviour
     //public Color alpha;
     private int startHealth;
     private float startFadeDelay;
+    private string currentScene;
 
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentScene = SceneManager.GetActiveScene().name;
         levelEnder = GetComponent<BoxCollider>();
         //playerAnimator = player.GetComponent<Animator>();
         playerLocomotion = GameObject.FindObjectOfType<PlayerLocomotion>();
@@ -43,15 +45,22 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetButton("Quit"))
+        {
+            Application.Quit();
+        }
+
         if(beatLevel == true)
         {
             changeLevelDelay -= 0.1f;
             if(changeLevelDelay <= 0.0f)
             {
+                //StartCoroutine("Reset");
+                SceneManager.LoadScene(currentScene);
                 //SceneManager.LoadScene("NextLevel"); :P
             }
         }
-        //Start in Prison Level Shift script here, from FadeOnDeath result
+        
         if(playerLocomotion.dead == true && playerLocomotion.fadeDelay <= 0.0f)
         {
             FadeOnDeath();
@@ -87,5 +96,12 @@ public class GameController : MonoBehaviour
             FadeOnDeath();
             levelEnder.enabled = false;
         }
+    }
+
+    IEnumerator Reset ()
+    {
+        yield return new WaitForSeconds(10.0f);
+
+        SceneManager.LoadScene(currentScene);
     }
 }

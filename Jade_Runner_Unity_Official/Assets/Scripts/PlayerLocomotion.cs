@@ -10,6 +10,7 @@ public class PlayerLocomotion : MonoBehaviour
     private float turnAngle;
     private Quaternion targetRotation;
 
+    [SerializeField]
     private Vector2 playerInput;
 
     private string jumpControl;
@@ -102,9 +103,10 @@ public class PlayerLocomotion : MonoBehaviour
         KillBox();
         DamageDeath();
 
-        //Debug.Log("Can Move?");
+       
         if (keyboardActive)
         {
+            //Debug.Log("Can Move?");
             playerInput.x = Input.GetAxisRaw("Horizontal");
             playerInput.y = Input.GetAxisRaw("Vertical");
         }
@@ -162,7 +164,7 @@ public class PlayerLocomotion : MonoBehaviour
 
         if (Input.GetButtonDown(jumpControl))
         {
-            Debug.Log("Jumping");
+            //Debug.Log("Jumping");
             if (!airBorne && jumpTimer <= 0)
             {
                 jumpTimer = 3.0f;
@@ -204,6 +206,7 @@ public class PlayerLocomotion : MonoBehaviour
 
     void PlayerMove()
     {
+       
         transform.position += transform.forward * moveSpeed * Time.deltaTime;
     }
 
@@ -401,6 +404,15 @@ public class PlayerLocomotion : MonoBehaviour
         {
             inKillbox = true;
         }
+
+        if(other.gameObject.CompareTag("Fireworks"))
+        {
+            if(!hit)
+            {
+                health -= 1;
+            }
+            hit = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -415,7 +427,6 @@ public class PlayerLocomotion : MonoBehaviour
     {
         int temp = 0;
         triggerCollider.enabled = false;
-        health -= 1;
         while (temp < numberOfFlashes)
         {
             characterBody.SetActive(false);
@@ -426,9 +437,13 @@ public class PlayerLocomotion : MonoBehaviour
             yield return new WaitForSeconds(flashDuration);
             characterBody.SetActive(true);
             yield return new WaitForSeconds(flashDuration);
+            characterBody.SetActive(false);
+            yield return new WaitForSeconds(flashDuration);
+            characterBody.SetActive(true);
             temp++;
         }
         triggerCollider.enabled = true;
+        hit = false;
     }
 
 }

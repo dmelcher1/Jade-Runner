@@ -8,7 +8,9 @@ public class Firework : MonoBehaviour
 
     public GameObject fuseEffect;
 
-    public GameController explosionEffect;
+    public GameObject explosionEffect;
+
+    public Transform explosionTarget;
 
     private PlayerLocomotion playerLocomotion;
 
@@ -75,7 +77,7 @@ public class Firework : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         detonated = true;
-        Instantiate(explosionEffect, transform.position, transform.rotation);
+        Instantiate(explosionEffect, explosionTarget.position, explosionTarget.rotation);
         Destroy(firework);
     }
 
@@ -84,14 +86,14 @@ public class Firework : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         detonated = true;
-        Instantiate(explosionEffect, transform.position, transform.rotation);
+        Instantiate(explosionEffect, explosionTarget.position, explosionTarget.rotation);
         Destroy(firework);
     }
 
 
     // Update is called once per frame
-    void Update()
-    {
+    //void Update()
+    //{
 
-    }
+    //}
 }

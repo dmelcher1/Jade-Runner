@@ -19,6 +19,7 @@ TagManager:
   - Path6
   - Path7
   - Fireworks
+  - Enemy
   layers:
   - Default
   - TransparentFX

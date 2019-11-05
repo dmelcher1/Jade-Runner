@@ -71270,12 +71270,12 @@ PrefabInstance:
     - target: {fileID: 7838793606440177535, guid: 9a3de907d96cefb4a86cdc00d79ad721,
         type: 3}
       propertyPath: keyboardActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7838793606440177535, guid: 9a3de907d96cefb4a86cdc00d79ad721,
         type: 3}
       propertyPath: controllerActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7838793606440177534, guid: 9a3de907d96cefb4a86cdc00d79ad721,
         type: 3}

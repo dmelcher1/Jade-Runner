@@ -116,7 +116,7 @@ public class PlayerLocomotion : MonoBehaviour
         //if(!noInput) <- will be used to decide if player is moving or not for idle animation
         //{ }
 
-        currentSpeed = new Vector2(playerInput.x, playerInput.y).sqrMagnitude;
+        
         //KEEP JUMP HERE!
         JumpControls();
         KillBox();
@@ -126,12 +126,18 @@ public class PlayerLocomotion : MonoBehaviour
         {
             if (keyboardActive)
             {
+                currentSpeed = new Vector2(playerInput.x, playerInput.y).sqrMagnitude;
+                playerAnim.SetFloat("Speed", currentSpeed);
+
                 //Debug.Log("Can Move?");
                 playerInput.x = Input.GetAxisRaw("Horizontal");
                 playerInput.y = Input.GetAxisRaw("Vertical");
             }
             else if (controllerActive)
             {
+                currentSpeed = new Vector2(playerInput.x, playerInput.y).sqrMagnitude;
+                playerAnim.SetFloat("Speed", currentSpeed);
+
                 //controlstick input here
                 playerInput.x = Input.GetAxisRaw("Horizontal2");
                 playerInput.y = Input.GetAxisRaw("Vertical2");
@@ -155,7 +161,7 @@ public class PlayerLocomotion : MonoBehaviour
         }
         
         
-        playerAnim.SetFloat("Speed", currentSpeed);
+        
         playerAnim.SetBool("Airborne", airBorne);
         playerAnim.SetBool("DoubleJump", dblJump);
         playerAnim.SetBool("Hit", hit);

@@ -8971,8 +8971,8 @@ MonoBehaviour:
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 1450582868}
+  m_Follow: {fileID: 1450582868}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
@@ -19010,8 +19010,8 @@ MonoBehaviour:
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 1450582868}
+  m_Follow: {fileID: 1450582868}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
@@ -19973,8 +19973,8 @@ MonoBehaviour:
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 1450582868}
+  m_Follow: {fileID: 1450582868}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
@@ -27048,8 +27048,8 @@ MonoBehaviour:
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 1450582868}
+  m_Follow: {fileID: 1450582868}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
@@ -34048,7 +34048,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1706521016}
     - target: {fileID: 6565982738694354733, guid: 7290a690cce17fc4b9501a055b4e2629,
         type: 3}
       propertyPath: fader
@@ -34058,7 +34058,7 @@ PrefabInstance:
         type: 3}
       propertyPath: playerLocomotion
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1706521017}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7290a690cce17fc4b9501a055b4e2629, type: 3}
 --- !u!1001 &885500551
@@ -58020,6 +58020,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8fc99e64532e8634aa63deebf00dde87, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6cd0a62c3bff1e41a53c179b900f55d, type: 3}
+--- !u!4 &1450582868 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3547037790332481093, guid: 9a3de907d96cefb4a86cdc00d79ad721,
+    type: 3}
+  m_PrefabInstance: {fileID: 6332603638169497192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1457516232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65361,6 +65367,24 @@ Transform:
   m_Father: {fileID: 1892007354}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1706521016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7838793606440177521, guid: 9a3de907d96cefb4a86cdc00d79ad721,
+    type: 3}
+  m_PrefabInstance: {fileID: 6332603638169497192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1706521017 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7838793606440177535, guid: 9a3de907d96cefb4a86cdc00d79ad721,
+    type: 3}
+  m_PrefabInstance: {fileID: 6332603638169497192}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706521016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28b2358b0735e6d4baefdcea91fb62c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1709518805
 GameObject:
   m_ObjectHideFlags: 0
@@ -65410,8 +65434,8 @@ MonoBehaviour:
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 1450582868}
+  m_Follow: {fileID: 1450582868}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
@@ -66634,8 +66658,8 @@ MonoBehaviour:
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 1450582868}
+  m_Follow: {fileID: 1450582868}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
@@ -68704,8 +68728,8 @@ MonoBehaviour:
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 1450582868}
+  m_Follow: {fileID: 1450582868}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
@@ -77776,6 +77800,56 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7838793606440177535, guid: 9a3de907d96cefb4a86cdc00d79ad721,
+        type: 3}
+      propertyPath: pathOneCam
+      value: 
+      objectReference: {fileID: 1750176799}
+    - target: {fileID: 7838793606440177535, guid: 9a3de907d96cefb4a86cdc00d79ad721,
+        type: 3}
+      propertyPath: pathTwoCam
+      value: 
+      objectReference: {fileID: 1709518807}
+    - target: {fileID: 7838793606440177535, guid: 9a3de907d96cefb4a86cdc00d79ad721,
+        type: 3}
+      propertyPath: pathThreeCam
+      value: 
+      objectReference: {fileID: 283881542}
+    - target: {fileID: 7838793606440177535, guid: 9a3de907d96cefb4a86cdc00d79ad721,
+        type: 3}
+      propertyPath: pathFourCam
+      value: 
+      objectReference: {fileID: 642847832}
+    - target: {fileID: 7838793606440177535, guid: 9a3de907d96cefb4a86cdc00d79ad721,
+        type: 3}
+      propertyPath: pathFiveCam
+      value: 
+      objectReference: {fileID: 603803836}
+    - target: {fileID: 7838793606440177535, guid: 9a3de907d96cefb4a86cdc00d79ad721,
+        type: 3}
+      propertyPath: pathSixCam
+      value: 
+      objectReference: {fileID: 837669178}
+    - target: {fileID: 7838793606440177535, guid: 9a3de907d96cefb4a86cdc00d79ad721,
+        type: 3}
+      propertyPath: pathSevenCam
+      value: 
+      objectReference: {fileID: 1817805875}
+    - target: {fileID: 7838793606440177535, guid: 9a3de907d96cefb4a86cdc00d79ad721,
+        type: 3}
+      propertyPath: activeCam
+      value: 
+      objectReference: {fileID: 1750176799}
+    - target: {fileID: 7838793606440177535, guid: 9a3de907d96cefb4a86cdc00d79ad721,
+        type: 3}
+      propertyPath: checkPtCam
+      value: 
+      objectReference: {fileID: 1750176799}
+    - target: {fileID: 7838793606440177535, guid: 9a3de907d96cefb4a86cdc00d79ad721,
+        type: 3}
+      propertyPath: currentCheckpoint
+      value: 
+      objectReference: {fileID: 348468677}
     - target: {fileID: 4364472480020741751, guid: 9a3de907d96cefb4a86cdc00d79ad721,
         type: 3}
       propertyPath: m_Name

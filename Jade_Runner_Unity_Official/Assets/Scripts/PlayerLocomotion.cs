@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class PlayerLocomotion : MonoBehaviour
 {
+    [SerializeField]
+    private float playerMagnitude;
+
     public float stickDeadZone = 0.25f;
     public float moveSpeed;
     public float lookSpeed = 5f;
     private float turnAngle;
     private Quaternion targetRotation;
+
+    //IMPORTANT FOR ROTATION
+    private float playerRot = 80.0f;
+    private float rotDeg = 120f;
+    private float horizontal = 0.0f;
+    private float vertical = 0.0f;
 
     [SerializeField]
     private Vector2 playerInput;
@@ -125,6 +134,11 @@ public class PlayerLocomotion : MonoBehaviour
             {
                 playerInput = playerInput.normalized * ((playerInput.magnitude - stickDeadZone) / (1 - stickDeadZone));
             }
+
+            //playerInput = playerInput.normalized * ((playerInput.magnitude - stickDeadZone) / (1 - stickDeadZone));
+
+            //horizontal = playerInput.x * playerRot * Time.deltaTime;
+            //vertical = playerInput.y * moveSpeed * Time.deltaTime;
         }
 
         //Keeps player facing direction of last input
@@ -137,6 +151,7 @@ public class PlayerLocomotion : MonoBehaviour
         PlayerMove();
         //PlayerMoveKeyboard()
         //PlayerMoveController()
+        playerMagnitude = playerInput.magnitude;
     }
 
     void JumpControls()
@@ -201,13 +216,23 @@ public class PlayerLocomotion : MonoBehaviour
 
     void PlayerRotate()
     {
-        targetRotation = Quaternion.Euler(0, turnAngle, 0);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, lookSpeed * Time.deltaTime);
+
+        //targetRotation = Quaternion.Euler(0, turnAngle, 0);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, lookSpeed * Time.deltaTime);
+
+
+        //transform.rotation = Quaternion.Euler(0, turnAngle, 0);
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(new Vector3(0, turnAngle, 0)), Time.deltaTime * lookSpeed);
+
+        //transform.Rotate(0, turnAngle, 0);
+        //transform.Rotate = Quaternion.Slerp(transform.rotation, Quaternion.Euler(new Vector3(0, turnAngle, 0)), Time.deltaTime * lookSpeed);
+
+
     }
 
     void PlayerMove()
     {
-       
+        //transform.Translate(0, 0, vertical);
         transform.position += transform.forward * moveSpeed * Time.deltaTime;
     }
 

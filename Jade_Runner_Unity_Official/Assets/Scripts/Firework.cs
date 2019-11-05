@@ -65,7 +65,11 @@ public class Firework : MonoBehaviour
         {
             if (other.CompareTag("Player"))
             {
-                playerLocomotion.hit = true;
+                if(!playerLocomotion.dead)
+                {
+                    playerLocomotion.hit = true;
+                    playerLocomotion.health -= 1;
+                }
             }
         }
     }

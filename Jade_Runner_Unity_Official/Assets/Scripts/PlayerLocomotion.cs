@@ -9,6 +9,8 @@ public class PlayerLocomotion : MonoBehaviour
 
     public float stickDeadZone = 0.25f;
     public float moveSpeed;
+    [SerializeField]
+    private float currentSpeed;
     public float lookSpeed = 5f;
     private float turnAngle;
     private Quaternion targetRotation;
@@ -72,6 +74,8 @@ public class PlayerLocomotion : MonoBehaviour
     public Collider triggerCollider;
 
     public int health;
+    public int currentHealth;
+
     public bool hit = false;
    
     public bool dead;
@@ -84,11 +88,11 @@ public class PlayerLocomotion : MonoBehaviour
     public int numberOfFlashes;
     public GameObject characterBody;
 
-    //public Animator playerAnim;
+    private Animator playerAnim;
 
-    //public bool noInput;
+    public bool noInput;
 
-    //private float hitLayerWeight;
+    private float hitLayerWeight;
 
     //public GameObject recentCheckpoint;
 
@@ -99,7 +103,10 @@ public class PlayerLocomotion : MonoBehaviour
     {
         this.transform.position = currentCheckpoint.transform.position;
         rb = GetComponent<Rigidbody>();
+        playerAnim = GetComponent<Animator>();
+        currentHealth = health;
         activeCam = pathOneCam;
+        dead = false;
     }
 
     // Update is called once per frame
@@ -108,54 +115,62 @@ public class PlayerLocomotion : MonoBehaviour
 
         //if(!noInput) <- will be used to decide if player is moving or not for idle animation
         //{ }
-        JumpControls();
 
+        currentSpeed = new Vector2(playerInput.x, playerInput.y).sqrMagnitude;
+        //KEEP JUMP HERE!
+        JumpControls();
         KillBox();
         DamageDeath();
 
-       
-        if (keyboardActive)
+        if(!dead)
         {
-            //Debug.Log("Can Move?");
-            playerInput.x = Input.GetAxisRaw("Horizontal");
-            playerInput.y = Input.GetAxisRaw("Vertical");
-        }
-        else if (controllerActive)
-        {
-            //controlstick input here
-            playerInput.x = Input.GetAxisRaw("Horizontal2");
-            playerInput.y = Input.GetAxisRaw("Vertical2");
-
-            if (playerInput.magnitude < stickDeadZone)
+            if (keyboardActive)
             {
-                playerInput = Vector2.zero;
+                //Debug.Log("Can Move?");
+                playerInput.x = Input.GetAxisRaw("Horizontal");
+                playerInput.y = Input.GetAxisRaw("Vertical");
             }
-            else
+            else if (controllerActive)
             {
-                playerInput = playerInput.normalized * ((playerInput.magnitude - stickDeadZone) / (1 - stickDeadZone));
+                //controlstick input here
+                playerInput.x = Input.GetAxisRaw("Horizontal2");
+                playerInput.y = Input.GetAxisRaw("Vertical2");
+
+                if (playerInput.magnitude < stickDeadZone)
+                {
+                    playerInput = Vector2.zero;
+                }
+                else
+                {
+                    playerInput = playerInput.normalized * ((playerInput.magnitude - stickDeadZone) / (1 - stickDeadZone));
+                }
             }
 
-            //playerInput = playerInput.normalized * ((playerInput.magnitude - stickDeadZone) / (1 - stickDeadZone));
+            //Keeps player facing direction of last input
+            if (Mathf.Abs(playerInput.x) < 1 && Mathf.Abs(playerInput.y) < 1) return;
 
-            //horizontal = playerInput.x * playerRot * Time.deltaTime;
-            //vertical = playerInput.y * moveSpeed * Time.deltaTime;
+            CalcDirect();
+            PlayerRotate();
+            PlayerMove();
         }
-
-        //Keeps player facing direction of last input
-        if (Mathf.Abs(playerInput.x) < 1 && Mathf.Abs(playerInput.y) < 1) return;
+        
+        
+        playerAnim.SetFloat("Speed", currentSpeed);
+        playerAnim.SetBool("Airborne", airBorne);
+        playerAnim.SetBool("DoubleJump", dblJump);
+        playerAnim.SetBool("Hit", hit);
+        //playerAnim.SetBool("PoweredUp", );
+        playerAnim.SetBool("Dead", dead);
+        //playerAnim.SetBool("Attacking", );
 
         
-        //PlayerInput();
-        CalcDirect();
-        PlayerRotate();
-        PlayerMove();
-        //PlayerMoveKeyboard()
-        //PlayerMoveController()
+      
         playerMagnitude = playerInput.magnitude;
     }
 
     void JumpControls()
     {
+        //Debug.Log("Jumping");
         if (keyboardActive && !controllerActive)
         {
             jumpControl = jumpKeyboard;
@@ -216,18 +231,15 @@ public class PlayerLocomotion : MonoBehaviour
 
     void PlayerRotate()
     {
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(new Vector3(0, turnAngle, 0)), Time.deltaTime * lookSpeed);
 
         //targetRotation = Quaternion.Euler(0, turnAngle, 0);
         //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, lookSpeed * Time.deltaTime);
 
-
         //transform.rotation = Quaternion.Euler(0, turnAngle, 0);
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(new Vector3(0, turnAngle, 0)), Time.deltaTime * lookSpeed);
 
         //transform.Rotate(0, turnAngle, 0);
         //transform.Rotate = Quaternion.Slerp(transform.rotation, Quaternion.Euler(new Vector3(0, turnAngle, 0)), Time.deltaTime * lookSpeed);
-
-
     }
 
     void PlayerMove()
@@ -255,6 +267,32 @@ public class PlayerLocomotion : MonoBehaviour
 
     void DamageDeath()
     {
+        if (currentHealth > health)
+        {
+            hit = true;
+            //if (hitLayerWeight < 1.0f)
+            //{
+            //    hitLayerWeight += 0.1f;
+            //}
+            //playerAnim.SetLayerWeight(playerAnim.GetLayerIndex("Hurt"), hitLayerWeight);
+            //if (hitLayerWeight >= 1.0f)
+            //{
+            //    currentHealth = health; //IMPORTANT FOR DAMAGE!!!*****!!!!!*****!!!!!
+            //}
+        }
+        //else if (currentHealth == health)
+        //{
+        //    if (hitLayerWeight > 0.0f)
+        //    {
+        //        hitLayerWeight -= 0.01f;
+        //    }
+        //    playerAnim.SetLayerWeight(playerAnim.GetLayerIndex("Hurt"), hitLayerWeight);
+        //}
+        if (currentHealth == health)
+        {
+            hit = false;
+        }
+
         if (health <= 0)
         {
             dead = true;
@@ -432,14 +470,14 @@ public class PlayerLocomotion : MonoBehaviour
             inKillbox = true;
         }
 
-        if(other.gameObject.CompareTag("Fireworks"))
-        {
-            if(!hit)
-            {
-                health -= 1;
-            }
-            hit = true;
-        }
+        //if(other.gameObject.CompareTag("Fireworks"))
+        //{
+        //    if(!hit)
+        //    {
+        //        health -= 1;
+        //    }
+        //    hit = true;
+        //}
     }
 
     private void OnTriggerExit(Collider other)
@@ -469,8 +507,12 @@ public class PlayerLocomotion : MonoBehaviour
             characterBody.SetActive(true);
             temp++;
         }
-        triggerCollider.enabled = true;
-        hit = false;
+        if(temp >= numberOfFlashes)
+        {
+            currentHealth = health;
+            triggerCollider.enabled = true;
+            hit = false;
+        }
     }
 
 }

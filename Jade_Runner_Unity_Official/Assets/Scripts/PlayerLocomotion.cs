@@ -11,6 +11,7 @@ public class PlayerLocomotion : MonoBehaviour
     public float moveSpeed;
     [SerializeField]
     private float currentSpeed;
+    private float verticalSpeed;
     public float lookSpeed = 5f;
     private float turnAngle;
     private Quaternion targetRotation;
@@ -162,8 +163,7 @@ public class PlayerLocomotion : MonoBehaviour
         
         
         
-        playerAnim.SetBool("Airborne", airBorne);
-        playerAnim.SetBool("DoubleJump", dblJump);
+        
         playerAnim.SetBool("Hit", hit);
         //playerAnim.SetBool("PoweredUp", );
         playerAnim.SetBool("Dead", dead);
@@ -221,6 +221,10 @@ public class PlayerLocomotion : MonoBehaviour
         {
             canJump = true;
         }
+
+        playerAnim.SetBool("Airborne", airBorne);
+        playerAnim.SetBool("DoubleJump", dblJump);
+        playerAnim.SetFloat("VerticalSpeed", rb.velocity.y);
     }
 
     //void PlayerInput()

@@ -71270,12 +71270,27 @@ PrefabInstance:
     - target: {fileID: 7838793606440177535, guid: 9a3de907d96cefb4a86cdc00d79ad721,
         type: 3}
       propertyPath: keyboardActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7838793606440177535, guid: 9a3de907d96cefb4a86cdc00d79ad721,
         type: 3}
       propertyPath: controllerActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838793606440177535, guid: 9a3de907d96cefb4a86cdc00d79ad721,
+        type: 3}
+      propertyPath: jumpForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838793606440177535, guid: 9a3de907d96cefb4a86cdc00d79ad721,
+        type: 3}
+      propertyPath: dblJumpForce
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838793606440177535, guid: 9a3de907d96cefb4a86cdc00d79ad721,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7838793606440177534, guid: 9a3de907d96cefb4a86cdc00d79ad721,
         type: 3}
@@ -71332,5 +71347,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7838793605963900841, guid: 9a3de907d96cefb4a86cdc00d79ad721,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d1d2d9a12644a5f4db7ac51f1df77e07, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a3de907d96cefb4a86cdc00d79ad721, type: 3}

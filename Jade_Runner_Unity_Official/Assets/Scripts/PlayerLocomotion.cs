@@ -193,7 +193,7 @@ public class PlayerLocomotion : MonoBehaviour
             dblJumpTimer -= 0.1f;
         }
 
-        if (Input.GetButtonUp(jumpControl) && airBorne && jumpTimer <= 2.5f && jumpCount < 1)
+        if (Input.GetButtonUp(jumpControl) && airBorne && jumpTimer <= 0.3f && jumpCount < 1)
         {
             dblJump = true;
             jumpCount += 1;
@@ -204,7 +204,7 @@ public class PlayerLocomotion : MonoBehaviour
             //Debug.Log("Jumping");
             if (!airBorne && jumpTimer <= 0)
             {
-                jumpTimer = 3.0f;
+                jumpTimer = 0.5f;
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
                 canJump = false;
                 airBorne = true;
@@ -279,7 +279,7 @@ public class PlayerLocomotion : MonoBehaviour
     {
         if (currentHealth > health)
         {
-            hit = true;
+            //hit = true;
             //if (hitLayerWeight < 1.0f)
             //{
             //    hitLayerWeight += 0.1f;
@@ -298,10 +298,10 @@ public class PlayerLocomotion : MonoBehaviour
         //    }
         //    playerAnim.SetLayerWeight(playerAnim.GetLayerIndex("Hurt"), hitLayerWeight);
         //}
-        if (currentHealth == health)
-        {
-            hit = false;
-        }
+        //if (currentHealth == health)
+        //{
+        //    hit = false;
+        //}
 
         if (health <= 0)
         {

@@ -11474,7 +11474,7 @@ GameObject:
   - component: {fileID: 349229025}
   - component: {fileID: 349229024}
   m_Layer: 0
-  m_Name: Particle System (2)
+  m_Name: Red Fireworks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15340,7 +15340,7 @@ ParticleSystem:
     rangeCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.75
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -18434,7 +18434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &407779550
 Transform:
   m_ObjectHideFlags: 0
@@ -47887,7 +47887,7 @@ GameObject:
   - component: {fileID: 1134429686}
   - component: {fileID: 1134429685}
   m_Layer: 0
-  m_Name: Particle System (3)
+  m_Name: Blue Fireworks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51753,7 +51753,7 @@ ParticleSystem:
     rangeCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.75
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -58881,7 +58881,7 @@ GameObject:
   - component: {fileID: 1189529903}
   - component: {fileID: 1189529902}
   m_Layer: 0
-  m_Name: Particle System (4)
+  m_Name: Green Fireworks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62747,7 +62747,7 @@ ParticleSystem:
     rangeCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.75
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -93904,6 +93904,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Jade Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836389942307527615, guid: db541bbebcca2464c8bbbe1d56b791ab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6836389942307527612, guid: db541bbebcca2464c8bbbe1d56b791ab,
         type: 3}

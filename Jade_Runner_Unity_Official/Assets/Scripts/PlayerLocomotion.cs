@@ -91,6 +91,8 @@ public class PlayerLocomotion : MonoBehaviour
 
     private Animator playerAnim;
 
+    //public Animation runLoop;
+
     public bool noInput;
 
     private float hitLayerWeight;
@@ -105,6 +107,7 @@ public class PlayerLocomotion : MonoBehaviour
         this.transform.position = currentCheckpoint.transform.position;
         rb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
+        
         currentHealth = health;
         activeCam = pathOneCam;
         dead = false;

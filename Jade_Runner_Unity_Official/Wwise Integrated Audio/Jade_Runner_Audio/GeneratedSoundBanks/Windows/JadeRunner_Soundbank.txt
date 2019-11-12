@@ -1,0 +1,16 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3071493210	inTheBeginning			\Default Work Unit\inTheBeginning	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	226124245	Music_Switches			\Default Work Unit\Music_Switches	
+
+Switch	ID	Name	Switch Group			Notes
+	321571300	Forrest_1	Music_Switches			
+	321571303	Forrest_2	Music_Switches			
+	1868129168	Village_2	Music_Switches			
+	1868129171	Village_1	Music_Switches			
+	2607556080	Menu	Music_Switches			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	947976714	Menu	Z:\Volumes\EOR\SCHOOL\_Games_DirectedStudy\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\Menu_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\META_Switch\Menu_Playlist\Menu\Menu		8270960
+

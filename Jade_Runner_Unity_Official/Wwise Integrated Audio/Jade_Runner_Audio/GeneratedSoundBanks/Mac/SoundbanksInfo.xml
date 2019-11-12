@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
+	<RootPaths>
+		<ProjectRoot>/Users/ethanreese/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/z:/Volumes/EOR/SCHOOL/_Games_DirectedStudy/Jade-Runner/Jade_Runner_Unity_Official/Wwise Integrated Audio/Jade_Runner_Audio/</ProjectRoot>
+		<SourceFilesRoot>/Users/ethanreese/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/z:/Volumes/EOR/SCHOOL/_Games_DirectedStudy/Jade-Runner/Jade_Runner_Unity_Official/Wwise Integrated Audio/Jade_Runner_Audio/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/ethanreese/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/z:/Volumes/EOR/SCHOOL/_Games_DirectedStudy/Jade-Runner/Jade_Runner_Unity_Official/Wwise Integrated Audio/Jade_Runner_Audio/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/ethanreese/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/z:/Volumes/EOR/SCHOOL/_Games_DirectedStudy/Jade-Runner/Jade_Runner_Unity_Official/Wwise Integrated Audio/Jade_Runner_Audio/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3772970539" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\JadeRunner_Soundbank</ObjectPath>
+			<ShortName>JadeRunner_Soundbank</ShortName>
+			<Path>JadeRunner_Soundbank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3071493210" Name="inTheBeginning" ObjectPath="\Events\Default Work Unit\inTheBeginning" DurationType="Infinite"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="947976714" Language="SFX">
+					<ShortName>Menu.wav</ShortName>
+					<Path>SFX/Menu_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

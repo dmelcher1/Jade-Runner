@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" SchemaVersion="94">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="inTheBeginning" ID="{BFF0E69C-B28F-401E-9D24-92D21157E36A}">
+					<ChildrenList>
+						<Action Name="" ID="{69E736DE-69FC-4DF6-9C0A-33D4C90D2E47}" ShortID="151747362">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu" ID="{5A137532-A353-41C4-BABD-5B45BD7E02EF}" WorkUnitID="{8AE5FC99-3416-41EB-8529-C7D61DF57C3A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{ABC24429-587F-4EF3-A1C6-A09BCC35C413}" ShortID="21579558">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="META_Switch" ID="{FCB8CFE3-861E-47D3-B518-AFDEF4EB4F2B}" WorkUnitID="{A3113F7D-FEBB-48BF-A777-7DFB46808496}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

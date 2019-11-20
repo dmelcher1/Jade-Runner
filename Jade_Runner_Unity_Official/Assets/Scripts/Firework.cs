@@ -61,18 +61,6 @@ public class Firework : MonoBehaviour
         {
             StartCoroutine("Combust");
         }
-        //if (detonated)
-        //{
-        //    if (other.CompareTag("Player"))
-        //    {
-        //        if(!playerLocomotion.dead)
-        //        {
-        //            playerLocomotion.hit = true;
-        //            playerLocomotion.health -= 1;
-        //            Debug.Log("Boom!");
-        //        }
-        //    }
-        //}
     }
 
     IEnumerator Countdown()

@@ -7,6 +7,8 @@ public class PlayerLocomotion : MonoBehaviour
     [SerializeField]
     private float playerMagnitude;
 
+
+
     public float stickDeadZone = 0.25f;
     public float moveSpeed;
     [SerializeField]
@@ -17,13 +19,16 @@ public class PlayerLocomotion : MonoBehaviour
     private Quaternion targetRotation;
 
     //IMPORTANT FOR ROTATION
-    private float playerRot = 80.0f;
-    private float rotDeg = 120f;
-    private float horizontal = 0.0f;
-    private float vertical = 0.0f;
+    //private float playerRot = 80.0f;
+    //private float rotDeg = 120f;
+    //private float horizontal = 0.0f;
+    //private float vertical = 0.0f;
 
     [SerializeField]
     private Vector2 playerInput;
+
+    [SerializeField]
+    private int temp = 0;
 
     private string jumpControl;
 
@@ -280,41 +285,16 @@ public class PlayerLocomotion : MonoBehaviour
 
     void DamageDeath()
     {
-        if (currentHealth > health)
-        {
-            //hit = true;
-            //if (hitLayerWeight < 1.0f)
-            //{
-            //    hitLayerWeight += 0.1f;
-            //}
-            //playerAnim.SetLayerWeight(playerAnim.GetLayerIndex("Hurt"), hitLayerWeight);
-            //if (hitLayerWeight >= 1.0f)
-            //{
-            //    currentHealth = health; //IMPORTANT FOR DAMAGE!!!*****!!!!!*****!!!!!
-            //}
-        }
-        //else if (currentHealth == health)
-        //{
-        //    if (hitLayerWeight > 0.0f)
-        //    {
-        //        hitLayerWeight -= 0.01f;
-        //    }
-        //    playerAnim.SetLayerWeight(playerAnim.GetLayerIndex("Hurt"), hitLayerWeight);
-        //}
-        //if (currentHealth == health)
-        //{
-        //    hit = false;
-        //}
-
         if (health <= 0)
         {
             dead = true;
             hit = false;
             fadeDelay -= 0.1f;
         }
-        if (hit & !dead && health > 1)
+        if (hit & !dead && health >= 1)
         {
             StartCoroutine("InvisiFrames");
+            hit = false;
         }
         //else if(hit && health <= 1)
         //{
@@ -483,14 +463,16 @@ public class PlayerLocomotion : MonoBehaviour
             inKillbox = true;
         }
 
-        //if(other.gameObject.CompareTag("Fireworks"))
-        //{
-        //    if(!hit)
-        //    {
-        //        health -= 1;
-        //    }
-        //    hit = true;
-        //}
+        if (other.gameObject.CompareTag("Fireworks"))
+        {
+            if (!hit)
+            {
+                Debug.Log("Ouch");
+                health -= 1;
+            }
+            //temp = 0;
+            hit = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -503,7 +485,8 @@ public class PlayerLocomotion : MonoBehaviour
 
     IEnumerator InvisiFrames()
     {
-        int temp = 0;
+        //Debug.Log("Zapped");
+        temp = 0;
         triggerCollider.enabled = false;
         while (temp < numberOfFlashes)
         {
@@ -511,20 +494,13 @@ public class PlayerLocomotion : MonoBehaviour
             yield return new WaitForSeconds(flashDuration);
             characterBody.SetActive(true);
             yield return new WaitForSeconds(flashDuration);
-            characterBody.SetActive(false);
-            yield return new WaitForSeconds(flashDuration);
-            characterBody.SetActive(true);
-            yield return new WaitForSeconds(flashDuration);
-            characterBody.SetActive(false);
-            yield return new WaitForSeconds(flashDuration);
-            characterBody.SetActive(true);
             temp++;
         }
         if(temp >= numberOfFlashes)
         {
             currentHealth = health;
             triggerCollider.enabled = true;
-            hit = false;
+            //hit = false;
         }
     }
 

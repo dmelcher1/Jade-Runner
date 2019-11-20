@@ -35,8 +35,8 @@ public class Self_Destruct : MonoBehaviour
         {
             if (!playerLocomotion.dead && !playerLocomotion.hit)
             {
-                playerLocomotion.health -= 1;
-                playerLocomotion.hit = true;
+                //playerLocomotion.health -= 1;
+                //playerLocomotion.hit = true;
                 Debug.Log("Boom!");
             }
         }

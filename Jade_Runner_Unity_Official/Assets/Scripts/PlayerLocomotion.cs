@@ -203,6 +203,7 @@ public class PlayerLocomotion : MonoBehaviour
 
         if (Input.GetButtonUp(jumpControl) && airBorne && jumpTimer <= 0.3f && jumpCount < 1)
         {
+            
             dblJump = true;
             jumpCount += 1;
         }
@@ -221,6 +222,7 @@ public class PlayerLocomotion : MonoBehaviour
         if (Input.GetButtonDown(jumpControl) && dblJumpTimer < 0)
         {
             rb.AddForce(Vector3.up * dblJumpForce, ForceMode.Impulse);
+            playerAnim.SetTrigger("DblJump");
             dblJump = false;
             dblJumpTimer = 0;
         }
@@ -311,6 +313,7 @@ public class PlayerLocomotion : MonoBehaviour
             if(canJump)
             {
                 airBorne = false;
+                playerAnim.ResetTrigger("DblJump");
                 dblJump = false;
                 dblJumpTimer = 0;
                 jumpCount = 0;
@@ -470,7 +473,6 @@ public class PlayerLocomotion : MonoBehaviour
                 Debug.Log("Ouch");
                 health -= 1;
             }
-            //temp = 0;
             hit = true;
         }
     }

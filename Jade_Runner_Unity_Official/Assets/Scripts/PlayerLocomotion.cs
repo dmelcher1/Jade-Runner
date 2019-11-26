@@ -11,6 +11,7 @@ public class PlayerLocomotion : MonoBehaviour
 
     public float stickDeadZone = 0.25f;
     public float moveSpeed;
+    public float lungeSpeed;
     [SerializeField]
     private float currentSpeed;
     private float verticalSpeed;
@@ -31,9 +32,13 @@ public class PlayerLocomotion : MonoBehaviour
     private int temp = 0;
 
     private string jumpControl;
+    private string attackControl;
 
     private string jumpKeyboard = "Jump";
     private string jumpJoystick = "Jump2";
+
+    private string attackKeyboard = "Attack";
+    private string attackTrigger = "Attack2";
 
     [SerializeField]
     private int fruitCount;
@@ -45,6 +50,9 @@ public class PlayerLocomotion : MonoBehaviour
     public bool canJump = true;
     public bool keyboardActive;
     public bool controllerActive;
+    public bool singleAttack = false;
+    public bool multiAttack = false;
+    //public bool canAttack = true;
     [SerializeField]
     private float killTimer = 3.0f;
     [SerializeField]
@@ -55,6 +63,12 @@ public class PlayerLocomotion : MonoBehaviour
     private int jumpCount;
     public float jumpForce;
     public float dblJumpForce;
+
+    [SerializeField]
+    private float attackTimer;
+    //[SerializeField]
+    //private int attackCount;
+
     public float fadeDelay;
 
     public Cinemachine.CinemachineVirtualCamera pathOneCam;
@@ -100,7 +114,7 @@ public class PlayerLocomotion : MonoBehaviour
 
     public bool noInput;
 
-    private float hitLayerWeight;
+    //private float hitLayerWeight;
 
     //public GameObject recentCheckpoint;
 
@@ -128,6 +142,7 @@ public class PlayerLocomotion : MonoBehaviour
         
         //KEEP JUMP HERE!
         JumpControls();
+        AttackControls();
         KillBox();
         DamageDeath();
 
@@ -136,6 +151,7 @@ public class PlayerLocomotion : MonoBehaviour
             if (keyboardActive)
             {
                 currentSpeed = new Vector2(playerInput.x, playerInput.y).sqrMagnitude;
+                //if(!singleAttack && !multiAttack)
                 playerAnim.SetFloat("Speed", currentSpeed);
 
                 //Debug.Log("Can Move?");
@@ -145,6 +161,7 @@ public class PlayerLocomotion : MonoBehaviour
             else if (controllerActive)
             {
                 currentSpeed = new Vector2(playerInput.x, playerInput.y).sqrMagnitude;
+                //if(!singleAttack && !multiAttack)
                 playerAnim.SetFloat("Speed", currentSpeed);
 
                 //controlstick input here
@@ -237,10 +254,60 @@ public class PlayerLocomotion : MonoBehaviour
         playerAnim.SetFloat("VerticalSpeed", rb.velocity.y);
     }
 
-    //void PlayerInput()
-   //{
-       
-   // }
+    void AttackControls()
+    {
+        if (keyboardActive && !controllerActive)
+        {
+            attackControl = attackKeyboard;
+        }
+        else if (controllerActive && !keyboardActive)
+        {
+            attackControl = attackTrigger;
+        }
+
+        attackTimer -= 0.1f;
+
+        
+        if(!airBorne)
+        {
+            if (Input.GetButtonDown(attackControl) && !singleAttack)
+            {
+                if (attackTimer <= 0)
+                {
+                    attackTimer = 0.5f;
+                    //canAttack = false;
+                    singleAttack = true;
+                }
+            }
+
+            if (Input.GetButton(attackControl))
+            {
+                if (attackTimer <= 0)
+                {
+                    singleAttack = false;
+                    multiAttack = true;
+                }
+            }
+
+            if (Input.GetButtonUp(attackControl))
+            {
+                singleAttack = false;
+                multiAttack = false;
+            }
+        }
+        
+
+        //if (Input.GetButtonUp(jumpControl) && airBorne && jumpTimer <= 0.3f && jumpCount < 1)
+        //{
+
+        //    dblJump = true;
+        //    jumpCount += 1;
+        //}
+
+        playerAnim.SetBool("SingleAttack", singleAttack);
+        playerAnim.SetBool("MultiAttack", multiAttack);
+        //playerAnim.SetFloat("AttackTimer", attackTimer);
+    }
 
     void CalcDirect()
     {
@@ -265,7 +332,18 @@ public class PlayerLocomotion : MonoBehaviour
     void PlayerMove()
     {
         //transform.Translate(0, 0, vertical);
-        transform.position += transform.forward * moveSpeed * Time.deltaTime;
+        if(!singleAttack && !multiAttack)
+        {
+            transform.position += transform.forward * moveSpeed * Time.deltaTime;
+        }
+        else if(multiAttack)
+        {
+            //transform.position += lungeSpeed * Time.deltaTime;
+        }
+        //else if(multiAttack)
+        //{
+        //    transform.position += transform.forward * Time.deltaTime;
+        //}
     }
 
     void KillBox()
@@ -336,16 +414,22 @@ public class PlayerLocomotion : MonoBehaviour
             pathOneCam.Priority = 11;
             pathTwoCam.Priority = 1;
             pathThreeCam.Priority = 1;
-            pathFourCam.Priority = 1;
-            pathFiveCam.Priority = 1;
-            pathSixCam.Priority = 1;
-            pathSevenCam.Priority = 1;
+            if(pathFourCam != null)
+            {
+                pathFourCam.Priority = 1;
+                pathFiveCam.Priority = 1;
+                pathSixCam.Priority = 1;
+                pathSevenCam.Priority = 1;
+            }
             pathTwoCam.gameObject.SetActive(false);
             pathThreeCam.gameObject.SetActive(false);
-            pathFourCam.gameObject.SetActive(false);
-            pathFiveCam.gameObject.SetActive(false);
-            pathSixCam.gameObject.SetActive(false);
-            pathSevenCam.gameObject.SetActive(false);
+            if(pathFourCam != null)
+            {
+                pathFourCam.gameObject.SetActive(false);
+                pathFiveCam.gameObject.SetActive(false);
+                pathSixCam.gameObject.SetActive(false);
+                pathSevenCam.gameObject.SetActive(false);
+            }
         }
         else if (other.gameObject.tag == ("Path2"))
         {
@@ -354,16 +438,22 @@ public class PlayerLocomotion : MonoBehaviour
             pathOneCam.Priority = 1;
             pathTwoCam.Priority = 11;
             pathThreeCam.Priority = 1;
-            pathFourCam.Priority = 1;
-            pathFiveCam.Priority = 1;
-            pathSixCam.Priority = 1;
-            pathSevenCam.Priority = 1;
+            if(pathFourCam != null)
+            {
+                pathFourCam.Priority = 1;
+                pathFiveCam.Priority = 1;
+                pathSixCam.Priority = 1;
+                pathSevenCam.Priority = 1;
+            }
             pathOneCam.gameObject.SetActive(false);
             pathThreeCam.gameObject.SetActive(false);
-            pathFourCam.gameObject.SetActive(false);
-            pathFiveCam.gameObject.SetActive(false);
-            pathSixCam.gameObject.SetActive(false);
-            pathSevenCam.gameObject.SetActive(false);
+            if (pathFourCam != null)
+            {
+                pathFourCam.gameObject.SetActive(false);
+                pathFiveCam.gameObject.SetActive(false);
+                pathSixCam.gameObject.SetActive(false);
+                pathSevenCam.gameObject.SetActive(false);
+            }
         }
         else if (other.gameObject.tag == ("Path3"))
         {
@@ -372,16 +462,22 @@ public class PlayerLocomotion : MonoBehaviour
             pathOneCam.Priority = 1;
             pathTwoCam.Priority = 1;
             pathThreeCam.Priority = 11;
-            pathFourCam.Priority = 1;
-            pathFiveCam.Priority = 1;
-            pathSixCam.Priority = 1;
-            pathSevenCam.Priority = 1;
+            if(pathFourCam != null)
+            {
+                pathFourCam.Priority = 1;
+                pathFiveCam.Priority = 1;
+                pathSixCam.Priority = 1;
+                pathSevenCam.Priority = 1;
+            }
             pathTwoCam.gameObject.SetActive(false);
             pathOneCam.gameObject.SetActive(false);
-            pathFourCam.gameObject.SetActive(false);
-            pathFiveCam.gameObject.SetActive(false);
-            pathSixCam.gameObject.SetActive(false);
-            pathSevenCam.gameObject.SetActive(false);
+            if (pathFourCam != null)
+            {
+                pathFourCam.gameObject.SetActive(false);
+                pathFiveCam.gameObject.SetActive(false);
+                pathSixCam.gameObject.SetActive(false);
+                pathSevenCam.gameObject.SetActive(false);
+            }
         }
         else if (other.gameObject.tag == ("Path4"))
         {

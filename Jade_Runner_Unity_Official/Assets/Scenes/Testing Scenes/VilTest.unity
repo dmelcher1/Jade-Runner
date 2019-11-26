@@ -71211,6 +71211,61 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character_Main-V3
       objectReference: {fileID: 0}
+    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
+        type: 3}
+      propertyPath: pathOneCam
+      value: 
+      objectReference: {fileID: 1750176799}
+    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
+        type: 3}
+      propertyPath: pathTwoCam
+      value: 
+      objectReference: {fileID: 1709518807}
+    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
+        type: 3}
+      propertyPath: pathThreeCam
+      value: 
+      objectReference: {fileID: 283881542}
+    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
+        type: 3}
+      propertyPath: pathFourCam
+      value: 
+      objectReference: {fileID: 642847832}
+    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
+        type: 3}
+      propertyPath: pathFiveCam
+      value: 
+      objectReference: {fileID: 603803836}
+    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
+        type: 3}
+      propertyPath: pathSixCam
+      value: 
+      objectReference: {fileID: 837669178}
+    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
+        type: 3}
+      propertyPath: pathSevenCam
+      value: 
+      objectReference: {fileID: 1817805875}
+    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
+        type: 3}
+      propertyPath: activeCam
+      value: 
+      objectReference: {fileID: 1750176799}
+    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
+        type: 3}
+      propertyPath: checkPtCam
+      value: 
+      objectReference: {fileID: 1750176799}
+    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
+        type: 3}
+      propertyPath: currentCheckpoint
+      value: 
+      objectReference: {fileID: 348468677}
+    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
+        type: 3}
+      propertyPath: lungeSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3437411648115451587, guid: af8d2dfe137d84944a3040b20d07d99a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -71266,56 +71321,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
-        type: 3}
-      propertyPath: pathOneCam
-      value: 
-      objectReference: {fileID: 1750176799}
-    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
-        type: 3}
-      propertyPath: pathTwoCam
-      value: 
-      objectReference: {fileID: 1709518807}
-    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
-        type: 3}
-      propertyPath: pathThreeCam
-      value: 
-      objectReference: {fileID: 283881542}
-    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
-        type: 3}
-      propertyPath: pathFourCam
-      value: 
-      objectReference: {fileID: 642847832}
-    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
-        type: 3}
-      propertyPath: pathFiveCam
-      value: 
-      objectReference: {fileID: 603803836}
-    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
-        type: 3}
-      propertyPath: pathSixCam
-      value: 
-      objectReference: {fileID: 837669178}
-    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
-        type: 3}
-      propertyPath: pathSevenCam
-      value: 
-      objectReference: {fileID: 1817805875}
-    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
-        type: 3}
-      propertyPath: activeCam
-      value: 
-      objectReference: {fileID: 1750176799}
-    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
-        type: 3}
-      propertyPath: checkPtCam
-      value: 
-      objectReference: {fileID: 1750176799}
-    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
-        type: 3}
-      propertyPath: currentCheckpoint
-      value: 
-      objectReference: {fileID: 348468677}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af8d2dfe137d84944a3040b20d07d99a, type: 3}
 --- !u!4 &6769298725486092659 stripped

@@ -7,8 +7,6 @@ public class PlayerLocomotion : MonoBehaviour
     [SerializeField]
     private float playerMagnitude;
 
-
-
     public float stickDeadZone = 0.25f;
     public float moveSpeed;
     public float lungeSpeed;
@@ -42,6 +40,12 @@ public class PlayerLocomotion : MonoBehaviour
 
     [SerializeField]
     private int fruitCount;
+    [SerializeField]
+    private int fruitHealCount;
+    [SerializeField]
+    private int fruitHealTotal = 10;
+    [SerializeField]
+    private int fruitMeter;
 
     public bool lastLeg = false;
     public bool airBorne = false;
@@ -52,6 +56,8 @@ public class PlayerLocomotion : MonoBehaviour
     public bool controllerActive;
     public bool singleAttack = false;
     public bool multiAttack = false;
+    public bool poweredUp = false;
+    
     //public bool canAttack = true;
     [SerializeField]
     private float killTimer = 3.0f;
@@ -65,7 +71,9 @@ public class PlayerLocomotion : MonoBehaviour
     public float dblJumpForce;
 
     [SerializeField]
-    private float attackTimer;
+    private float multiAttackTimer;
+    [SerializeField]
+    private float singleAttackTimer;
     //[SerializeField]
     //private int attackCount;
 
@@ -145,6 +153,8 @@ public class PlayerLocomotion : MonoBehaviour
         AttackControls();
         KillBox();
         DamageDeath();
+        FruitCollection();
+        PoweredUpState();
 
         if(!dead)
         {
@@ -155,7 +165,10 @@ public class PlayerLocomotion : MonoBehaviour
                 playerAnim.SetFloat("Speed", currentSpeed);
 
                 //Debug.Log("Can Move?");
+                //if (!multiAttack)
                 playerInput.x = Input.GetAxisRaw("Horizontal");
+                //else if (multiAttack)
+                //playerInput.x = 1.0f;
                 playerInput.y = Input.GetAxisRaw("Vertical");
             }
             else if (controllerActive)
@@ -165,7 +178,10 @@ public class PlayerLocomotion : MonoBehaviour
                 playerAnim.SetFloat("Speed", currentSpeed);
 
                 //controlstick input here
+                //if (!multiAttack)
                 playerInput.x = Input.GetAxisRaw("Horizontal2");
+                //else if (multiAttack)
+                //playerInput.x = 1.0f;
                 playerInput.y = Input.GetAxisRaw("Vertical2");
 
                 if (playerInput.magnitude < stickDeadZone)
@@ -265,24 +281,28 @@ public class PlayerLocomotion : MonoBehaviour
             attackControl = attackTrigger;
         }
 
-        attackTimer -= 0.1f;
-
+        multiAttackTimer -= 0.1f;
+        singleAttackTimer -= 0.1f;
         
         if(!airBorne)
         {
             if (Input.GetButtonDown(attackControl) && !singleAttack)
             {
-                if (attackTimer <= 0)
+                if (multiAttackTimer <= 0)
                 {
-                    attackTimer = 0.5f;
+                    multiAttackTimer = 0.5f;
                     //canAttack = false;
-                    singleAttack = true;
+                    if(singleAttackTimer < -3.0f)
+                    {
+                        singleAttack = true;
+                        singleAttackTimer = 0.0f;
+                    }
                 }
             }
 
             if (Input.GetButton(attackControl))
             {
-                if (attackTimer <= 0)
+                if (multiAttackTimer <= 0)
                 {
                     singleAttack = false;
                     multiAttack = true;
@@ -306,7 +326,7 @@ public class PlayerLocomotion : MonoBehaviour
 
         playerAnim.SetBool("SingleAttack", singleAttack);
         playerAnim.SetBool("MultiAttack", multiAttack);
-        //playerAnim.SetFloat("AttackTimer", attackTimer);
+        //playerAnim.SetFloat("multiAttackTimer", multiAttackTimer);
     }
 
     void CalcDirect()
@@ -332,14 +352,18 @@ public class PlayerLocomotion : MonoBehaviour
     void PlayerMove()
     {
         //transform.Translate(0, 0, vertical);
-        if(!singleAttack && !multiAttack)
+        if(!singleAttack)
         {
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
-        else if(multiAttack)
+        if(!multiAttack)
         {
-            //transform.position += lungeSpeed * Time.deltaTime;
+            transform.position += transform.forward * lungeSpeed * Time.deltaTime;
         }
+        //else if(multiAttack)
+        //{
+        //    transform.position += new Vector3(1, 0, 0) * movespeed * Time.deltaTime;
+        //}
         //else if(multiAttack)
         //{
         //    transform.position += transform.forward * Time.deltaTime;
@@ -381,6 +405,23 @@ public class PlayerLocomotion : MonoBehaviour
         //    return;
         //}
         
+    }
+
+    void FruitCollection()
+    {
+        if(fruitMeter == 10)
+        {
+            health += 1;
+            fruitMeter = 0;
+        }
+    }
+
+    void PoweredUpState()
+    {
+        if(poweredUp)
+        {
+
+        }
     }
 
     private void OnCollisionStay(Collision collision)
@@ -551,13 +592,22 @@ public class PlayerLocomotion : MonoBehaviour
             pathSixCam.gameObject.SetActive(false);
             pathOneCam.gameObject.SetActive(false);
         }
-        if (other.gameObject.tag == ("Fruit"))
+        if(other.gameObject.tag == "PowerFruit")
+        {
+            poweredUp = true;
+        }
+
+        if (other.gameObject.tag == "Fruit")
         {
             Debug.Log("That's Not A Wampa!");
             fruitCount += 1;
+            if(health < 3)
+            {
+                fruitMeter += 1;
+            }
             Destroy(other.gameObject);
         }
-        if(other.gameObject.tag == ("Killbox"))
+        if(other.gameObject.tag == "Killbox")
         {
             inKillbox = true;
         }

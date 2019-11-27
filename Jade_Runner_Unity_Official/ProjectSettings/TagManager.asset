@@ -20,6 +20,7 @@ TagManager:
   - Path7
   - Fireworks
   - Enemy
+  - PowerFruit
   layers:
   - Default
   - TransparentFX

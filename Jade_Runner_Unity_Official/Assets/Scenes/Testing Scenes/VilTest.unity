@@ -41609,7 +41609,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232652481}
-  m_LocalRotation: {x: 0.08538276, y: 0.71147925, z: -0.08779212, w: 0.6919535}
+  m_LocalRotation: {x: 0.08538276, y: 0.71147966, z: -0.08779222, w: 0.69195306}
   m_LocalPosition: {x: -11.618264, y: 2.8038003, z: -2.464269}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -59187,7 +59187,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750176798}
-  m_LocalRotation: {x: 0.08538276, y: 0.71147925, z: -0.08779212, w: 0.6919535}
+  m_LocalRotation: {x: 0.08538276, y: 0.71147966, z: -0.08779222, w: 0.69195306}
   m_LocalPosition: {x: -11.618264, y: 2.8038003, z: -2.464269}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -71264,7 +71264,17 @@ PrefabInstance:
     - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
         type: 3}
       propertyPath: lungeSpeed
-      value: 2
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
+        type: 3}
+      propertyPath: fruitPowerUp
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
+        type: 3}
+      propertyPath: fruitHeal
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3437411648115451587, guid: af8d2dfe137d84944a3040b20d07d99a,
         type: 3}

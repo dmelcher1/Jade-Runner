@@ -38,16 +38,13 @@ public class PlayerLocomotion : MonoBehaviour
     private string attackKeyboard = "Attack";
     private string attackTrigger = "Attack2";
 
-    [SerializeField]
-    private int fruitCount;
-    [SerializeField]
-    private int fruitHealCount;
-    [SerializeField]
-    private int fruitHealTotal = 10;
-    [SerializeField]
-    private int fruitMeter;
+    
+    public int fruitCount;
+    
+    public int fruitMeter;
 
-    public bool lastLeg = false;
+    [SerializeField]
+    private float lastLeg = 0;
     public bool airBorne = false;
     public bool dblJump = false;
     public bool inKillbox = false;
@@ -107,6 +104,7 @@ public class PlayerLocomotion : MonoBehaviour
     public bool hit = false;
    
     public bool dead;
+    private float die;
 
     public GameObject currentCheckpoint;
 
@@ -400,11 +398,25 @@ public class PlayerLocomotion : MonoBehaviour
             StartCoroutine("InvisiFrames");
             hit = false;
         }
-        //else if(hit && health <= 1)
-        //{
-        //    return;
-        //}
-        
+        if(health == 1 && lastLeg < 10.0f)
+        {
+            lastLeg += 0.1f;
+        }
+        else if(health > 1)
+        {
+            lastLeg = 0;
+        }
+        if (dead && die < 10.0f)
+        {
+            die += 0.1f;
+        }
+        else if(!dead)
+        {
+            die = 0;
+        }
+        playerAnim.SetFloat("Dying", lastLeg);
+        playerAnim.SetFloat("DyingCrouch", die);
+        playerAnim.SetBool("Dead", dead);
     }
 
     void FruitCollection()
@@ -412,6 +424,7 @@ public class PlayerLocomotion : MonoBehaviour
         if(fruitMeter == 10)
         {
             health += 1;
+            currentHealth = health;
             fruitMeter = 0;
         }
     }
@@ -597,16 +610,16 @@ public class PlayerLocomotion : MonoBehaviour
             poweredUp = true;
         }
 
-        if (other.gameObject.tag == "Fruit")
-        {
-            Debug.Log("That's Not A Wampa!");
-            fruitCount += 1;
-            if(health < 3)
-            {
-                fruitMeter += 1;
-            }
-            Destroy(other.gameObject);
-        }
+        //if (other.gameObject.tag == "Fruit")
+        //{
+        //    Debug.Log("That's Not A Wampa!");
+        //    fruitCount += 1;
+        //    if(health < 3)
+        //    {
+        //        fruitMeter += 1;
+        //    }
+        //    Destroy(other.gameObject);
+        //}
         if(other.gameObject.tag == "Killbox")
         {
             inKillbox = true;

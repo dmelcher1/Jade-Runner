@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 9d8e1b76049bbd44eb12f6473b9716ef
+guid: 0a1ee1ab0bb75b540af11e1990cfc027
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: Idle - Critical
+    second: Run - Loop2
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle - Critical
+      name: Run - Loop2
       takeName: Take 001
       internalID: 1827226128182048838
-      firstFrame: 0
-      lastFrame: 192
+      firstFrame: 8
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

@@ -9,13 +9,16 @@ public class PlayerLocomotion : MonoBehaviour
 
     public float stickDeadZone = 0.25f;
     public float moveSpeed;
-    public float lungeSpeed;
+    private float moveSpeedConstant;
+    //public float lungeSpeed;
     [SerializeField]
     private float currentSpeed;
     private float verticalSpeed;
     public float lookSpeed = 5f;
     private float turnAngle;
     private Quaternion targetRotation;
+    public GameObject[] handFires;
+    public GameObject[] tigerClaws;
 
     //IMPORTANT FOR ROTATION
     //private float playerRot = 80.0f;
@@ -65,7 +68,13 @@ public class PlayerLocomotion : MonoBehaviour
     [SerializeField]
     private int jumpCount;
     public float jumpForce;
+    private float jumpForceConstant;
     public float dblJumpForce;
+
+    public float poweredUpInstanceTimer;
+    [SerializeField]
+    private float poweredUpDurationTimer = 10.0f;
+    private float poweredUpTimerReset;
 
     [SerializeField]
     private float multiAttackTimer;
@@ -132,7 +141,9 @@ public class PlayerLocomotion : MonoBehaviour
         this.transform.position = currentCheckpoint.transform.position;
         rb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
-        
+        poweredUpTimerReset = poweredUpDurationTimer;
+        moveSpeedConstant = moveSpeed;
+        jumpForceConstant = jumpForce;
         currentHealth = health;
         activeCam = pathOneCam;
         dead = false;
@@ -154,7 +165,7 @@ public class PlayerLocomotion : MonoBehaviour
         FruitCollection();
         PoweredUpState();
 
-        if(!dead)
+        if(!dead && poweredUpInstanceTimer <= 0)
         {
             if (keyboardActive)
             {
@@ -204,127 +215,137 @@ public class PlayerLocomotion : MonoBehaviour
         
         
         playerAnim.SetBool("Hit", hit);
-        //playerAnim.SetBool("PoweredUp", );
+        
         playerAnim.SetBool("Dead", dead);
-        //playerAnim.SetBool("Attacking", );
+
+        playerAnim.SetFloat("PowerTimer", poweredUpInstanceTimer);
 
         
-      
+
+
         playerMagnitude = playerInput.magnitude;
+
+        Debug.Log(poweredUpInstanceTimer);
     }
 
     void JumpControls()
     {
-        //Debug.Log("Jumping");
-        if (keyboardActive && !controllerActive)
-        {
-            jumpControl = jumpKeyboard;
-        }
-        else if (controllerActive && !keyboardActive)
-        {
-            jumpControl = jumpJoystick;
-        }
-
-        jumpTimer -= 0.1f;
-
-        if (airBorne && dblJump)
-        {
-            dblJumpTimer -= 0.1f;
-        }
-
-        if (Input.GetButtonUp(jumpControl) && airBorne && jumpTimer <= 0.3f && jumpCount < 1)
-        {
-            
-            dblJump = true;
-            jumpCount += 1;
-        }
-
-        if (Input.GetButtonDown(jumpControl))
+        if(!dead && poweredUpInstanceTimer <= 0)
         {
             //Debug.Log("Jumping");
-            if (!airBorne && jumpTimer <= 0)
+            if (keyboardActive && !controllerActive)
             {
-                jumpTimer = 0.5f;
-                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-                canJump = false;
-                airBorne = true;
+                jumpControl = jumpKeyboard;
             }
-        }
-        if (Input.GetButtonDown(jumpControl) && dblJumpTimer < 0)
-        {
-            rb.AddForce(Vector3.up * dblJumpForce, ForceMode.Impulse);
-            playerAnim.SetTrigger("DblJump");
-            dblJump = false;
-            dblJumpTimer = 0;
-        }
+            else if (controllerActive && !keyboardActive)
+            {
+                jumpControl = jumpJoystick;
+            }
 
-        if (Input.GetButtonUp(jumpControl))
-        {
-            canJump = true;
-        }
+            jumpTimer -= 0.1f;
 
-        playerAnim.SetBool("Airborne", airBorne);
-        playerAnim.SetBool("DoubleJump", dblJump);
-        playerAnim.SetFloat("VerticalSpeed", rb.velocity.y);
+            if (airBorne && dblJump)
+            {
+                dblJumpTimer -= 0.1f;
+            }
+
+            if (Input.GetButtonUp(jumpControl) && airBorne && jumpTimer <= 0.3f && jumpCount < 1)
+            {
+
+                dblJump = true;
+                jumpCount += 1;
+            }
+
+            if (Input.GetButtonDown(jumpControl))
+            {
+                //Debug.Log("Jumping");
+                if (!airBorne && jumpTimer <= 0)
+                {
+                    jumpTimer = 0.5f;
+                    rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                    canJump = false;
+                    airBorne = true;
+                }
+            }
+            if (Input.GetButtonDown(jumpControl) && dblJumpTimer < 0)
+            {
+                rb.AddForce(Vector3.up * dblJumpForce, ForceMode.Impulse);
+                playerAnim.SetTrigger("DblJump");
+                dblJump = false;
+                dblJumpTimer = 0;
+            }
+
+            if (Input.GetButtonUp(jumpControl))
+            {
+                canJump = true;
+            }
+
+            playerAnim.SetBool("Airborne", airBorne);
+            playerAnim.SetBool("DoubleJump", dblJump);
+            playerAnim.SetFloat("VerticalSpeed", rb.velocity.y);
+        }
     }
 
     void AttackControls()
     {
-        if (keyboardActive && !controllerActive)
+        if(!dead && poweredUpInstanceTimer <= 0)
         {
-            attackControl = attackKeyboard;
-        }
-        else if (controllerActive && !keyboardActive)
-        {
-            attackControl = attackTrigger;
-        }
-
-        multiAttackTimer -= 0.1f;
-        singleAttackTimer -= 0.1f;
-        
-        if(!airBorne)
-        {
-            if (Input.GetButtonDown(attackControl) && !singleAttack)
+            if (keyboardActive && !controllerActive)
             {
-                if (multiAttackTimer <= 0)
+                attackControl = attackKeyboard;
+            }
+            else if (controllerActive && !keyboardActive)
+            {
+                attackControl = attackTrigger;
+            }
+
+            multiAttackTimer -= 0.1f;
+            singleAttackTimer -= 0.1f;
+
+            if (!airBorne)
+            {
+                if (Input.GetButtonDown(attackControl) && !singleAttack)
                 {
-                    multiAttackTimer = 0.5f;
-                    //canAttack = false;
-                    if(singleAttackTimer < -3.0f)
+                    if (multiAttackTimer <= 0)
                     {
-                        singleAttack = true;
-                        singleAttackTimer = 0.0f;
+                        multiAttackTimer = 0.5f;
+                        //canAttack = false;
+                        if (singleAttackTimer < -3.0f)
+                        {
+                            singleAttack = true;
+                            singleAttackTimer = 0.0f;
+                        }
                     }
                 }
-            }
 
-            if (Input.GetButton(attackControl))
-            {
-                if (multiAttackTimer <= 0)
+                if (Input.GetButton(attackControl))
+                {
+                    if (multiAttackTimer <= 0)
+                    {
+                        singleAttack = false;
+                        multiAttack = true;
+                    }
+                }
+
+                if (Input.GetButtonUp(attackControl))
                 {
                     singleAttack = false;
-                    multiAttack = true;
+                    multiAttack = false;
                 }
             }
 
-            if (Input.GetButtonUp(attackControl))
-            {
-                singleAttack = false;
-                multiAttack = false;
-            }
+
+            //if (Input.GetButtonUp(jumpControl) && airBorne && jumpTimer <= 0.3f && jumpCount < 1)
+            //{
+
+            //    dblJump = true;
+            //    jumpCount += 1;
+            //}
+
+            playerAnim.SetBool("SingleAttack", singleAttack);
+            playerAnim.SetBool("MultiAttack", multiAttack);
+            //playerAnim.SetFloat("multiAttackTimer", multiAttackTimer);
         }
-        
-
-        //if (Input.GetButtonUp(jumpControl) && airBorne && jumpTimer <= 0.3f && jumpCount < 1)
-        //{
-
-        //    dblJump = true;
-        //    jumpCount += 1;
-        //}
-
-        playerAnim.SetBool("SingleAttack", singleAttack);
-        playerAnim.SetBool("MultiAttack", multiAttack);
-        //playerAnim.SetFloat("multiAttackTimer", multiAttackTimer);
     }
 
     void CalcDirect()
@@ -337,14 +358,6 @@ public class PlayerLocomotion : MonoBehaviour
     void PlayerRotate()
     {
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(new Vector3(0, turnAngle, 0)), Time.deltaTime * lookSpeed);
-
-        //targetRotation = Quaternion.Euler(0, turnAngle, 0);
-        //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, lookSpeed * Time.deltaTime);
-
-        //transform.rotation = Quaternion.Euler(0, turnAngle, 0);
-
-        //transform.Rotate(0, turnAngle, 0);
-        //transform.Rotate = Quaternion.Slerp(transform.rotation, Quaternion.Euler(new Vector3(0, turnAngle, 0)), Time.deltaTime * lookSpeed);
     }
 
     void PlayerMove()
@@ -354,18 +367,11 @@ public class PlayerLocomotion : MonoBehaviour
         {
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
-        if(!multiAttack)
-        {
-            transform.position += transform.forward * lungeSpeed * Time.deltaTime;
-        }
-        //else if(multiAttack)
+        //if(!multiAttack)
         //{
-        //    transform.position += new Vector3(1, 0, 0) * movespeed * Time.deltaTime;
+        //    transform.position += transform.forward * lungeSpeed * Time.deltaTime;
         //}
-        //else if(multiAttack)
-        //{
-        //    transform.position += transform.forward * Time.deltaTime;
-        //}
+       
     }
 
     void KillBox()
@@ -431,10 +437,31 @@ public class PlayerLocomotion : MonoBehaviour
 
     void PoweredUpState()
     {
-        if(poweredUp)
+        if(poweredUp && poweredUpDurationTimer > 0)
         {
-
+            poweredUpDurationTimer -= 1.0f * Time.deltaTime;
+            poweredUpInstanceTimer -= 0.1f * Time.deltaTime;
+            if (poweredUpInstanceTimer < 0.01)
+            {
+                poweredUpInstanceTimer = 0;
+            }
+            foreach (GameObject fire in handFires)
+            {
+                fire.SetActive(true);
+            }
         }
+        else if(poweredUpDurationTimer < 0)
+        {
+            foreach (GameObject fire in handFires)
+            {
+                fire.SetActive(false);
+            }
+            poweredUp = false;
+            moveSpeed = moveSpeedConstant;
+            jumpForce = jumpForceConstant;
+            poweredUpDurationTimer = poweredUpTimerReset;
+        }
+        playerAnim.SetBool("PoweredUp", poweredUp);
     }
 
     private void OnCollisionStay(Collision collision)
@@ -605,10 +632,14 @@ public class PlayerLocomotion : MonoBehaviour
             pathSixCam.gameObject.SetActive(false);
             pathOneCam.gameObject.SetActive(false);
         }
-        if(other.gameObject.tag == "PowerFruit")
-        {
-            poweredUp = true;
-        }
+        //if(other.gameObject.tag == "PowerFruit")
+        //{
+        //    poweredUp = true;
+        //    poweredUpInstanceTimer = 0.1f;
+        //    moveSpeed = moveSpeed * 1.5f;
+        //    jumpForce = jumpForce * 1.25f;
+        //    //put ranged attack code here
+        //}
 
         //if (other.gameObject.tag == "Fruit")
         //{

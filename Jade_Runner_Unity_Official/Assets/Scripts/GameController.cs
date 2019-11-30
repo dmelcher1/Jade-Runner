@@ -83,6 +83,7 @@ public class GameController : MonoBehaviour
         player.transform.rotation = playerLocomotion.currentCheckpoint.transform.rotation;
         playerLocomotion.activeCam = playerLocomotion.checkPtCam;
         playerLocomotion.health = startHealth;
+        playerLocomotion.currentHealth = playerLocomotion.health;
         playerLocomotion.dead = false;
         playerLocomotion.fadeDelay = startFadeDelay;
         animator.SetBool("FadeOut", false);

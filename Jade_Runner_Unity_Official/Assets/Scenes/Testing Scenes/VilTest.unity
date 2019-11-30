@@ -74643,6 +74643,16 @@ PrefabInstance:
       propertyPath: poweredUpInstanceTimer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
+        type: 3}
+      propertyPath: numberOfFlashes
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3437411648115451586, guid: af8d2dfe137d84944a3040b20d07d99a,
+        type: 3}
+      propertyPath: flashDuration
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 6671465716151835326, guid: af8d2dfe137d84944a3040b20d07d99a,
         type: 3}
       propertyPath: m_TagString

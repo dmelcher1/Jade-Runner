@@ -14,6 +14,8 @@ public class PlayerLocomotion : MonoBehaviour
     [SerializeField]
     private float currentSpeed;
     private float verticalSpeed;
+    [SerializeField]
+    private float stepTimer;
     public float lookSpeed = 5f;
     private float turnAngle;
     private Quaternion targetRotation;
@@ -58,8 +60,10 @@ public class PlayerLocomotion : MonoBehaviour
     public bool controllerActive;
     public bool singleAttack = false;
     public bool multiAttack = false;
+    public bool attackActive = false;
     public bool poweredUp = false;
     public bool powerUpJig = false;
+    public bool haltAttack = false;
     
     //public bool canAttack = true;
     [SerializeField]
@@ -154,6 +158,7 @@ public class PlayerLocomotion : MonoBehaviour
         jumpForceConstant = jumpForce;
         currentHealth = health;
         activeCam = pathOneCam;
+        stepTimer = 0.03f;
         dead = false;
     }
 
@@ -178,27 +183,25 @@ public class PlayerLocomotion : MonoBehaviour
             if (keyboardActive)
             {
                 currentSpeed = new Vector2(playerInput.x, playerInput.y).sqrMagnitude;
-                //if(!singleAttack && !multiAttack)
+                
                 playerAnim.SetFloat("Speed", currentSpeed);
 
                 //Debug.Log("Can Move?");
-                //if (!multiAttack)
+               
                 playerInput.x = Input.GetAxisRaw("Horizontal");
-                //else if (multiAttack)
-                //playerInput.x = 1.0f;
+                
                 playerInput.y = Input.GetAxisRaw("Vertical");
             }
             else if (controllerActive)
             {
                 currentSpeed = new Vector2(playerInput.x, playerInput.y).sqrMagnitude;
-                //if(!singleAttack && !multiAttack)
+                
                 playerAnim.SetFloat("Speed", currentSpeed);
 
                 //controlstick input here
-                //if (!multiAttack)
+                
                 playerInput.x = Input.GetAxisRaw("Horizontal2");
-                //else if (multiAttack)
-                //playerInput.x = 1.0f;
+                
                 playerInput.y = Input.GetAxisRaw("Vertical2");
 
                 if (playerInput.magnitude < stickDeadZone)
@@ -234,7 +237,7 @@ public class PlayerLocomotion : MonoBehaviour
         playerMagnitude = playerInput.magnitude;
 
         //Debug.Log("Anything?");
-        Debug.Log(poweredUpInstanceTimer);
+        //Debug.Log(poweredUpInstanceTimer);
     }
 
     void JumpControls()
@@ -325,6 +328,7 @@ public class PlayerLocomotion : MonoBehaviour
                             singleAttackTimer = 0.0f;
                         }
                     }
+                    haltAttack = false;
                 }
 
                 if (Input.GetButton(attackControl))
@@ -342,7 +346,9 @@ public class PlayerLocomotion : MonoBehaviour
                     multiAttack = false;
                 }
             }
-            if (playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack - Single") || playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack - First"))
+            if (playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-Single") ||
+                playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-ContinueCombo") || 
+                playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-ExitCombo"))
             {
                 clawRight.enabled = true;
             }
@@ -358,6 +364,44 @@ public class PlayerLocomotion : MonoBehaviour
             else
             {
                 clawLeft.enabled = false;
+            }
+
+            if(playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-Single"))
+            {
+                attackActive = true;
+            }
+            else
+            {
+                attackActive = false;
+            }
+            if (multiAttack && (playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-ContinueCombo") ||
+                playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-ExitCombo") || 
+                playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-Combo")))
+            {
+                stepTimer -= 0.1f * Time.deltaTime;
+                if(stepTimer < -0.03)
+                {
+                    stepTimer = 0.03f;
+                }
+            }
+            if(playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Running - Start") || 
+                playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Idle - Healthy - Loop"))
+            {
+                haltAttack = true;
+            }
+            if(haltAttack)
+            {
+                multiAttack = false;
+            }
+            //if (multiAttack && (!playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-ContinueCombo") ||
+            //    !playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-ExitCombo") ||
+            //    !playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-Combo")))
+            //{
+            //    stepTimer = 0.3f;
+            //}
+            if(!multiAttack)
+            {
+                stepTimer = 0.03f;
             }
 
             //if (Input.GetButtonUp(jumpControl) && airBorne && jumpTimer <= 0.3f && jumpCount < 1)
@@ -387,15 +431,22 @@ public class PlayerLocomotion : MonoBehaviour
     void PlayerMove()
     {
         //transform.Translate(0, 0, vertical);
-        if(!singleAttack)
+        if(!attackActive && stepTimer > 0)
         {
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
+        
+        //if (attackActive)
+        //{
+             
+        //    transform.position += 
+        //}
+
         //if(!multiAttack)
         //{
         //    transform.position += transform.forward * lungeSpeed * Time.deltaTime;
         //}
-       
+
     }
 
     void KillBox()

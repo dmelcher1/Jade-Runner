@@ -30,10 +30,10 @@ public class TwirlyFruit : MonoBehaviour
             {
                 playerLocomotion.fruitMeter += 1;
             }
-            if (this.gameObject.tag == "PowerFruit" && other.gameObject.tag == "Player")
+            if (this.gameObject.tag == "PowerFruit" && !playerLocomotion.poweredUp)
             {
                 playerLocomotion.poweredUp = true;
-                playerLocomotion.poweredUpInstanceTimer = 0.1f;
+                playerLocomotion.powerUpJig = true;
                 playerLocomotion.moveSpeed = playerLocomotion.moveSpeed * 1.5f;
                 playerLocomotion.jumpForce = playerLocomotion.jumpForce * 1.25f;
                 //put ranged attack code here

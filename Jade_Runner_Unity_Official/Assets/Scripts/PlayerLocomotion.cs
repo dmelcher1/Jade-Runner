@@ -19,6 +19,8 @@ public class PlayerLocomotion : MonoBehaviour
     private Quaternion targetRotation;
     public GameObject[] handFires;
     public GameObject[] tigerClaws;
+    private BoxCollider clawRight;
+    private BoxCollider clawLeft;
 
     //IMPORTANT FOR ROTATION
     //private float playerRot = 80.0f;
@@ -57,6 +59,7 @@ public class PlayerLocomotion : MonoBehaviour
     public bool singleAttack = false;
     public bool multiAttack = false;
     public bool poweredUp = false;
+    public bool powerUpJig = false;
     
     //public bool canAttack = true;
     [SerializeField]
@@ -71,10 +74,12 @@ public class PlayerLocomotion : MonoBehaviour
     private float jumpForceConstant;
     public float dblJumpForce;
 
-    public float poweredUpInstanceTimer;
+    [SerializeField]
+    private float poweredUpInstanceTimer = 1.0f;
     [SerializeField]
     private float poweredUpDurationTimer = 10.0f;
     private float poweredUpTimerReset;
+    private float poweredUpInstanceTimerReset;
 
     [SerializeField]
     private float multiAttackTimer;
@@ -141,7 +146,10 @@ public class PlayerLocomotion : MonoBehaviour
         this.transform.position = currentCheckpoint.transform.position;
         rb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
+        clawRight = tigerClaws[0].GetComponent<BoxCollider>();
+        clawLeft = tigerClaws[1].GetComponent<BoxCollider>();
         poweredUpTimerReset = poweredUpDurationTimer;
+        poweredUpInstanceTimerReset = poweredUpInstanceTimer;
         moveSpeedConstant = moveSpeed;
         jumpForceConstant = jumpForce;
         currentHealth = health;
@@ -165,7 +173,7 @@ public class PlayerLocomotion : MonoBehaviour
         FruitCollection();
         PoweredUpState();
 
-        if(!dead && poweredUpInstanceTimer <= 0)
+        if(!dead && !powerUpJig)
         {
             if (keyboardActive)
             {
@@ -218,19 +226,20 @@ public class PlayerLocomotion : MonoBehaviour
         
         playerAnim.SetBool("Dead", dead);
 
-        playerAnim.SetFloat("PowerTimer", poweredUpInstanceTimer);
+        //playerAnim.SetFloat("PowerTimer", poweredUpInstanceTimer);
 
         
 
 
         playerMagnitude = playerInput.magnitude;
 
+        //Debug.Log("Anything?");
         Debug.Log(poweredUpInstanceTimer);
     }
 
     void JumpControls()
     {
-        if(!dead && poweredUpInstanceTimer <= 0)
+        if(!dead && !powerUpJig)
         {
             //Debug.Log("Jumping");
             if (keyboardActive && !controllerActive)
@@ -288,7 +297,7 @@ public class PlayerLocomotion : MonoBehaviour
 
     void AttackControls()
     {
-        if(!dead && poweredUpInstanceTimer <= 0)
+        if (!dead && !powerUpJig)
         {
             if (keyboardActive && !controllerActive)
             {
@@ -333,7 +342,23 @@ public class PlayerLocomotion : MonoBehaviour
                     multiAttack = false;
                 }
             }
-
+            if (playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack - Single") || playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack - First"))
+            {
+                clawRight.enabled = true;
+            }
+            else
+            {
+                clawRight.enabled = false;
+            }
+       
+            if(playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-Combo"))
+            {
+                clawLeft.enabled = true;
+            }
+            else
+            {
+                clawLeft.enabled = false;
+            }
 
             //if (Input.GetButtonUp(jumpControl) && airBorne && jumpTimer <= 0.3f && jumpCount < 1)
             //{
@@ -344,7 +369,6 @@ public class PlayerLocomotion : MonoBehaviour
 
             playerAnim.SetBool("SingleAttack", singleAttack);
             playerAnim.SetBool("MultiAttack", multiAttack);
-            //playerAnim.SetFloat("multiAttackTimer", multiAttackTimer);
         }
     }
 
@@ -439,12 +463,14 @@ public class PlayerLocomotion : MonoBehaviour
     {
         if(poweredUp && poweredUpDurationTimer > 0)
         {
+            //powerUpJig = true;
             poweredUpDurationTimer -= 1.0f * Time.deltaTime;
-            poweredUpInstanceTimer -= 0.1f * Time.deltaTime;
-            if (poweredUpInstanceTimer < 0.01)
-            {
-                poweredUpInstanceTimer = 0;
-            }
+            poweredUpInstanceTimer -= 1.0f * Time.deltaTime;
+            //if (poweredUpInstanceTimer < 0.01)
+            //{
+            //    poweredUpInstanceTimer = 0;
+            //}
+            //Debug.Log("Still got juice!");
             foreach (GameObject fire in handFires)
             {
                 fire.SetActive(true);
@@ -461,7 +487,15 @@ public class PlayerLocomotion : MonoBehaviour
             jumpForce = jumpForceConstant;
             poweredUpDurationTimer = poweredUpTimerReset;
         }
+        if(poweredUpInstanceTimer < 0)
+        {
+            powerUpJig = false;
+            if(!poweredUp)
+            poweredUpInstanceTimer = poweredUpInstanceTimerReset;
+        }
         playerAnim.SetBool("PoweredUp", poweredUp);
+        playerAnim.SetBool("PowerDance", powerUpJig);
+
     }
 
     private void OnCollisionStay(Collision collision)

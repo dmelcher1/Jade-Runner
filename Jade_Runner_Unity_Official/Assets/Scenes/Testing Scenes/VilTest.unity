@@ -18220,7 +18220,7 @@ PrefabInstance:
     - target: {fileID: -2650481384158574622, guid: 60e2b7df607b4b8408a95e78516ffcb3,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 60e2b7df607b4b8408a95e78516ffcb3,
         type: 3}
@@ -18370,10 +18370,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   destroyed: 0
-  charge: 0
   playerDetector: {fileID: 1656075996}
   rhinoRenderer: {fileID: 733794922}
-  chargeSpeed: 4
+  rhinoVelocity: 0
+  chargeSpeed: 8
+  charge: 0
 --- !u!1001 &484259510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59925,6 +59926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDetected: 0
+  chargeRhino: {fileID: 481462666}
 --- !u!65 &1656076000
 BoxCollider:
   m_ObjectHideFlags: 0

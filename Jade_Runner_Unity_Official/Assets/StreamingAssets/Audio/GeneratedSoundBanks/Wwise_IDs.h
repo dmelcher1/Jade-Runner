@@ -13,7 +13,9 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID ATTACK = 180661997U;
         static const AkUniqueID CHECKPOINT = 612075679U;
+        static const AkUniqueID FOOTLAND = 2498411518U;
         static const AkUniqueID FOOTSTEP = 1866025847U;
         static const AkUniqueID INTHEBEGINNING = 3071493210U;
         static const AkUniqueID UI_HOVER = 2118900976U;
@@ -28,7 +30,9 @@ namespace AK
 
             namespace SWITCH
             {
+                static const AkUniqueID DIRT = 2195636714U;
                 static const AkUniqueID GRASS = 4248645337U;
+                static const AkUniqueID STONE = 1216965916U;
             } // namespace SWITCH
         } // namespace FOOTSTEP_SWITCHES
 

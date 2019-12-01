@@ -27,36 +27,47 @@ public class CheckPt_Light : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerLocomotion.currentCheckpoint == this.gameObject)
+        if (playerLocomotion.currentCheckpoint == this.gameObject)
         {
             tripped = true;
         }
-        if(tripped)
+        if (tripped)
         {
-            if(urGoodMan.intensity < 10.0f && flareUp)
+            if (urGoodMan.intensity < 10.0f && flareUp)
             {
                 urGoodMan.intensity += 0.5f;
             }
-            if(urGoodMan.intensity >= 10.0f)
+            if (urGoodMan.intensity >= 10.0f)
             {
                 flareUp = false;
             }
-            if(!flareUp && urGoodMan.intensity > 3.0f)
+            if (!flareUp && urGoodMan.intensity > 3.0f)
             {
                 urGoodMan.intensity -= 0.2f;
             }
-            if(urGoodMan.color != endColor)
+            if (urGoodMan.color != endColor)
             {
                 urGoodMan.color = Color.Lerp(startColor, endColor, transitionTime);
             }
+
         }
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if(gameObject.CompareTag("Player"))
-    //    {
-    //        tripped = true;
-    //    }
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (playerLocomotion.currentCheckpoint == this.gameObject)
+        {
+            tripped = true;
+        }
+        if (tripped)
+        {
+            AkSoundEngine.PostEvent("Checkpoint", gameObject);
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+
+            //    if(gameObject.CompareTag("Player"))
+            //    {
+            //        tripped = true;
+            //    }
+        }
+    }
 }

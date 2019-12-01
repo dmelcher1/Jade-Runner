@@ -66,10 +66,25 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{8FB047D1-90CA-47CA-B44A-4A5D7B1A88EB}" ShortID="65845862">
+					</ChildrenList>
+				</Event>
+				<Event Name="footLand" ID="{83F4E149-4F8E-4FEB-A28D-013F8BABDDD9}">
+					<ChildrenList>
+						<Action Name="" ID="{4F70C027-CB71-498B-9DB9-A5EF7E1CAE8A}" ShortID="529930711">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="grassSteps" ID="{8C60D589-ADEE-49FA-82ED-D0912EAC61EF}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+									<ObjectRef Name="footLand_Switch" ID="{258DF6BF-F28B-42AB-8F15-E564A04C4D32}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Attack" ID="{E08B240D-AF82-49DB-9172-F1DFCB598C15}">
+					<ChildrenList>
+						<Action Name="" ID="{2615B893-0137-4C96-88A8-67C27ED0D9F3}" ShortID="839728126">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bladeAttack" ID="{010127AD-6971-49DD-BD5F-31C313580E75}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

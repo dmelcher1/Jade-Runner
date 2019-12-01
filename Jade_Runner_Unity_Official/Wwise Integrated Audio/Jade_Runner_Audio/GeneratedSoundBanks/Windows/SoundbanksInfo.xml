@@ -21,8 +21,10 @@
 			<ShortName>JadeRunner_Soundbank</ShortName>
 			<Path>JadeRunner_Soundbank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="180661997" Name="Attack" ObjectPath="\Events\Default Work Unit\Attack" DurationType="OneShot" DurationMin="0.275754" DurationMax="0.335854"/>
 				<Event Id="612075679" Name="Checkpoint" ObjectPath="\Events\Default Work Unit\Checkpoint" DurationType="OneShot" DurationMin="6.000000" DurationMax="6.000000"/>
-				<Event Id="1866025847" Name="footStep" ObjectPath="\Events\Default Work Unit\footStep" DurationType="OneShot" DurationMin="0.185729" DurationMax="0.271229"/>
+				<Event Id="2498411518" Name="footLand" ObjectPath="\Events\Default Work Unit\footLand" DurationType="OneShot" DurationMin="0.412667" DurationMax="0.773208"/>
+				<Event Id="1866025847" Name="footStep" ObjectPath="\Events\Default Work Unit\footStep" DurationType="OneShot" DurationMin="0.185729" DurationMax="0.704000"/>
 				<Event Id="3071493210" Name="inTheBeginning" ObjectPath="\Events\Default Work Unit\inTheBeginning" DurationType="Infinite"/>
 				<Event Id="2118900976" Name="UI_hover" ObjectPath="\Events\Default Work Unit\UI_hover" DurationType="OneShot" DurationMin="1.322667" DurationMax="1.322667"/>
 				<Event Id="2774129122" Name="UI_select" ObjectPath="\Events\Default Work Unit\UI_select" DurationType="OneShot" DurationMin="2.368000" DurationMax="2.368000"/>
@@ -44,25 +46,89 @@
 					<ShortName>UI_hover.wav</ShortName>
 					<Path>SFX/UI_hover_10C4C929.wem</Path>
 				</File>
+				<File Id="189058525" Language="SFX">
+					<ShortName>player_footsteps_stone_04.wav</ShortName>
+					<Path>SFX/player_footsteps_stone_04_10C4C929.wem</Path>
+				</File>
+				<File Id="240966390" Language="SFX">
+					<ShortName>player_footsteps_stone_02.wav</ShortName>
+					<Path>SFX/player_footsteps_stone_02_10C4C929.wem</Path>
+				</File>
+				<File Id="250515086" Language="SFX">
+					<ShortName>GrassLand.wav</ShortName>
+					<Path>SFX/GrassLand_10C4C929.wem</Path>
+				</File>
 				<File Id="253366961" Language="SFX">
 					<ShortName>Step_Grass_5.wav</ShortName>
 					<Path>SFX/Step_Grass_5_10C4C929.wem</Path>
+				</File>
+				<File Id="273711767" Language="SFX">
+					<ShortName>Attack1.wav</ShortName>
+					<Path>SFX/Attack1_10C4C929.wem</Path>
 				</File>
 				<File Id="341560796" Language="SFX">
 					<ShortName>Step_Grass_1.wav</ShortName>
 					<Path>SFX/Step_Grass_1_10C4C929.wem</Path>
 				</File>
+				<File Id="342657200" Language="SFX">
+					<ShortName>Village_Level_Draft 4.wav</ShortName>
+					<Path>SFX/Village_Level_Draft 4_D79FB2B7.wem</Path>
+				</File>
+				<File Id="350638146" Language="SFX">
+					<ShortName>Attack2.wav</ShortName>
+					<Path>SFX/Attack2_10C4C929.wem</Path>
+				</File>
+				<File Id="365631348" Language="SFX">
+					<ShortName>Bamboo_Stage_Demo_132bpm.wav</ShortName>
+					<Path>SFX/Bamboo_Stage_Demo_132bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="427821848" Language="SFX">
+					<ShortName>player_footsteps_dirt_1.wav</ShortName>
+					<Path>SFX/player_footsteps_dirt_1_10C4C929.wem</Path>
+				</File>
+				<File Id="437168310" Language="SFX">
+					<ShortName>player_landing_dirt_3.wav</ShortName>
+					<Path>SFX/player_landing_dirt_3_10C4C929.wem</Path>
+				</File>
 				<File Id="474746038" Language="SFX">
 					<ShortName>Step_Grass_3.wav</ShortName>
 					<Path>SFX/Step_Grass_3_10C4C929.wem</Path>
+				</File>
+				<File Id="495037492" Language="SFX">
+					<ShortName>player_footsteps_stone_01.wav</ShortName>
+					<Path>SFX/player_footsteps_stone_01_10C4C929.wem</Path>
+				</File>
+				<File Id="550483470" Language="SFX">
+					<ShortName>player_landing_dirt_2.wav</ShortName>
+					<Path>SFX/player_landing_dirt_2_10C4C929.wem</Path>
+				</File>
+				<File Id="559824723" Language="SFX">
+					<ShortName>player_landing_dirt_4.wav</ShortName>
+					<Path>SFX/player_landing_dirt_4_10C4C929.wem</Path>
+				</File>
+				<File Id="560260347" Language="SFX">
+					<ShortName>player_landing_dirt_1.wav</ShortName>
+					<Path>SFX/player_landing_dirt_1_10C4C929.wem</Path>
+				</File>
+				<File Id="587515936" Language="SFX">
+					<ShortName>player_footsteps_stone_03.wav</ShortName>
+					<Path>SFX/player_footsteps_stone_03_10C4C929.wem</Path>
 				</File>
 				<File Id="724026448" Language="SFX">
 					<ShortName>Step_Grass_4.wav</ShortName>
 					<Path>SFX/Step_Grass_4_10C4C929.wem</Path>
 				</File>
+				<File Id="804659363" Language="SFX">
+					<ShortName>player_footsteps_dirt_6.wav</ShortName>
+					<Path>SFX/player_footsteps_dirt_6_10C4C929.wem</Path>
+				</File>
 				<File Id="806889390" Language="SFX">
 					<ShortName>Step_Grass_8.wav</ShortName>
 					<Path>SFX/Step_Grass_8_10C4C929.wem</Path>
+				</File>
+				<File Id="850441153" Language="SFX">
+					<ShortName>player_footsteps_dirt_2.wav</ShortName>
+					<Path>SFX/player_footsteps_dirt_2_10C4C929.wem</Path>
 				</File>
 				<File Id="860171682" Language="SFX">
 					<ShortName>Step_Grass_6.wav</ShortName>
@@ -72,6 +138,18 @@
 					<ShortName>Menu.wav</ShortName>
 					<Path>SFX/Menu_D79FB2B7.wem</Path>
 				</File>
+				<File Id="976594680" Language="SFX">
+					<ShortName>player_footsteps_dirt_5.wav</ShortName>
+					<Path>SFX/player_footsteps_dirt_5_10C4C929.wem</Path>
+				</File>
+				<File Id="994380550" Language="SFX">
+					<ShortName>player_footsteps_dirt_3.wav</ShortName>
+					<Path>SFX/player_footsteps_dirt_3_10C4C929.wem</Path>
+				</File>
+				<File Id="1010876088" Language="SFX">
+					<ShortName>player_landing_dirt_5.wav</ShortName>
+					<Path>SFX/player_landing_dirt_5_10C4C929.wem</Path>
+				</File>
 				<File Id="1051710066" Language="SFX">
 					<ShortName>checkpoint_2.wav</ShortName>
 					<Path>SFX/checkpoint_2_10C4C929.wem</Path>
@@ -79,6 +157,10 @@
 				<File Id="1061781004" Language="SFX">
 					<ShortName>UI_select.wav</ShortName>
 					<Path>SFX/UI_select_10C4C929.wem</Path>
+				</File>
+				<File Id="1067948419" Language="SFX">
+					<ShortName>player_footsteps_dirt_4.wav</ShortName>
+					<Path>SFX/player_footsteps_dirt_4_10C4C929.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

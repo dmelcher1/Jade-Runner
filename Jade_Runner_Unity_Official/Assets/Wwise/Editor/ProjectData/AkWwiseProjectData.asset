@@ -191,7 +191,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 9d57935ecbf9c74ea26dde10967945cf
     GuidInternal: 
-    m_lastTime: -8586263894214775808
+    m_lastTime: -8586263709214775808
     List:
     - name: JadeRunner_Soundbank
       guid: ba02b25aa9be7c418c8bfcaa60830851
@@ -207,8 +207,20 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 1bead272cd7e9048b19c37dcb88683b3
     GuidInternal: 
-    m_lastTime: -8586263894714775808
+    m_lastTime: -8586263709604775808
     List:
+    - name: Attack
+      guid: 0d248be082afdb499172f1dfcb598c15
+      id: 180661997
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Attack
+        ObjectType: 3
+      Path: Default Work Unit/Attack
+      maxAttenuation: 0
+      maxDuration: 0.335854
+      minDuration: 0.275754
     - name: Checkpoint
       guid: 758a4d162966624d9b8d42242dd3ad25
       id: 612075679
@@ -219,8 +231,32 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/Checkpoint
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 6
+      minDuration: 6
+    - name: footLand
+      guid: 49e1f4838e4feb4fa28d013f8babddd9
+      id: 2498411518
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: footLand
+        ObjectType: 3
+      Path: Default Work Unit/footLand
+      maxAttenuation: 0
+      maxDuration: 0.773208
+      minDuration: 0.412667
+    - name: footStep
+      guid: 82fac55e963eb6498ea080bfc5cc63c1
+      id: 1866025847
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: footStep
+        ObjectType: 3
+      Path: Default Work Unit/footStep
+      maxAttenuation: 0
+      maxDuration: 0.704
+      minDuration: 0.185729
     - name: inTheBeginning
       guid: 9ce6f0bf8fb21e409d2492d21157e36a
       id: 3071493210
@@ -243,8 +279,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/UI_hover
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.322667
+      minDuration: 1.322667
     - name: UI_select
       guid: 6e6cc7333682924692dd70839f9ea483
       id: 2774129122
@@ -255,8 +291,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/UI_select
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.368
+      minDuration: 2.368
   RtpcWwu:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -396,8 +432,39 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 99fce58a1634eb418529c7d61df57c3a
     GuidInternal: 
-    m_lastTime: -8586263898914775808
+    m_lastTime: -8586263710934775808
     List:
+    - name: FootStep_Switches
+      guid: e92757c215aa054f86ba478398a70117
+      id: 1110811498
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: FootStep_Switches
+        ObjectType: 11
+      Path: Default Work Unit/FootStep_Switches
+      values:
+      - name: Dirt
+        guid: 6c33a5aa98b34944b6d1f08f94f0c29c
+        id: 2195636714
+        PathAndIcons:
+        - ElementName: Dirt
+          ObjectType: 10
+      - name: Grass
+        guid: d905c88acb007c40adb5303aa9bbfbc9
+        id: 4248645337
+        PathAndIcons:
+        - ElementName: Grass
+          ObjectType: 10
+      - name: Stone
+        guid: 3a7d7fa09a0a114a87927e6c5d65221b
+        id: 1216965916
+        PathAndIcons:
+        - ElementName: Stone
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: Music_Switches
       guid: 50849f41c4624d48a8510fb4533b9b9a
       id: 226124245
@@ -454,5 +521,8 @@ MonoBehaviour:
   - /Jade_Runner_Audio/Events/Default Work Unit
   - /Jade_Runner_Audio/SoundBanks
   - /Jade_Runner_Audio/SoundBanks/Default Work Unit
+  - /Jade_Runner_Audio/Switches
+  - /Jade_Runner_Audio/Switches/Default Work Unit
+  - /Jade_Runner_Audio/Switches/Default Work Unit/Music_Switches
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

@@ -21,6 +21,8 @@ TagManager:
   - Fireworks
   - Enemy
   - PowerFruit
+  - Player_Detector
+  - Stopper
   layers:
   - Default
   - TransparentFX

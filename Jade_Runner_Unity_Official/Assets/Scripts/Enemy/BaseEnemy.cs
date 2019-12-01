@@ -27,6 +27,22 @@ public class BaseEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //if(health <= 0)
+        //{
+        //    destroyed = true;
+        //}
+        //statueAnim.SetBool("Destroyed", destroyed);
+        //if (destroyed)
+        //{
+        //    Debug.Log("Please die?");
+        //    StartCoroutine("DestroyEnemy");
+        //}
+    }
+
+    IEnumerator DestroyEnemy()
+    {
+        //Instantiate puff of dust at transform.position
+        yield return new WaitForSeconds(0.4f);
+        Destroy(gameObject);
     }
 }

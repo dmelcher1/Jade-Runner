@@ -21,12 +21,64 @@
 			<ShortName>JadeRunner_Soundbank</ShortName>
 			<Path>JadeRunner_Soundbank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="612075679" Name="Checkpoint" ObjectPath="\Events\Default Work Unit\Checkpoint" DurationType="OneShot" DurationMin="6.000000" DurationMax="6.000000"/>
+				<Event Id="1866025847" Name="footStep" ObjectPath="\Events\Default Work Unit\footStep" DurationType="OneShot" DurationMin="0.185729" DurationMax="0.271229"/>
 				<Event Id="3071493210" Name="inTheBeginning" ObjectPath="\Events\Default Work Unit\inTheBeginning" DurationType="Infinite"/>
+				<Event Id="2118900976" Name="UI_hover" ObjectPath="\Events\Default Work Unit\UI_hover" DurationType="OneShot" DurationMin="1.322667" DurationMax="1.322667"/>
+				<Event Id="2774129122" Name="UI_select" ObjectPath="\Events\Default Work Unit\UI_select" DurationType="OneShot" DurationMin="2.368000" DurationMax="2.368000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="52760072" Language="SFX">
+					<ShortName>Step_Grass_9.wav</ShortName>
+					<Path>SFX/Step_Grass_9_10C4C929.wem</Path>
+				</File>
+				<File Id="65745406" Language="SFX">
+					<ShortName>Step_Grass_2.wav</ShortName>
+					<Path>SFX/Step_Grass_2_10C4C929.wem</Path>
+				</File>
+				<File Id="149824429" Language="SFX">
+					<ShortName>Step_Grass_7.wav</ShortName>
+					<Path>SFX/Step_Grass_7_10C4C929.wem</Path>
+				</File>
+				<File Id="155947586" Language="SFX">
+					<ShortName>UI_hover.wav</ShortName>
+					<Path>SFX/UI_hover_10C4C929.wem</Path>
+				</File>
+				<File Id="253366961" Language="SFX">
+					<ShortName>Step_Grass_5.wav</ShortName>
+					<Path>SFX/Step_Grass_5_10C4C929.wem</Path>
+				</File>
+				<File Id="341560796" Language="SFX">
+					<ShortName>Step_Grass_1.wav</ShortName>
+					<Path>SFX/Step_Grass_1_10C4C929.wem</Path>
+				</File>
+				<File Id="474746038" Language="SFX">
+					<ShortName>Step_Grass_3.wav</ShortName>
+					<Path>SFX/Step_Grass_3_10C4C929.wem</Path>
+				</File>
+				<File Id="724026448" Language="SFX">
+					<ShortName>Step_Grass_4.wav</ShortName>
+					<Path>SFX/Step_Grass_4_10C4C929.wem</Path>
+				</File>
+				<File Id="806889390" Language="SFX">
+					<ShortName>Step_Grass_8.wav</ShortName>
+					<Path>SFX/Step_Grass_8_10C4C929.wem</Path>
+				</File>
+				<File Id="860171682" Language="SFX">
+					<ShortName>Step_Grass_6.wav</ShortName>
+					<Path>SFX/Step_Grass_6_10C4C929.wem</Path>
+				</File>
 				<File Id="947976714" Language="SFX">
 					<ShortName>Menu.wav</ShortName>
 					<Path>SFX/Menu_D79FB2B7.wem</Path>
+				</File>
+				<File Id="1051710066" Language="SFX">
+					<ShortName>checkpoint_2.wav</ShortName>
+					<Path>SFX/checkpoint_2_10C4C929.wem</Path>
+				</File>
+				<File Id="1061781004" Language="SFX">
+					<ShortName>UI_select.wav</ShortName>
+					<Path>SFX/UI_select_10C4C929.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

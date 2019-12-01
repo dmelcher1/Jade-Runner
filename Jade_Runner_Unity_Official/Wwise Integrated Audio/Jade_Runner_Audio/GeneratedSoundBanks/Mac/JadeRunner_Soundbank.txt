@@ -1,8 +1,13 @@
 Event	ID	Name			Wwise Object Path	Notes
+	612075679	Checkpoint			\Default Work Unit\Checkpoint	
+	1866025847	footStep			\Default Work Unit\footStep	
+	2118900976	UI_hover			\Default Work Unit\UI_hover	
+	2774129122	UI_select			\Default Work Unit\UI_select	
 	3071493210	inTheBeginning			\Default Work Unit\inTheBeginning	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	226124245	Music_Switches			\Default Work Unit\Music_Switches	
+	1110811498	FootStep_Switches			\Default Work Unit\FootStep_Switches	
 
 Switch	ID	Name	Switch Group			Notes
 	321571300	Forrest_1	Music_Switches			
@@ -10,7 +15,20 @@ Switch	ID	Name	Switch Group			Notes
 	1868129168	Village_2	Music_Switches			
 	1868129171	Village_1	Music_Switches			
 	2607556080	Menu	Music_Switches			
+	4248645337	Grass	FootStep_Switches			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	52760072	Step_Grass_9	Z:\Volumes\EOR\SCHOOL\_Games_DirectedStudy\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\Step_Grass_9_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\footStep_Switch\grassSteps\Step_Grass_9		52140
+	65745406	Step_Grass_2	Z:\Volumes\EOR\SCHOOL\_Games_DirectedStudy\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\Step_Grass_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\footStep_Switch\grassSteps\Step_Grass_2		38640
+	149824429	Step_Grass_7	Z:\Volumes\EOR\SCHOOL\_Games_DirectedStudy\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\Step_Grass_7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\footStep_Switch\grassSteps\Step_Grass_7		37420
+	155947586	UI_hover	Z:\Volumes\EOR\SCHOOL\_Games_DirectedStudy\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\UI_hover_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI_hover		254016
+	253366961	Step_Grass_5	Z:\Volumes\EOR\SCHOOL\_Games_DirectedStudy\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\Step_Grass_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\footStep_Switch\grassSteps\Step_Grass_5		37972
+	341560796	Step_Grass_1	Z:\Volumes\EOR\SCHOOL\_Games_DirectedStudy\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\Step_Grass_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\footStep_Switch\grassSteps\Step_Grass_1		37444
+	474746038	Step_Grass_3	Z:\Volumes\EOR\SCHOOL\_Games_DirectedStudy\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\Step_Grass_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\footStep_Switch\grassSteps\Step_Grass_3		36748
+	724026448	Step_Grass_4	Z:\Volumes\EOR\SCHOOL\_Games_DirectedStudy\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\Step_Grass_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\footStep_Switch\grassSteps\Step_Grass_4		37692
+	806889390	Step_Grass_8	Z:\Volumes\EOR\SCHOOL\_Games_DirectedStudy\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\Step_Grass_8_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\footStep_Switch\grassSteps\Step_Grass_8		35724
+	860171682	Step_Grass_6	Z:\Volumes\EOR\SCHOOL\_Games_DirectedStudy\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\Step_Grass_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\footStep_Switch\grassSteps\Step_Grass_6		37420
 	947976714	Menu	Z:\Volumes\EOR\SCHOOL\_Games_DirectedStudy\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\Menu_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\META_Switch\Menu_Playlist\Menu\Menu		8270960
+	1051710066	checkpoint_2	Z:\Volumes\EOR\SCHOOL\_Games_DirectedStudy\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\checkpoint_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\checkpoint_2		1152192
+	1061781004	UI_select	Z:\Volumes\EOR\SCHOOL\_Games_DirectedStudy\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\UI_select_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI_select		454720
 

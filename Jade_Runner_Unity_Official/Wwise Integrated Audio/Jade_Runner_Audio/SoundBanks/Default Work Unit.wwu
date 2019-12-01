@@ -6,6 +6,10 @@
 				<SoundBank Name="JadeRunner_Soundbank" ID="{5AB202BA-BEA9-417C-8C8B-FCAA60830851}">
 					<ObjectInclusionList>
 						<ObjectRef Name="inTheBeginning" ID="{BFF0E69C-B28F-401E-9D24-92D21157E36A}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="UI_select" ID="{33C76C6E-8236-4692-92DD-70839F9EA483}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="footStep" ID="{5EC5FA82-3E96-49B6-8EA0-80BFC5CC63C1}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Checkpoint" ID="{164D8A75-6629-4D62-9B8D-42242DD3AD25}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="UI_hover" ID="{11BE6310-9A0F-4F14-8035-0C634649670F}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

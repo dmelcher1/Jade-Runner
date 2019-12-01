@@ -9,6 +9,10 @@
 							<ObjectRef Name="inTheBeginning" ID="{BFF0E69C-B28F-401E-9D24-92D21157E36A}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
 							<Position X="0" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="footStep" ID="{5EC5FA82-3E96-49B6-8EA0-80BFC5CC63C1}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
+							<Position X="1" Y="0"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
@@ -63,6 +67,7 @@
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Forrest_1" ID="{A22743F8-2C2D-4F01-ABF6-898ADCED0EC4}"/>
+						<CurrentSwitchRef Name="Grass" ID="{8AC805D9-00CB-407C-ADB5-303AA9BBFBC9}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

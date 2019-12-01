@@ -24,6 +24,57 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="UI_hover" ID="{11BE6310-9A0F-4F14-8035-0C634649670F}">
+					<ChildrenList>
+						<Action Name="" ID="{DD75ADDF-FD86-4AAC-A57A-E5B8DA2B2BA7}" ShortID="985639274">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_hover" ID="{84DF21DC-53EB-4D14-ABBD-DE9B73669A6F}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_select" ID="{33C76C6E-8236-4692-92DD-70839F9EA483}">
+					<ChildrenList>
+						<Action Name="" ID="{AFE95B58-D2A2-4688-8522-3710DBC3C444}" ShortID="1010613166">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_select" ID="{0273A90B-FCD4-4E69-B9B9-99090056429C}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Checkpoint" ID="{164D8A75-6629-4D62-9B8D-42242DD3AD25}">
+					<ChildrenList>
+						<Action Name="" ID="{DC9F6307-782C-43BC-A8AF-155332AD2478}" ShortID="365874533">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="checkpoint_2" ID="{24603C2C-F90F-4DE2-96C8-C14CFF510E23}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="footStep" ID="{5EC5FA82-3E96-49B6-8EA0-80BFC5CC63C1}">
+					<ChildrenList>
+						<Action Name="" ID="{468748AD-745B-4CE4-87AC-2CAB6FD33F07}" ShortID="948935490">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="footStep_Switch" ID="{07521F3D-4A70-4639-8512-9B5009A08903}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8FB047D1-90CA-47CA-B44A-4A5D7B1A88EB}" ShortID="65845862">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="grassSteps" ID="{8C60D589-ADEE-49FA-82ED-D0912EAC61EF}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

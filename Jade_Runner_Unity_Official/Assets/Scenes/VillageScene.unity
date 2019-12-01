@@ -67240,11 +67240,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1429590148}
     m_Modifications:
-    - target: {fileID: 601901962154426178, guid: 8a045fba62662cb4fa8f27e289910e52,
-        type: 3}
-      propertyPath: m_Name
-      value: Checkpt.Box (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 601901962154426179, guid: 8a045fba62662cb4fa8f27e289910e52,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67299,6 +67294,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 601901962154426178, guid: 8a045fba62662cb4fa8f27e289910e52,
+        type: 3}
+      propertyPath: m_Name
+      value: Checkpt.Box (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a045fba62662cb4fa8f27e289910e52, type: 3}
@@ -73836,6 +73836,7 @@ GameObject:
   - component: {fileID: 1232652486}
   - component: {fileID: 1232652485}
   - component: {fileID: 1232652482}
+  - component: {fileID: 1232652487}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -73967,6 +73968,14 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!81 &1232652487
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232652481}
+  m_Enabled: 1
 --- !u!1001 &1233009981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87514,11 +87523,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1429590148}
     m_Modifications:
-    - target: {fileID: 601901962154426178, guid: 8a045fba62662cb4fa8f27e289910e52,
-        type: 3}
-      propertyPath: m_Name
-      value: Checkpt.Box (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 601901962154426179, guid: 8a045fba62662cb4fa8f27e289910e52,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -87573,6 +87577,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 601901962154426178, guid: 8a045fba62662cb4fa8f27e289910e52,
+        type: 3}
+      propertyPath: m_Name
+      value: Checkpt.Box (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a045fba62662cb4fa8f27e289910e52, type: 3}
@@ -92069,11 +92078,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1429590148}
     m_Modifications:
-    - target: {fileID: 601901962154426178, guid: 8a045fba62662cb4fa8f27e289910e52,
-        type: 3}
-      propertyPath: m_Name
-      value: Checkpt.Box (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 601901962154426179, guid: 8a045fba62662cb4fa8f27e289910e52,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -92128,6 +92132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 601901962154426178, guid: 8a045fba62662cb4fa8f27e289910e52,
+        type: 3}
+      propertyPath: m_Name
+      value: Checkpt.Box (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a045fba62662cb4fa8f27e289910e52, type: 3}
@@ -110113,11 +110122,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1892007354}
     m_Modifications:
-    - target: {fileID: 2585304223658005204, guid: fdaac33e89d647e41af104dcc4d34c90,
-        type: 3}
-      propertyPath: m_Name
-      value: wyvernfruit
-      objectReference: {fileID: 0}
     - target: {fileID: 1565987847568433351, guid: fdaac33e89d647e41af104dcc4d34c90,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -110172,6 +110176,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585304223658005204, guid: fdaac33e89d647e41af104dcc4d34c90,
+        type: 3}
+      propertyPath: m_Name
+      value: wyvernfruit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdaac33e89d647e41af104dcc4d34c90, type: 3}

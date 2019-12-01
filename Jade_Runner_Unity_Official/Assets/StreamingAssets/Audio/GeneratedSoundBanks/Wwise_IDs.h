@@ -13,11 +13,25 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID CHECKPOINT = 612075679U;
+        static const AkUniqueID FOOTSTEP = 1866025847U;
         static const AkUniqueID INTHEBEGINNING = 3071493210U;
+        static const AkUniqueID UI_HOVER = 2118900976U;
+        static const AkUniqueID UI_SELECT = 2774129122U;
     } // namespace EVENTS
 
     namespace SWITCHES
     {
+        namespace FOOTSTEP_SWITCHES
+        {
+            static const AkUniqueID GROUP = 1110811498U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID GRASS = 4248645337U;
+            } // namespace SWITCH
+        } // namespace FOOTSTEP_SWITCHES
+
         namespace MUSIC_SWITCHES
         {
             static const AkUniqueID GROUP = 226124245U;

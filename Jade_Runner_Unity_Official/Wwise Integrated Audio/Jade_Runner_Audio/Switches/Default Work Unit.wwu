@@ -12,6 +12,11 @@
 						<Switch Name="Forrest_2" ID="{717B4F83-0EA0-4F63-91FE-AE59025709DD}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="FootStep_Switches" ID="{C25727E9-AA15-4F05-86BA-478398A70117}">
+					<ChildrenList>
+						<Switch Name="Grass" ID="{8AC805D9-00CB-407C-ADB5-303AA9BBFBC9}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

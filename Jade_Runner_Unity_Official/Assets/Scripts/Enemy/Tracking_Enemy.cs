@@ -15,7 +15,7 @@ public class Tracking_Enemy : BaseEnemy
     public Transform[] patrolPoints;
     private NavMeshAgent statuePuppet;
     //private GameObject playerLoc;
-    private Animator statueAnim;
+    
     private float followDist;
     [SerializeField]
     private float resetTimer = 30.0f;
@@ -38,7 +38,7 @@ public class Tracking_Enemy : BaseEnemy
 
     private void Awake()
     {
-        statueAnim = GetComponent<Animator>();
+        
         statuePuppet = GetComponent<NavMeshAgent>();
 
         //if(!randomPatrol && strictPatrol && patroling)

@@ -9,11 +9,13 @@ public class BaseEnemy : MonoBehaviour
     public bool destroyed;
     protected PlayerLocomotion playerLocomotion;
     protected GameObject playerLocation;
+    protected Animator statueAnim;
 
     private void Awake()
     {
         playerLocation = GameObject.FindGameObjectWithTag("Player");
         playerLocomotion = playerLocation.GetComponent<PlayerLocomotion>();
+        statueAnim = GetComponent<Animator>();
     }
 
     // Start is called before the first frame update

@@ -2361,6 +2361,7 @@ GameObject:
   - component: {fileID: 7838793606440177532}
   - component: {fileID: 4262956344430911839}
   - component: {fileID: 7838793606440177535}
+  - component: {fileID: -5632654108175137423}
   m_Layer: 0
   m_Name: Character_Main-v2
   m_TagString: Player
@@ -2464,23 +2465,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b2358b0735e6d4baefdcea91fb62c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMagnitude: 0
   stickDeadZone: 0.1
   moveSpeed: 5
+  currentSpeed: 0
+  stepTimer: 0
   lookSpeed: 5
+  handFires: []
+  tigerClaws: []
   playerInput: {x: 0, y: 0}
+  temp: 0
   fruitCount: 0
+  fruitMeter: 0
+  lastLeg: 0
   airBorne: 0
   dblJump: 0
   inKillbox: 0
   canJump: 1
   keyboardActive: 1
   controllerActive: 0
+  singleAttack: 0
+  multiAttack: 0
+  attackActive: 0
+  poweredUp: 0
+  powerUpJig: 0
+  haltAttack: 0
   killTimer: 10
   jumpTimer: 0
   dblJumpTimer: 0
   jumpCount: 0
   jumpForce: 6
   dblJumpForce: 4
+  poweredUpInstanceTimer: 1
+  poweredUpDurationTimer: 10
+  multiAttackTimer: 0
+  singleAttackTimer: 0
   fadeDelay: 10
   pathOneCam: {fileID: 0}
   pathTwoCam: {fileID: 0}
@@ -2493,12 +2512,26 @@ MonoBehaviour:
   checkPtCam: {fileID: 0}
   triggerCollider: {fileID: 4262956344430911839}
   health: 3
+  currentHealth: 0
   hit: 0
   dead: 0
   currentCheckpoint: {fileID: 0}
   flashDuration: 0.07
   numberOfFlashes: 4
   characterBody: {fileID: 7838793605963900843}
+  noInput: 0
+--- !u!114 &-5632654108175137423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7838793606440177521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b094fa21a7754f2299ce56a0ae0e2f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7838793606468738079
 GameObject:
   m_ObjectHideFlags: 0

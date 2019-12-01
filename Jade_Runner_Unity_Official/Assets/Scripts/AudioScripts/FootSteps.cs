@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class FootSteps : MonoBehaviour
 {
+
     uint bankID;
 
     public void LoadBank()
@@ -13,7 +15,29 @@ public class FootSteps : MonoBehaviour
     // Update is called once per frame
     private void Step()
     {
-        AkSoundEngine.PostEvent("UI_hover", gameObject);
+        AkSoundEngine.PostEvent("footStep", gameObject);
 
     }
+    //[SerializeField]
+    //private AudioClip[] footStep;
+
+    //private AudioSource footStepSource;
+
+    //private void Awake()
+    //{
+    //    footStepSource = GetComponent<AudioSource>(); 
+    //}
+
+    //private void Step()
+    //{
+    //    AudioClip footStep = GetRandomClip();
+    //    footStepSource.PlayOneShot(footStep);
+    //}
+
+
+    //private AudioClip GetRandomClip()
+    //{
+    //    return footStep[UnityEngine.Random.Range(0, footStep.Length)];
+    //}
+
 }

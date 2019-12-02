@@ -63,6 +63,7 @@ MonoBehaviour:
   rhinoVelocity: 0
   chargeSpeed: 6
   charge: 0
+  hitByPlayer: 0
 --- !u!1 &7293495038508474965
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,7 +230,7 @@ PrefabInstance:
     - target: {fileID: -2650481384158574622, guid: 60e2b7df607b4b8408a95e78516ffcb3,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 60e2b7df607b4b8408a95e78516ffcb3,
         type: 3}
@@ -321,7 +322,7 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 785269161665660069, guid: 60e2b7df607b4b8408a95e78516ffcb3,
+    - target: {fileID: 6042366688119511072, guid: 60e2b7df607b4b8408a95e78516ffcb3,
         type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -331,7 +332,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6042366688119511072, guid: 60e2b7df607b4b8408a95e78516ffcb3,
+    - target: {fileID: 785269161665660069, guid: 60e2b7df607b4b8408a95e78516ffcb3,
         type: 3}
       propertyPath: m_IsActive
       value: 1

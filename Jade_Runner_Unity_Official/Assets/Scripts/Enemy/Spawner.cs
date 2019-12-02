@@ -8,20 +8,28 @@ public class Spawner : MonoBehaviour
     public bool forChargeRhino;
     public bool forPatrolRhino;
 
+    public GameObject chargeRhino;
+    private GameObject patrolRhino;
+    private GameObject gorilla;
+
     // Start is called before the first frame update
     void Start()
     {
-        if(forGorilla)
+        //chargeRhino = GameObject.Find("Charge_Rhino");
+        if (forGorilla)
         {
+            //gorilla = GameObject.Find() Insert name of gorilla object here
             //Instantiate Gorilla at this position and rotation
         }
         else if(forChargeRhino)
         {
             //Instantiate Charging Rhino at this position and rotation
+            Instantiate(chargeRhino, new Vector3(transform.position.x, transform.position.y + 1.2f, transform.position.z), transform.rotation);
         }
         else if(forPatrolRhino)
         {
             //Instantiate Patrolling Rhino at this position and rotation
+            //Instantiate()
         }
     }
 

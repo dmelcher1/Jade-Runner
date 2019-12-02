@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class BaseEnemy : MonoBehaviour
 {
-    public int health;
     public bool destroyed;
     protected PlayerLocomotion playerLocomotion;
     protected GameObject playerLocation;

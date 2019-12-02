@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class C_Rhino : BaseEnemy
 {
+    public int health;
     public GameObject playerDetector;
     private PlayerDetector playerDetectorScript;
     public GameObject rhinoRenderer;
@@ -12,6 +13,7 @@ public class C_Rhino : BaseEnemy
     private float rhinoVelocity;
     public float chargeSpeed;
     public bool charge;
+    public bool hitByPlayer;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +43,7 @@ public class C_Rhino : BaseEnemy
         {
             rb.velocity = Vector3.zero;
         }
-        if (health <= 0)
+        if (hitByPlayer)
         {
             destroyed = true;
         }
@@ -56,12 +58,18 @@ public class C_Rhino : BaseEnemy
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Stopper" || other.gameObject.tag == "Player")
+        //other.gameObject.tag == "Player" ||
+        if((other.gameObject.tag == "Stopper" || other.gameObject.tag == "Player") && !hitByPlayer)
         {
             Debug.Log("Kablooie!");
+            playerLocomotion.attackedByEnemy = true;
             charge = false;
- 
             destroyed = true;
+        }
+
+        if(other.gameObject.tag == "TigerClaw")
+        {
+            hitByPlayer = true;
         }
     }
 }

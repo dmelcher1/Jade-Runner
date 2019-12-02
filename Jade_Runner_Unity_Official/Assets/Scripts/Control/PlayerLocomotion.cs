@@ -120,6 +120,7 @@ public class PlayerLocomotion : MonoBehaviour
     public int currentHealth;
 
     public bool hit = false;
+    public bool attackedByEnemy = false;
    
     public bool dead;
     private float die;
@@ -168,7 +169,7 @@ public class PlayerLocomotion : MonoBehaviour
 
         //if(!noInput) <- will be used to decide if player is moving or not for idle animation
         //{ }
-
+        //singleAttack = true;
         
         //KEEP JUMP HERE!
         JumpControls();
@@ -295,11 +296,14 @@ public class PlayerLocomotion : MonoBehaviour
             playerAnim.SetBool("Airborne", airBorne);
             playerAnim.SetBool("DoubleJump", dblJump);
             playerAnim.SetFloat("VerticalSpeed", rb.velocity.y);
+            playerAnim.SetFloat("JumpTime", jumpTimer);
         }
     }
 
     void AttackControls()
     {
+        //multiAttack = true;
+        //Debug.Log(multiAttack);
         if (!dead && !powerUpJig)
         {
             if (keyboardActive && !controllerActive)
@@ -313,6 +317,7 @@ public class PlayerLocomotion : MonoBehaviour
 
             multiAttackTimer -= 0.1f;
             singleAttackTimer -= 0.1f;
+            
 
             if (!airBorne)
             {
@@ -325,6 +330,7 @@ public class PlayerLocomotion : MonoBehaviour
                         if (singleAttackTimer < -3.0f)
                         {
                             singleAttack = true;
+                            //Debug.Log(singleAttack);
                             singleAttackTimer = 0.0f;
                         }
                     }
@@ -333,8 +339,10 @@ public class PlayerLocomotion : MonoBehaviour
 
                 if (Input.GetButton(attackControl))
                 {
+                    //multiAttack = true;
                     if (multiAttackTimer <= 0)
                     {
+                        //Debug.Log("Multi?");
                         singleAttack = false;
                         multiAttack = true;
                     }
@@ -384,35 +392,24 @@ public class PlayerLocomotion : MonoBehaviour
                     stepTimer = 0.03f;
                 }
             }
-            if(playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Running - Start") || 
-                playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Idle - Healthy - Loop"))
+            if((playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Running - Start") || 
+                playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Idle - Healthy - Loop")) && !singleAttack)
             {
-                haltAttack = true;
+                //haltAttack = true;
             }
             if(haltAttack)
             {
                 multiAttack = false;
             }
-            //if (multiAttack && (!playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-ContinueCombo") ||
-            //    !playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-ExitCombo") ||
-            //    !playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-Combo")))
-            //{
-            //    stepTimer = 0.3f;
-            //}
+            
             if(!multiAttack)
             {
                 stepTimer = 0.03f;
             }
 
-            //if (Input.GetButtonUp(jumpControl) && airBorne && jumpTimer <= 0.3f && jumpCount < 1)
-            //{
-
-            //    dblJump = true;
-            //    jumpCount += 1;
-            //}
-
-            playerAnim.SetBool("SingleAttack", singleAttack);
             playerAnim.SetBool("MultiAttack", multiAttack);
+            playerAnim.SetBool("SingleAttack", singleAttack);
+            
         }
     }
 
@@ -567,7 +564,7 @@ public class PlayerLocomotion : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == ("Checkpoint"))
+        if (other.gameObject.tag == ("Checkpoint"))
         {
             currentCheckpoint = other.gameObject;
             currentCheckpoint.tag = ("OldPoint");
@@ -580,7 +577,7 @@ public class PlayerLocomotion : MonoBehaviour
             pathOneCam.Priority = 11;
             pathTwoCam.Priority = 1;
             pathThreeCam.Priority = 1;
-            if(pathFourCam != null)
+            if (pathFourCam != null)
             {
                 pathFourCam.Priority = 1;
                 pathFiveCam.Priority = 1;
@@ -589,7 +586,7 @@ public class PlayerLocomotion : MonoBehaviour
             }
             pathTwoCam.gameObject.SetActive(false);
             pathThreeCam.gameObject.SetActive(false);
-            if(pathFourCam != null)
+            if (pathFourCam != null)
             {
                 pathFourCam.gameObject.SetActive(false);
                 pathFiveCam.gameObject.SetActive(false);
@@ -604,7 +601,7 @@ public class PlayerLocomotion : MonoBehaviour
             pathOneCam.Priority = 1;
             pathTwoCam.Priority = 11;
             pathThreeCam.Priority = 1;
-            if(pathFourCam != null)
+            if (pathFourCam != null)
             {
                 pathFourCam.Priority = 1;
                 pathFiveCam.Priority = 1;
@@ -628,7 +625,7 @@ public class PlayerLocomotion : MonoBehaviour
             pathOneCam.Priority = 1;
             pathTwoCam.Priority = 1;
             pathThreeCam.Priority = 11;
-            if(pathFourCam != null)
+            if (pathFourCam != null)
             {
                 pathFourCam.Priority = 1;
                 pathFiveCam.Priority = 1;
@@ -736,7 +733,7 @@ public class PlayerLocomotion : MonoBehaviour
         //    }
         //    Destroy(other.gameObject);
         //}
-        if(other.gameObject.tag == "Killbox")
+        if (other.gameObject.tag == "Killbox")
         {
             inKillbox = true;
         }
@@ -749,6 +746,14 @@ public class PlayerLocomotion : MonoBehaviour
                 health -= 1;
             }
             hit = true;
+        }
+
+        if(attackedByEnemy)
+        {
+            Debug.Log("Arrg!");
+            health -= 1;
+            hit = true;
+            attackedByEnemy = false;
         }
     }
 

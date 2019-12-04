@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerDetector : MonoBehaviour
+public class CRhino_PlayerDetector : MonoBehaviour
 {
     public bool playerDetected;
     private BoxCollider thisCollider;

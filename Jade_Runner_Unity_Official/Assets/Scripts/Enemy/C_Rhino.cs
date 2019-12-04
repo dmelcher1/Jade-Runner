@@ -6,7 +6,7 @@ public class C_Rhino : BaseEnemy
 {
     public int health;
     public GameObject playerDetector;
-    private PlayerDetector playerDetectorScript;
+    private CRhino_PlayerDetector playerDetectorScript;
     public GameObject rhinoRenderer;
     private Rigidbody rb;
     [SerializeField]
@@ -18,7 +18,7 @@ public class C_Rhino : BaseEnemy
     // Start is called before the first frame update
     void Start()
     {
-        playerDetectorScript = playerDetector.GetComponent<PlayerDetector>();
+        playerDetectorScript = playerDetector.GetComponent<CRhino_PlayerDetector>();
         rb = GetComponent<Rigidbody>();
     }
 

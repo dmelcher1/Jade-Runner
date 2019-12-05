@@ -68,12 +68,13 @@ public class C_Rhino : BaseEnemy
             charge = false;
             destroyed = true;
         }
-        else if(other.gameObject.tag == "Player" && !hitByPlayer)
+        else if(charge && other.gameObject.tag == "Player" && !hitByPlayer)
         {
             Debug.Log("Kablooie!");
             playerLocomotion.attackedByEnemy = true;
-            charge = false;
             destroyed = true;
+            charge = false;
+            
         }
 
         if (other.gameObject.tag == "TigerClaw")

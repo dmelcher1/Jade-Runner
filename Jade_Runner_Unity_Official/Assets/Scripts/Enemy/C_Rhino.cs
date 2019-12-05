@@ -37,7 +37,10 @@ public class C_Rhino : BaseEnemy
         statueAnim.SetBool("Charging", charge);
         if(charge)
         {
-            rb.velocity = Vector3.right * chargeSpeed * -1;
+            //rb.AddRelativeForce(Vector3.right * chargeSpeed * -1);
+            transform.Translate(Vector3.forward * chargeSpeed * Time.deltaTime, Space.Self);
+            //rb.velocity = Vector3.right * chargeSpeed * -1;
+            //transform.position = transform.right * chargeSpeed * -1 * Time.deltaTime;
         }
         else if(!charge)
         {
@@ -59,7 +62,13 @@ public class C_Rhino : BaseEnemy
     private void OnTriggerEnter(Collider other)
     {
         //other.gameObject.tag == "Player" ||
-        if((other.gameObject.tag == "Stopper" || other.gameObject.tag == "Player") && !hitByPlayer)
+        if(other.gameObject.tag == "Stopper")
+        {
+            Debug.Log("Kablooie!");
+            charge = false;
+            destroyed = true;
+        }
+        else if(other.gameObject.tag == "Player" && !hitByPlayer)
         {
             Debug.Log("Kablooie!");
             playerLocomotion.attackedByEnemy = true;
@@ -67,7 +76,7 @@ public class C_Rhino : BaseEnemy
             destroyed = true;
         }
 
-        if(other.gameObject.tag == "TigerClaw")
+        if (other.gameObject.tag == "TigerClaw")
         {
             hitByPlayer = true;
         }

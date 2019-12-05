@@ -560,6 +560,10 @@ public class PlayerLocomotion : MonoBehaviour
                 jumpCount = 0;
             }
         }
+        //if(collision.gameObject.CompareTag("Debug"))
+        //{
+        //    Debug.Log("What the fuck?");
+        //}
     }
 
     private void OnTriggerEnter(Collider other)

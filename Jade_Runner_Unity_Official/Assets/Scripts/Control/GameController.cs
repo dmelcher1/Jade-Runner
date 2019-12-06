@@ -27,19 +27,26 @@ public class GameController : MonoBehaviour
     private int startHealth;
     private float startFadeDelay;
     private string currentScene;
+    //private int nextScene;
+    //private Scene loadingScene;
+    //public bool menuScene;
 
     
     // Start is called before the first frame update
     void Start()
     {
         currentScene = SceneManager.GetActiveScene().name;
+        
         levelEnder = GetComponent<BoxCollider>();
-        //playerAnimator = player.GetComponent<Animator>();
+        
         playerLocomotion = GameObject.FindObjectOfType<PlayerLocomotion>();
-        //fader = GetComponent<Image>();
-        //alpha = fader.color;
+        
         startHealth = playerLocomotion.health;
         startFadeDelay = playerLocomotion.fadeDelay;
+        //if(SceneManager.GetActiveScene().name == "VillageMenuScene")
+        //{
+        //    menuScene = true;
+        //}
     }
 
     // Update is called once per frame
@@ -56,7 +63,8 @@ public class GameController : MonoBehaviour
             if(changeLevelDelay <= 0.0f)
             {
                 //StartCoroutine("Reset");
-                SceneManager.LoadScene(currentScene);
+                //SceneManager.LoadScene(currentScene);
+                SceneManager.LoadScene("LoadScreen");
                 //SceneManager.LoadScene("NextLevel"); :P
             }
         }

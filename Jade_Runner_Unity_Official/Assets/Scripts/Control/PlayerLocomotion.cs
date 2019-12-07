@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerLocomotion : MonoBehaviour
 {
+    //private GameController gameController;
+
     [SerializeField]
     private float playerMagnitude;
 

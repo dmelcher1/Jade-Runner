@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+public class GameController : LevelTracking
 {
     public BoxCollider levelEnder;
     //^This might need to be modified to a GameObject, 
@@ -12,7 +12,8 @@ public class GameController : MonoBehaviour
     public bool levelComplete;
     public bool beatLevel = false;
     //public bool faded = false;
-   
+    //public LevelTracking levelTracking;
+    //public GameObject levelTracker;
     private float changeLevelDelay = 5.0f;
     public PlayerLocomotion playerLocomotion;
     //public Animator levelAnim;
@@ -35,6 +36,8 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //levelTracking = GameObject.Find("LevelTracker").GetComponent<LevelTracking>();
+        levelSelected = false;
         currentScene = SceneManager.GetActiveScene().name;
         
         levelEnder = GetComponent<BoxCollider>();

@@ -34,4 +34,14 @@ public class AudioManager : MonoBehaviour
     {
         AkSoundEngine.PostEvent("villageStart", gameObject);
     }
+
+    public void PlayEndCredits()
+    {
+
+    }
+
+    public void PlayForrest()
+    {
+
+    }
 }

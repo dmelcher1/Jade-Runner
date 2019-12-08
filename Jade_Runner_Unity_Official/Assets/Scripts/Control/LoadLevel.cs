@@ -80,6 +80,7 @@ public class LoadLevel : MonoBehaviour
                 playScreen.texture = loadingScreenVideo.texture;
                 //animator.SetBool("FadeOut", false);
                 loadingScreenVideo.Play();
+                GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayForrest();
             }
             if (previousScene == 3)
             {
@@ -98,6 +99,7 @@ public class LoadLevel : MonoBehaviour
 
                 if(youWon)
                 {
+                    GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
                     vidRunTime = creditsSceneVideo.clip.length;
                     endTime = vidRunTime - 1;
                     creditsSceneVideo.Prepare();

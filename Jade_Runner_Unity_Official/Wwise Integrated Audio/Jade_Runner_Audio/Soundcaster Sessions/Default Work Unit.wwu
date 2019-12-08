@@ -14,7 +14,7 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="villageStart" ID="{CF8D7E17-CDF9-4379-80C9-82F24212F34C}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
+							<ObjectRef Name="villageImediate" ID="{CF8D7E17-CDF9-4379-80C9-82F24212F34C}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>

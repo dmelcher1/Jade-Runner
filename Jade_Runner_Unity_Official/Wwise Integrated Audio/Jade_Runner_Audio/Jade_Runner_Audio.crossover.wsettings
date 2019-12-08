@@ -11,6 +11,7 @@
 				<Property Name="Event Action List\{61E103A0-00CC-4701-AA7D-EAACB00F86A2}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{7B3B585C-C561-4CBB-A0B6-A580BC0FC171}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{7C90D9A3-161A-4AB6-8A06-12F1A429A7CB}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{7EF338C4-0211-4C51-AD9F-0502508F3C8E}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{83F4E149-4F8E-4FEB-A28D-013F8BABDDD9}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{95F7EC19-B329-4CA3-831F-0005A6267E4D}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{B8FCC825-F847-4BA9-92CD-00317A287076}\x64_Expand States" Type="string" Value=""/>
@@ -54,6 +55,7 @@
 				<Property Name="MonitoringManager\WatchMgr\x64_GameSyncWatches" Type="string" Value=""/>
 				<Property Name="MonitoringManager\WatchMgr\x64_Watches" Type="string" Value=""/>
 				<Property Name="Music Transition List\{217BAA7D-EA3C-4388-AA95-751BC2CAD6C4}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{3188C71B-B309-4768-A431-7A43CF8633BF}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{56023E0E-A57E-4A9A-9A70-DE7B3B8DFAD9}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{9C957375-8E9F-4709-80A4-F84EBC61A505}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{FCB8CFE3-861E-47D3-B518-AFDEF4EB4F2B}\x64_Expand States" Type="string" Value=""/>

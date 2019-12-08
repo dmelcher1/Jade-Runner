@@ -10,6 +10,7 @@
 						<Switch Name="Village_2" ID="{25B5AB01-9F08-4B4B-B829-A522E93069F9}"/>
 						<Switch Name="Forrest_1" ID="{A22743F8-2C2D-4F01-ABF6-898ADCED0EC4}"/>
 						<Switch Name="Forrest_2" ID="{717B4F83-0EA0-4F63-91FE-AE59025709DD}"/>
+						<Switch Name="VillageImediate" ID="{9093E62D-F790-4843-A944-D7B88A272240}"/>
 					</ChildrenList>
 				</SwitchGroup>
 				<SwitchGroup Name="FootStep_Switches" ID="{C25727E9-AA15-4F05-86BA-478398A70117}">

@@ -10,16 +10,48 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="playerDeath" ID="{F8CB0C41-B1E0-4864-B4B9-F97303E26C8E}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="villageStart" ID="{CF8D7E17-CDF9-4379-80C9-82F24212F34C}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="footStep" ID="{5EC5FA82-3E96-49B6-8EA0-80BFC5CC63C1}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
 							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="pendantCrack1" ID="{61E103A0-00CC-4701-AA7D-EAACB00F86A2}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="UI_Select" ID="{33C76C6E-8236-4692-92DD-70839F9EA483}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
+							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="footLand" ID="{83F4E149-4F8E-4FEB-A28D-013F8BABDDD9}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="pendantCrack2" ID="{7B3B585C-C561-4CBB-A0B6-A580BC0FC171}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="UI_Hover" ID="{11BE6310-9A0F-4F14-8035-0C634649670F}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Attack" ID="{E08B240D-AF82-49DB-9172-F1DFCB598C15}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
 							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="pendantCrack3" ID="{BB8F39A9-650F-45AF-9049-FD569A89B721}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Respawn" ID="{95F7EC19-B329-4CA3-831F-0005A6267E4D}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
+							<Position X="3" Y="2"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -75,7 +107,7 @@
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Village_1" ID="{941591EF-E4B0-424C-A873-DADBD5BC0277}"/>
-						<CurrentSwitchRef Name="Grass" ID="{8AC805D9-00CB-407C-ADB5-303AA9BBFBC9}"/>
+						<CurrentSwitchRef Name="Stone" ID="{A07F7D3A-0A9A-4A11-8792-7E6C5D65221B}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

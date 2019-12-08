@@ -24,7 +24,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="UI_hover" ID="{11BE6310-9A0F-4F14-8035-0C634649670F}">
+				<Event Name="UI_Hover" ID="{11BE6310-9A0F-4F14-8035-0C634649670F}">
 					<ChildrenList>
 						<Action Name="" ID="{DD75ADDF-FD86-4AAC-A57A-E5B8DA2B2BA7}" ShortID="985639274">
 							<ReferenceList>
@@ -35,7 +35,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="UI_select" ID="{33C76C6E-8236-4692-92DD-70839F9EA483}">
+				<Event Name="UI_Select" ID="{33C76C6E-8236-4692-92DD-70839F9EA483}">
 					<ChildrenList>
 						<Action Name="" ID="{AFE95B58-D2A2-4688-8522-3710DBC3C444}" ShortID="1010613166">
 							<ReferenceList>
@@ -87,6 +87,127 @@
 									<ObjectRef Name="bladeAttack" ID="{010127AD-6971-49DD-BD5F-31C313580E75}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
 								</Reference>
 							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pendantCrack1" ID="{61E103A0-00CC-4701-AA7D-EAACB00F86A2}">
+					<ChildrenList>
+						<Action Name="" ID="{70AC1B7F-A51B-4892-857B-971265F58007}" ShortID="969092674">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="jade_pendant_crack_1" ID="{0BBC0746-274B-4170-80F8-AA875C0C222A}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pendantCrack2" ID="{7B3B585C-C561-4CBB-A0B6-A580BC0FC171}">
+					<ChildrenList>
+						<Action Name="" ID="{861A181E-28AD-455C-8668-8A4B20A7B038}" ShortID="822273457">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="jade_pendant_crack_2" ID="{5D44621B-E29F-4BCB-A8CB-4DC4F36AEA24}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pendantCrack3" ID="{BB8F39A9-650F-45AF-9049-FD569A89B721}">
+					<ChildrenList>
+						<Action Name="" ID="{64AD093E-1702-473C-B6E7-C0304B20BD3E}" ShortID="573649607">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="jade_pendant_crack_3" ID="{3A68770E-9AF8-4903-A186-1EA504085EE0}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="playerDeath" ID="{F8CB0C41-B1E0-4864-B4B9-F97303E26C8E}">
+					<ChildrenList>
+						<Action Name="" ID="{85334598-06F7-4D11-910C-5CB47EEA44E9}" ShortID="344939477">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="8"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{3F802986-0923-465F-9BBD-7E6A5D1854BC}" ShortID="832498615">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_death" ID="{951716EC-3E76-48DB-8C0A-2279F5111C53}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="levelComplete" ID="{E45B4463-BB53-4FF3-92E5-5A59C8D7CBCB}"/>
+				<Event Name="villageStart" ID="{CF8D7E17-CDF9-4379-80C9-82F24212F34C}">
+					<ChildrenList>
+						<Action Name="" ID="{EB48BF51-7535-412B-81D2-61363E57AC47}" ShortID="794630237">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ambience_birds" ID="{BC1902CB-F3D2-4EB6-9497-33D2C8E06558}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EBAD5AD8-0042-4E70-A5E9-B5DF3307502F}" ShortID="762220444">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ambience_forest" ID="{79AE95B4-06E6-4A9C-BD01-1B18328BE352}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8064AFE8-3366-4A20-8EFB-4EFF9D7650B6}" ShortID="151790781">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ambience_night" ID="{F6281334-681C-4EC6-A7FD-E78EC1190016}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D1C86D8F-5B6C-4887-8329-1D668B00489C}" ShortID="851620682">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Village_1" ID="{941591EF-E4B0-424C-A873-DADBD5BC0277}" WorkUnitID="{8AE5FC99-3416-41EB-8529-C7D61DF57C3A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="forestStart" ID="{7C90D9A3-161A-4AB6-8A06-12F1A429A7CB}">
+					<ChildrenList>
+						<Action Name="" ID="{9B02C4DE-1EC9-488D-B11B-481237BE6C6A}" ShortID="282993432">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Forrest_1" ID="{A22743F8-2C2D-4F01-ABF6-898ADCED0EC4}" WorkUnitID="{8AE5FC99-3416-41EB-8529-C7D61DF57C3A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Respawn" ID="{95F7EC19-B329-4CA3-831F-0005A6267E4D}">
+					<ChildrenList>
+						<Action Name="" ID="{F77273B6-498B-4904-B8A7-E63FE18F7C80}" ShortID="684085660">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="10"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList/>
 						</Action>
 					</ChildrenList>
 				</Event>

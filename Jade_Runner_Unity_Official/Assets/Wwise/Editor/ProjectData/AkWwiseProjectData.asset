@@ -191,7 +191,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 9d57935ecbf9c74ea26dde10967945cf
     GuidInternal: 
-    m_lastTime: -8586263709214775808
+    m_lastTime: -8586258393494775808
     List:
     - name: JadeRunner_Soundbank
       guid: ba02b25aa9be7c418c8bfcaa60830851
@@ -207,7 +207,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 1bead272cd7e9048b19c37dcb88683b3
     GuidInternal: 
-    m_lastTime: -8586263709604775808
+    m_lastTime: -8586258393314775808
     List:
     - name: Attack
       guid: 0d248be082afdb499172f1dfcb598c15
@@ -219,8 +219,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/Attack
       maxAttenuation: 0
-      maxDuration: 0.335854
-      minDuration: 0.275754
+      maxDuration: -1
+      minDuration: -1
     - name: Checkpoint
       guid: 758a4d162966624d9b8d42242dd3ad25
       id: 612075679
@@ -231,8 +231,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/Checkpoint
       maxAttenuation: 0
-      maxDuration: 6
-      minDuration: 6
+      maxDuration: -1
+      minDuration: -1
     - name: footLand
       guid: 49e1f4838e4feb4fa28d013f8babddd9
       id: 2498411518
@@ -243,8 +243,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/footLand
       maxAttenuation: 0
-      maxDuration: 0.773208
-      minDuration: 0.412667
+      maxDuration: -1
+      minDuration: -1
     - name: footStep
       guid: 82fac55e963eb6498ea080bfc5cc63c1
       id: 1866025847
@@ -255,8 +255,20 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/footStep
       maxAttenuation: 0
-      maxDuration: 0.704
-      minDuration: 0.185729
+      maxDuration: -1
+      minDuration: -1
+    - name: forestStart
+      guid: a3d9907c1a16b64a8a0612f1a429a7cb
+      id: 3999288086
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: forestStart
+        ObjectType: 3
+      Path: Default Work Unit/forestStart
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: inTheBeginning
       guid: 9ce6f0bf8fb21e409d2492d21157e36a
       id: 3071493210
@@ -269,30 +281,114 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: UI_hover
+    - name: levelComplete
+      guid: 63445be453bbf34f92e55a59c8d7cbcb
+      id: 853594596
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: levelComplete
+        ObjectType: 3
+      Path: Default Work Unit/levelComplete
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: pendantCrack1
+      guid: a003e161cc000147aa7deaacb00f86a2
+      id: 985050826
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: pendantCrack1
+        ObjectType: 3
+      Path: Default Work Unit/pendantCrack1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: pendantCrack2
+      guid: 5c583b7b61c5bb4ca0b6a580bc0fc171
+      id: 985050825
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: pendantCrack2
+        ObjectType: 3
+      Path: Default Work Unit/pendantCrack2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: pendantCrack3
+      guid: a9398fbb0f65af459049fd569a89b721
+      id: 985050824
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: pendantCrack3
+        ObjectType: 3
+      Path: Default Work Unit/pendantCrack3
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: playerDeath
+      guid: 410ccbf8e0b16448b4b9f97303e26c8e
+      id: 1656947812
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: playerDeath
+        ObjectType: 3
+      Path: Default Work Unit/playerDeath
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Respawn
+      guid: 19ecf79529b3a34c831f0005a6267e4d
+      id: 4279841335
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Respawn
+        ObjectType: 3
+      Path: Default Work Unit/Respawn
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: UI_Hover
       guid: 1063be110f9a144f80350c634649670f
       id: 2118900976
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: UI_hover
+      - ElementName: UI_Hover
         ObjectType: 3
-      Path: Default Work Unit/UI_hover
+      Path: Default Work Unit/UI_Hover
       maxAttenuation: 0
-      maxDuration: 1.322667
-      minDuration: 1.322667
-    - name: UI_select
+      maxDuration: -1
+      minDuration: -1
+    - name: UI_Select
       guid: 6e6cc7333682924692dd70839f9ea483
       id: 2774129122
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: UI_select
+      - ElementName: UI_Select
         ObjectType: 3
-      Path: Default Work Unit/UI_select
+      Path: Default Work Unit/UI_Select
       maxAttenuation: 0
-      maxDuration: 2.368
-      minDuration: 2.368
+      maxDuration: -1
+      minDuration: -1
+    - name: villageStart
+      guid: 177e8dcff9cd794380c982f24212f34c
+      id: 860607337
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: villageStart
+        ObjectType: 3
+      Path: Default Work Unit/villageStart
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -523,6 +619,7 @@ MonoBehaviour:
   - /Jade_Runner_Audio/SoundBanks/Default Work Unit
   - /Jade_Runner_Audio/Switches
   - /Jade_Runner_Audio/Switches/Default Work Unit
+  - /Jade_Runner_Audio/Switches/Default Work Unit/FootStep_Switches
   - /Jade_Runner_Audio/Switches/Default Work Unit/Music_Switches
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

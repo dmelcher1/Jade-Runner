@@ -17,9 +17,17 @@ namespace AK
         static const AkUniqueID CHECKPOINT = 612075679U;
         static const AkUniqueID FOOTLAND = 2498411518U;
         static const AkUniqueID FOOTSTEP = 1866025847U;
+        static const AkUniqueID FORESTSTART = 3999288086U;
         static const AkUniqueID INTHEBEGINNING = 3071493210U;
+        static const AkUniqueID LEVELCOMPLETE = 853594596U;
+        static const AkUniqueID PENDANTCRACK1 = 985050826U;
+        static const AkUniqueID PENDANTCRACK2 = 985050825U;
+        static const AkUniqueID PENDANTCRACK3 = 985050824U;
+        static const AkUniqueID PLAYERDEATH = 1656947812U;
+        static const AkUniqueID RESPAWN = 4279841335U;
         static const AkUniqueID UI_HOVER = 2118900976U;
         static const AkUniqueID UI_SELECT = 2774129122U;
+        static const AkUniqueID VILLAGESTART = 860607337U;
     } // namespace EVENTS
 
     namespace SWITCHES

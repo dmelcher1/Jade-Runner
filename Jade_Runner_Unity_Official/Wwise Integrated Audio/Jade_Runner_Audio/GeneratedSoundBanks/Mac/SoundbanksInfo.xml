@@ -25,9 +25,17 @@
 				<Event Id="612075679" Name="Checkpoint" ObjectPath="\Events\Default Work Unit\Checkpoint" DurationType="OneShot" DurationMin="6.000000" DurationMax="6.000000"/>
 				<Event Id="2498411518" Name="footLand" ObjectPath="\Events\Default Work Unit\footLand" DurationType="OneShot" DurationMin="0.412667" DurationMax="0.773208"/>
 				<Event Id="1866025847" Name="footStep" ObjectPath="\Events\Default Work Unit\footStep" DurationType="OneShot" DurationMin="0.185729" DurationMax="0.704000"/>
+				<Event Id="3999288086" Name="forestStart" ObjectPath="\Events\Default Work Unit\forestStart" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3071493210" Name="inTheBeginning" ObjectPath="\Events\Default Work Unit\inTheBeginning" DurationType="Infinite"/>
-				<Event Id="2118900976" Name="UI_hover" ObjectPath="\Events\Default Work Unit\UI_hover" DurationType="OneShot" DurationMin="1.322667" DurationMax="1.322667"/>
-				<Event Id="2774129122" Name="UI_select" ObjectPath="\Events\Default Work Unit\UI_select" DurationType="OneShot" DurationMin="2.368000" DurationMax="2.368000"/>
+				<Event Id="853594596" Name="levelComplete" ObjectPath="\Events\Default Work Unit\levelComplete" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="985050826" Name="pendantCrack1" ObjectPath="\Events\Default Work Unit\pendantCrack1" DurationType="OneShot" DurationMin="0.519896" DurationMax="0.519896"/>
+				<Event Id="985050825" Name="pendantCrack2" ObjectPath="\Events\Default Work Unit\pendantCrack2" DurationType="OneShot" DurationMin="0.515708" DurationMax="0.515708"/>
+				<Event Id="985050824" Name="pendantCrack3" ObjectPath="\Events\Default Work Unit\pendantCrack3" DurationType="OneShot" DurationMin="0.561833" DurationMax="0.561833"/>
+				<Event Id="1656947812" Name="playerDeath" ObjectPath="\Events\Default Work Unit\playerDeath" DurationType="OneShot" DurationMin="1.741979" DurationMax="1.741979"/>
+				<Event Id="4279841335" Name="Respawn" ObjectPath="\Events\Default Work Unit\Respawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2118900976" Name="UI_Hover" ObjectPath="\Events\Default Work Unit\UI_Hover" DurationType="OneShot" DurationMin="1.322667" DurationMax="1.322667"/>
+				<Event Id="2774129122" Name="UI_Select" ObjectPath="\Events\Default Work Unit\UI_Select" DurationType="OneShot" DurationMin="2.368000" DurationMax="2.368000"/>
+				<Event Id="860607337" Name="villageStart" ObjectPath="\Events\Default Work Unit\villageStart" DurationType="Infinite"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="52760072" Language="SFX">
@@ -46,9 +54,17 @@
 					<ShortName>UI_hover.wav</ShortName>
 					<Path>SFX/UI_hover_10C4C929.wem</Path>
 				</File>
+				<File Id="172937142" Language="SFX">
+					<ShortName>stinger_level_complete.wav</ShortName>
+					<Path>SFX/stinger_level_complete_D79FB2B7.wem</Path>
+				</File>
 				<File Id="189058525" Language="SFX">
 					<ShortName>player_footsteps_stone_04.wav</ShortName>
 					<Path>SFX/player_footsteps_stone_04_10C4C929.wem</Path>
+				</File>
+				<File Id="235875504" Language="SFX">
+					<ShortName>player_death.wav</ShortName>
+					<Path>SFX/player_death_10C4C929.wem</Path>
 				</File>
 				<File Id="240966390" Language="SFX">
 					<ShortName>player_footsteps_stone_02.wav</ShortName>
@@ -61,6 +77,10 @@
 				<File Id="253366961" Language="SFX">
 					<ShortName>Step_Grass_5.wav</ShortName>
 					<Path>SFX/Step_Grass_5_10C4C929.wem</Path>
+				</File>
+				<File Id="261884199" Language="SFX">
+					<ShortName>jade_pendant_crack_1.wav</ShortName>
+					<Path>SFX/jade_pendant_crack_1_10C4C929.wem</Path>
 				</File>
 				<File Id="273711767" Language="SFX">
 					<ShortName>Attack1.wav</ShortName>
@@ -110,6 +130,10 @@
 					<ShortName>player_landing_dirt_1.wav</ShortName>
 					<Path>SFX/player_landing_dirt_1_10C4C929.wem</Path>
 				</File>
+				<File Id="562619060" Language="SFX">
+					<ShortName>jade_pendant_crack_2.wav</ShortName>
+					<Path>SFX/jade_pendant_crack_2_10C4C929.wem</Path>
+				</File>
 				<File Id="587515936" Language="SFX">
 					<ShortName>player_footsteps_stone_03.wav</ShortName>
 					<Path>SFX/player_footsteps_stone_03_10C4C929.wem</Path>
@@ -117,6 +141,10 @@
 				<File Id="724026448" Language="SFX">
 					<ShortName>Step_Grass_4.wav</ShortName>
 					<Path>SFX/Step_Grass_4_10C4C929.wem</Path>
+				</File>
+				<File Id="796845028" Language="SFX">
+					<ShortName>ambience_night.wav</ShortName>
+					<Path>SFX/ambience_night_D79FB2B7.wem</Path>
 				</File>
 				<File Id="804659363" Language="SFX">
 					<ShortName>player_footsteps_dirt_6.wav</ShortName>
@@ -134,6 +162,10 @@
 					<ShortName>Step_Grass_6.wav</ShortName>
 					<Path>SFX/Step_Grass_6_10C4C929.wem</Path>
 				</File>
+				<File Id="882511175" Language="SFX">
+					<ShortName>jade_pendant_crack_3.wav</ShortName>
+					<Path>SFX/jade_pendant_crack_3_10C4C929.wem</Path>
+				</File>
 				<File Id="947976714" Language="SFX">
 					<ShortName>Menu.wav</ShortName>
 					<Path>SFX/Menu_D79FB2B7.wem</Path>
@@ -141,6 +173,10 @@
 				<File Id="976594680" Language="SFX">
 					<ShortName>player_footsteps_dirt_5.wav</ShortName>
 					<Path>SFX/player_footsteps_dirt_5_10C4C929.wem</Path>
+				</File>
+				<File Id="979674642" Language="SFX">
+					<ShortName>ambience_forest.wav</ShortName>
+					<Path>SFX/ambience_forest_D79FB2B7.wem</Path>
 				</File>
 				<File Id="994380550" Language="SFX">
 					<ShortName>player_footsteps_dirt_3.wav</ShortName>
@@ -153,6 +189,10 @@
 				<File Id="1051710066" Language="SFX">
 					<ShortName>checkpoint_2.wav</ShortName>
 					<Path>SFX/checkpoint_2_10C4C929.wem</Path>
+				</File>
+				<File Id="1058334562" Language="SFX">
+					<ShortName>ambience_birds.wav</ShortName>
+					<Path>SFX/ambience_birds_D79FB2B7.wem</Path>
 				</File>
 				<File Id="1061781004" Language="SFX">
 					<ShortName>UI_select.wav</ShortName>

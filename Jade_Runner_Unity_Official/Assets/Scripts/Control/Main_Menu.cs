@@ -27,13 +27,15 @@ public class Main_Menu : MonoBehaviour
 
     public void StartGame()
     {
-        AkSoundEngine.PostEvent("villageStart", gameObject);
+        GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayVillageScene();
+        //AkSoundEngine.PostEvent("villageStart", gameObject);
         SceneManager.LoadScene(1);
         
     }
 
     public void VillageLevel()
     {
+        GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayVillageScene();
         levelTracking.levelSelected = true;
         chosenScene = 2;
         levelTracking.chosenScene = chosenScene;
@@ -42,6 +44,7 @@ public class Main_Menu : MonoBehaviour
 
     public void BambooLevel()
     {
+        GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayVillageScene();
         levelTracking.levelSelected = true;
         chosenScene = 3;
         levelTracking.chosenScene = chosenScene;

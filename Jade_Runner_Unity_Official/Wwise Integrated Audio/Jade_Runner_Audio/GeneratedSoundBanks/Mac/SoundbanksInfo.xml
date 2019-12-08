@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>/Users/ethanreese/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/z:/Volumes/EOR/SCHOOL/_Games_DirectedStudy/Jade-Runner/Jade_Runner_Unity_Official/Wwise Integrated Audio/Jade_Runner_Audio/</ProjectRoot>
-		<SourceFilesRoot>/Users/ethanreese/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/z:/Volumes/EOR/SCHOOL/_Games_DirectedStudy/Jade-Runner/Jade_Runner_Unity_Official/Wwise Integrated Audio/Jade_Runner_Audio/.cache/Mac/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/ethanreese/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/z:/Volumes/EOR/SCHOOL/_Games_DirectedStudy/Jade-Runner/Jade_Runner_Unity_Official/Wwise Integrated Audio/Jade_Runner_Audio/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ProjectRoot>/Users/ethanreese/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/z:/Volumes/EOR/_JadeRunner/Jade-Runner/Jade_Runner_Unity_Official/Wwise Integrated Audio/Jade_Runner_Audio/</ProjectRoot>
+		<SourceFilesRoot>/Users/ethanreese/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/z:/Volumes/EOR/_JadeRunner/Jade-Runner/Jade_Runner_Unity_Official/Wwise Integrated Audio/Jade_Runner_Audio/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/ethanreese/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/z:/Volumes/EOR/_JadeRunner/Jade-Runner/Jade_Runner_Unity_Official/Wwise Integrated Audio/Jade_Runner_Audio/GeneratedSoundBanks/Mac/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/ethanreese/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/z:/Volumes/EOR/SCHOOL/_Games_DirectedStudy/Jade-Runner/Jade_Runner_Unity_Official/Wwise Integrated Audio/Jade_Runner_Audio/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/ethanreese/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/z:/Volumes/EOR/_JadeRunner/Jade-Runner/Jade_Runner_Unity_Official/Wwise Integrated Audio/Jade_Runner_Audio/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -21,21 +21,21 @@
 			<ShortName>JadeRunner_Soundbank</ShortName>
 			<Path>JadeRunner_Soundbank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="180661997" Name="Attack" ObjectPath="\Events\Default Work Unit\Attack" DurationType="OneShot" DurationMin="0.275754" DurationMax="0.335854"/>
-				<Event Id="612075679" Name="Checkpoint" ObjectPath="\Events\Default Work Unit\Checkpoint" DurationType="OneShot" DurationMin="6.000000" DurationMax="6.000000"/>
-				<Event Id="2498411518" Name="footLand" ObjectPath="\Events\Default Work Unit\footLand" DurationType="OneShot" DurationMin="0.412667" DurationMax="0.773208"/>
-				<Event Id="1866025847" Name="footStep" ObjectPath="\Events\Default Work Unit\footStep" DurationType="OneShot" DurationMin="0.185729" DurationMax="0.704000"/>
-				<Event Id="3999288086" Name="forestStart" ObjectPath="\Events\Default Work Unit\forestStart" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3071493210" Name="inTheBeginning" ObjectPath="\Events\Default Work Unit\inTheBeginning" DurationType="Infinite"/>
-				<Event Id="853594596" Name="levelComplete" ObjectPath="\Events\Default Work Unit\levelComplete" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="985050826" Name="pendantCrack1" ObjectPath="\Events\Default Work Unit\pendantCrack1" DurationType="OneShot" DurationMin="0.519896" DurationMax="0.519896"/>
-				<Event Id="985050825" Name="pendantCrack2" ObjectPath="\Events\Default Work Unit\pendantCrack2" DurationType="OneShot" DurationMin="0.515708" DurationMax="0.515708"/>
-				<Event Id="985050824" Name="pendantCrack3" ObjectPath="\Events\Default Work Unit\pendantCrack3" DurationType="OneShot" DurationMin="0.561833" DurationMax="0.561833"/>
-				<Event Id="1656947812" Name="playerDeath" ObjectPath="\Events\Default Work Unit\playerDeath" DurationType="OneShot" DurationMin="1.741979" DurationMax="1.741979"/>
-				<Event Id="4279841335" Name="Respawn" ObjectPath="\Events\Default Work Unit\Respawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2118900976" Name="UI_Hover" ObjectPath="\Events\Default Work Unit\UI_Hover" DurationType="OneShot" DurationMin="1.322667" DurationMax="1.322667"/>
-				<Event Id="2774129122" Name="UI_Select" ObjectPath="\Events\Default Work Unit\UI_Select" DurationType="OneShot" DurationMin="2.368000" DurationMax="2.368000"/>
-				<Event Id="860607337" Name="villageStart" ObjectPath="\Events\Default Work Unit\villageStart" DurationType="Infinite"/>
+				<Event Id="180661997" Name="Attack" ObjectPath="\Events\Default Work Unit\Attack"/>
+				<Event Id="612075679" Name="Checkpoint" ObjectPath="\Events\Default Work Unit\Checkpoint"/>
+				<Event Id="2498411518" Name="footLand" ObjectPath="\Events\Default Work Unit\footLand"/>
+				<Event Id="1866025847" Name="footStep" ObjectPath="\Events\Default Work Unit\footStep"/>
+				<Event Id="3999288086" Name="forestStart" ObjectPath="\Events\Default Work Unit\forestStart"/>
+				<Event Id="3071493210" Name="inTheBeginning" ObjectPath="\Events\Default Work Unit\inTheBeginning"/>
+				<Event Id="853594596" Name="levelComplete" ObjectPath="\Events\Default Work Unit\levelComplete"/>
+				<Event Id="985050826" Name="pendantCrack1" ObjectPath="\Events\Default Work Unit\pendantCrack1"/>
+				<Event Id="985050825" Name="pendantCrack2" ObjectPath="\Events\Default Work Unit\pendantCrack2"/>
+				<Event Id="985050824" Name="pendantCrack3" ObjectPath="\Events\Default Work Unit\pendantCrack3"/>
+				<Event Id="1656947812" Name="playerDeath" ObjectPath="\Events\Default Work Unit\playerDeath"/>
+				<Event Id="4279841335" Name="Respawn" ObjectPath="\Events\Default Work Unit\Respawn"/>
+				<Event Id="2118900976" Name="UI_Hover" ObjectPath="\Events\Default Work Unit\UI_Hover"/>
+				<Event Id="2774129122" Name="UI_Select" ObjectPath="\Events\Default Work Unit\UI_Select"/>
+				<Event Id="860607337" Name="villageStart" ObjectPath="\Events\Default Work Unit\villageStart"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="52760072" Language="SFX">

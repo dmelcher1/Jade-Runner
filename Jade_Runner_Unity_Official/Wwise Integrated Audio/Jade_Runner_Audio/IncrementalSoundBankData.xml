@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<IncrementalBankBuild Version="6" Flags="861300542">
+<IncrementalBankBuild Version="6" Flags="240381544">
 	<Platform GUID="{BC3F95A7-887F-441E-AEAA-A569D3B27AE5}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="2839127252" Timestamp="1575217460"/>
-				<File Name="JadeRunner_Soundbank" Hash="2145791520" Timestamp="1575767540"/>
+				<File Name="Init" Hash="2839127252" Timestamp="1575844642"/>
+				<File Name="JadeRunner_Soundbank" Hash="3789268100" Timestamp="1575844642"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="4154513574" Timestamp="1575767540"/>
+				<File Name="" Hash="2985465330" Timestamp="1575844642"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{AFC9B9FB-34BB-469A-9323-72A01D5BACB1}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="713214872" Timestamp="1575217460"/>
-				<File Name="JadeRunner_Soundbank" Hash="2145791520" Timestamp="1575767538"/>
+				<File Name="Init" Hash="713214872" Timestamp="1575844640"/>
+				<File Name="JadeRunner_Soundbank" Hash="3789268100" Timestamp="1575844640"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="905030772" Timestamp="1575767539"/>
+				<File Name="" Hash="780360740" Timestamp="1575844640"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

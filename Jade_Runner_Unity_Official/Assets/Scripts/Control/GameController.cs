@@ -9,7 +9,6 @@ public class GameController : LevelTracking
     public BoxCollider levelEnder;
     //^This might need to be modified to a GameObject, 
     //since we might decide to make the level enders their own objects
-    public bool levelComplete;
     public bool beatLevel = false;
     //public bool faded = false;
     //public LevelTracking levelTracking;
@@ -33,6 +32,8 @@ public class GameController : LevelTracking
     //public bool menuScene;
     public GameObject levelTracker;
     public LevelTracking levelTracking;
+    public Image healthUI;
+    public Sprite[] healthSprites;
 
     
     // Start is called before the first frame update
@@ -49,7 +50,7 @@ public class GameController : LevelTracking
         
         playerLocomotion = GameObject.FindObjectOfType<PlayerLocomotion>();
         
-        startHealth = playerLocomotion.health;
+        startHealth = 3;
         startFadeDelay = playerLocomotion.fadeDelay;
         //if(SceneManager.GetActiveScene().name == "VillageMenuScene")
         //{
@@ -60,6 +61,8 @@ public class GameController : LevelTracking
     // Update is called once per frame
     void Update()
     {
+        HealthUI();
+
         if(Input.GetButton("Quit"))
         {
             Application.Quit();
@@ -79,6 +82,7 @@ public class GameController : LevelTracking
         
         if(playerLocomotion.dead == true && playerLocomotion.fadeDelay <= 0.0f)
         {
+            
             FadeOnDeath();
         }
         if(animator.GetBool("FadeOut") && fader.color.a == 1 && beatLevel != true)
@@ -112,6 +116,46 @@ public class GameController : LevelTracking
             beatLevel = true;
             FadeOnDeath();
             levelEnder.enabled = false;
+        }
+    }
+
+    void HealthUI()
+    {
+        if (playerLocomotion.health == 4 && !playerLocomotion.poweredUp)
+        {
+            healthUI.sprite = healthSprites[0];
+        }
+        if (playerLocomotion.health == 3 && !playerLocomotion.poweredUp)
+        {
+            healthUI.sprite = healthSprites[1];
+        }
+        if (playerLocomotion.health == 2 && !playerLocomotion.poweredUp)
+        {
+            healthUI.sprite = healthSprites[2];
+        }
+        if (playerLocomotion.health == 1 && !playerLocomotion.poweredUp)
+        {
+            healthUI.sprite = healthSprites[3];
+        }
+        if (playerLocomotion.health == 4 && playerLocomotion.poweredUp)
+        {
+            healthUI.sprite = healthSprites[4];
+        }
+        if (playerLocomotion.health == 3 && playerLocomotion.poweredUp)
+        {
+            healthUI.sprite = healthSprites[5];
+        }
+        if (playerLocomotion.health == 2 && playerLocomotion.poweredUp)
+        {
+            healthUI.sprite = healthSprites[6];
+        }
+        if (playerLocomotion.health == 1 && playerLocomotion.poweredUp)
+        {
+            healthUI.sprite = healthSprites[7];
+        }
+        if (playerLocomotion.health == 0)
+        {
+            healthUI.sprite = healthSprites[8];
         }
     }
 

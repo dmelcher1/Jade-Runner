@@ -26,8 +26,10 @@ public class TwirlyFruit : MonoBehaviour
         {
             Debug.Log("That's Not A Wampa!");
             playerLocomotion.fruitCount += 1;
-            if (this.gameObject.tag == "Fruit" && playerLocomotion.health < 3)
+            if (this.gameObject.tag == "Fruit" && playerLocomotion.health < playerLocomotion.startHealth)
             {
+                playerLocomotion.health += 1;
+                playerLocomotion.currentHealth = playerLocomotion.health;
                 playerLocomotion.fruitMeter += 1;
             }
             if (this.gameObject.tag == "PowerFruit" && !playerLocomotion.poweredUp)

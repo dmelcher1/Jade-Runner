@@ -119,6 +119,7 @@ public class PlayerLocomotion : MonoBehaviour
     public Collider triggerCollider;
 
     public int health;
+    public int startHealth;
     public int currentHealth;
 
     public bool hit = false;
@@ -150,6 +151,7 @@ public class PlayerLocomotion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startHealth = health;
         this.transform.position = currentCheckpoint.transform.position;
         rb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
@@ -178,7 +180,7 @@ public class PlayerLocomotion : MonoBehaviour
         AttackControls();
         KillBox();
         DamageDeath();
-        FruitCollection();
+        //FruitCollection();
         PoweredUpState();
 
         if(!dead && !powerUpJig)
@@ -499,15 +501,15 @@ public class PlayerLocomotion : MonoBehaviour
         playerAnim.SetBool("Dead", dead);
     }
 
-    void FruitCollection()
-    {
-        if(fruitMeter == 10)
-        {
-            health += 1;
-            currentHealth = health;
-            fruitMeter = 0;
-        }
-    }
+    //void FruitCollection()
+    //{
+    //    if(fruitMeter == 10)
+    //    {
+    //        //health += 1;
+    //        currentHealth = health;
+    //        fruitMeter = 0;
+    //    }
+    //}
 
     void PoweredUpState()
     {

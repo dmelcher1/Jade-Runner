@@ -17,13 +17,13 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 7d49826ae610cd46956f1a3f867b3d06
     GuidInternal: 
-    m_lastTime: -8586280819094775808
+    m_lastTime: -8586257661374775808
     List: []
   - PhysicalPath: Virtual Acoustics/Factory Reflect Acoustic Textures.wwu
     ParentPhysicalPath: 
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8586280819094775808
+    m_lastTime: -8586257661374775808
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -184,14 +184,14 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 9e2878d48cf6314d9ba774334b0e3a56
     GuidInternal: 
-    m_lastTime: -8586280819114775808
+    m_lastTime: -8586257661394775808
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9d57935ecbf9c74ea26dde10967945cf
     GuidInternal: 
-    m_lastTime: -8586258393494775808
+    m_lastTime: -8586257661374775808
     List:
     - name: JadeRunner_Soundbank
       guid: ba02b25aa9be7c418c8bfcaa60830851
@@ -207,7 +207,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 1bead272cd7e9048b19c37dcb88683b3
     GuidInternal: 
-    m_lastTime: -8586258393314775808
+    m_lastTime: -8586257661404775808
     List:
     - name: Attack
       guid: 0d248be082afdb499172f1dfcb598c15
@@ -219,8 +219,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/Attack
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.335854
+      minDuration: 0.275754
     - name: Checkpoint
       guid: 758a4d162966624d9b8d42242dd3ad25
       id: 612075679
@@ -231,8 +231,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/Checkpoint
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 6
+      minDuration: 6
     - name: footLand
       guid: 49e1f4838e4feb4fa28d013f8babddd9
       id: 2498411518
@@ -243,8 +243,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/footLand
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.773208
+      minDuration: 0.412667
     - name: footStep
       guid: 82fac55e963eb6498ea080bfc5cc63c1
       id: 1866025847
@@ -255,8 +255,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/footStep
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.704
+      minDuration: 0.185729
     - name: forestStart
       guid: a3d9907c1a16b64a8a0612f1a429a7cb
       id: 3999288086
@@ -267,8 +267,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/forestStart
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: inTheBeginning
       guid: 9ce6f0bf8fb21e409d2492d21157e36a
       id: 3071493210
@@ -291,8 +291,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/levelComplete
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: pendantCrack1
       guid: a003e161cc000147aa7deaacb00f86a2
       id: 985050826
@@ -303,8 +303,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/pendantCrack1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.519896
+      minDuration: 0.519896
     - name: pendantCrack2
       guid: 5c583b7b61c5bb4ca0b6a580bc0fc171
       id: 985050825
@@ -315,8 +315,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/pendantCrack2
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.515708
+      minDuration: 0.515708
     - name: pendantCrack3
       guid: a9398fbb0f65af459049fd569a89b721
       id: 985050824
@@ -327,8 +327,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/pendantCrack3
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.561833
+      minDuration: 0.561833
     - name: playerDeath
       guid: 410ccbf8e0b16448b4b9f97303e26c8e
       id: 1656947812
@@ -339,8 +339,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/playerDeath
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.741979
+      minDuration: 1.741979
     - name: Respawn
       guid: 19ecf79529b3a34c831f0005a6267e4d
       id: 4279841335
@@ -351,8 +351,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/Respawn
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: UI_Hover
       guid: 1063be110f9a144f80350c634649670f
       id: 2118900976
@@ -363,8 +363,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/UI_Hover
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.322667
+      minDuration: 1.322667
     - name: UI_Select
       guid: 6e6cc7333682924692dd70839f9ea483
       id: 2774129122
@@ -375,8 +375,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/UI_Select
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.368
+      minDuration: 2.368
     - name: villageStart
       guid: 177e8dcff9cd794380c982f24212f34c
       id: 860607337
@@ -394,13 +394,13 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 1ceaa1157464a040828f125dfd8808fe
     GuidInternal: 
-    m_lastTime: -8586280819114775808
+    m_lastTime: -8586257661404775808
     List: []
   - PhysicalPath: Game Parameters/Factory Motion.wwu
     ParentPhysicalPath: 
     guid: 225213d7dbd1d042adc0930743567776
     GuidInternal: 
-    m_lastTime: -8586280819104775808
+    m_lastTime: -8586257661404775808
     List:
     - name: Playback_Rate
       guid: e37e38283ac11643b9c3db5c521624af
@@ -424,7 +424,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8586280819104775808
+    m_lastTime: -8586257661404775808
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -521,14 +521,14 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 397ba9f46f3e984cb678731ff834c2c5
     GuidInternal: 
-    m_lastTime: -8586280819104775808
+    m_lastTime: -8586257661374775808
     List: []
   SwitchWwu:
   - PhysicalPath: Switches/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 99fce58a1634eb418529c7d61df57c3a
     GuidInternal: 
-    m_lastTime: -8586263710934775808
+    m_lastTime: -8586257661374775808
     List:
     - name: FootStep_Switches
       guid: e92757c215aa054f86ba478398a70117
@@ -609,7 +609,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 715685f91eee4f4ab89384a47559b7bf
     GuidInternal: 
-    m_lastTime: -8586280819094775808
+    m_lastTime: -8586257661374775808
     List: []
   ExpandedItems:
   - /Jade_Runner_Audio
@@ -619,7 +619,6 @@ MonoBehaviour:
   - /Jade_Runner_Audio/SoundBanks/Default Work Unit
   - /Jade_Runner_Audio/Switches
   - /Jade_Runner_Audio/Switches/Default Work Unit
-  - /Jade_Runner_Audio/Switches/Default Work Unit/FootStep_Switches
   - /Jade_Runner_Audio/Switches/Default Work Unit/Music_Switches
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

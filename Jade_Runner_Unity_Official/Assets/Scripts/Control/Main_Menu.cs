@@ -27,7 +27,9 @@ public class Main_Menu : MonoBehaviour
 
     public void StartGame()
     {
+        AkSoundEngine.PostEvent("villageStart", gameObject);
         SceneManager.LoadScene(1);
+        
     }
 
     public void VillageLevel()

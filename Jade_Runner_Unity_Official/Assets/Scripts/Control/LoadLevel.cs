@@ -42,7 +42,7 @@ public class LoadLevel : LevelTracking
         
         if(!levelSelected)
         {
-            if (previousScene == 0)
+            if (oldPreviousScene == 0)
             {
                 vidRunTime = startCutSceneVideo.clip.length;
                 endTime = vidRunTime - 1;
@@ -64,7 +64,7 @@ public class LoadLevel : LevelTracking
                 vidReady = true;
                 startCutSceneAudio.Play();
             }
-            if (previousScene == 2)
+            if (oldPreviousScene == 2)
             {
                 vidRunTime = loadingScreenVideo.clip.length;
                 endTime = vidRunTime - 1;
@@ -78,7 +78,7 @@ public class LoadLevel : LevelTracking
                 //animator.SetBool("FadeOut", false);
                 loadingScreenVideo.Play();
             }
-            if (previousScene == 3)
+            if (oldPreviousScene == 3)
             {
                 vidRunTime = endCutSceneVideo.clip.length;
                 endTime = vidRunTime - 1;
@@ -141,7 +141,7 @@ public class LoadLevel : LevelTracking
         {
             if(!levelSelected)
             {
-                if (previousScene == 0)
+                if (oldPreviousScene == 0)
                 {
                     currentRunTime = startCutSceneVideo.time;
                     if (currentRunTime >= endTime)
@@ -156,7 +156,7 @@ public class LoadLevel : LevelTracking
                     }
                 }
                     
-                else if (previousScene == 2)
+                else if (oldPreviousScene == 2)
                 {
                     currentRunTime = loadingScreenVideo.time;
                     //Might change loadingScreenVideo.isPlaying to a flat wait time instead depending on how long it is
@@ -172,7 +172,7 @@ public class LoadLevel : LevelTracking
                     }
                 }
                     
-                else if (previousScene == 3)
+                else if (oldPreviousScene == 3)
                 {
                     currentRunTime = endCutSceneVideo.time;
                     //Might change loadingScreenVideo.isPlaying to a flat wait time instead depending on how long it is

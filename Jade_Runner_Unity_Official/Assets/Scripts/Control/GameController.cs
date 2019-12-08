@@ -31,13 +31,18 @@ public class GameController : LevelTracking
     //private int nextScene;
     //private Scene loadingScene;
     //public bool menuScene;
+    public GameObject levelTracker;
+    public LevelTracking levelTracking;
 
     
     // Start is called before the first frame update
     void Start()
     {
-        //levelTracking = GameObject.Find("LevelTracker").GetComponent<LevelTracking>();
+        levelTracking = GameObject.Find("LevelTracker").GetComponent<LevelTracking>();
         levelSelected = false;
+        levelTracking.levelSelected = levelSelected;
+
+        chosenScene = 0;
         currentScene = SceneManager.GetActiveScene().name;
         
         levelEnder = GetComponent<BoxCollider>();

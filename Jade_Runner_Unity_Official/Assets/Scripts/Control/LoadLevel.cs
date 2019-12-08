@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
 
-public class LoadLevel : LevelTracking
+public class LoadLevel : MonoBehaviour
 {
     public Animator animator;
     public Image fader;
@@ -27,6 +27,9 @@ public class LoadLevel : LevelTracking
     public double currentRunTime;
     public double endTime;
     public bool vidReady;
+    public bool levelSelected;
+    public int previousScene;
+    public int chosenScene;
     
 
     // Start is called before the first frame update
@@ -42,7 +45,7 @@ public class LoadLevel : LevelTracking
         
         if(!levelSelected)
         {
-            if (oldPreviousScene == 0)
+            if (previousScene == 0)
             {
                 vidRunTime = startCutSceneVideo.clip.length;
                 endTime = vidRunTime - 1;
@@ -64,7 +67,7 @@ public class LoadLevel : LevelTracking
                 vidReady = true;
                 startCutSceneAudio.Play();
             }
-            if (oldPreviousScene == 2)
+            if (previousScene == 2)
             {
                 vidRunTime = loadingScreenVideo.clip.length;
                 endTime = vidRunTime - 1;
@@ -78,7 +81,7 @@ public class LoadLevel : LevelTracking
                 //animator.SetBool("FadeOut", false);
                 loadingScreenVideo.Play();
             }
-            if (oldPreviousScene == 3)
+            if (previousScene == 3)
             {
                 vidRunTime = endCutSceneVideo.clip.length;
                 endTime = vidRunTime - 1;
@@ -91,7 +94,24 @@ public class LoadLevel : LevelTracking
                 playScreen.texture = endCutSceneVideo.texture;
                 //animator.SetBool("FadeOut", false);
                
-                    endCutSceneVideo.Play();
+                endCutSceneVideo.Play();
+
+                if(youWon)
+                {
+                    vidRunTime = creditsSceneVideo.clip.length;
+                    endTime = vidRunTime - 1;
+                    creditsSceneVideo.Prepare();
+                    while (!creditsSceneVideo.isPrepared)
+                    {
+                        yield return new WaitForSeconds(1.0f);
+                        break;
+                    }
+                    playScreen.texture = creditsSceneVideo.texture;
+                    //animator.SetBool("FadeOut", false);
+
+                    creditsSceneVideo.Play();
+                    creditsSceneAudio.Play();
+                }
                     
                 
             }
@@ -114,24 +134,24 @@ public class LoadLevel : LevelTracking
                     
             }
         }
-        else if (youWon)
-        {
-            vidRunTime = creditsSceneVideo.clip.length;
-            endTime = vidRunTime - 1;
-            creditsSceneVideo.Prepare();
-            while (!creditsSceneVideo.isPrepared)
-            {
-                yield return new WaitForSeconds(1.0f);
-                break;
-            }
-            playScreen.texture = creditsSceneVideo.texture;
-            //animator.SetBool("FadeOut", false);
+        //else if (youWon)
+        //{
+            //vidRunTime = creditsSceneVideo.clip.length;
+            //endTime = vidRunTime - 1;
+            //creditsSceneVideo.Prepare();
+            //while (!creditsSceneVideo.isPrepared)
+            //{
+            //    yield return new WaitForSeconds(1.0f);
+            //    break;
+            //}
+            //playScreen.texture = creditsSceneVideo.texture;
+            ////animator.SetBool("FadeOut", false);
 
-            creditsSceneVideo.Play();
-            creditsSceneAudio.Play();
+            //creditsSceneVideo.Play();
+            //creditsSceneAudio.Play();
             
 
-        }
+        //}
     }
 
     // Update is called once per frame
@@ -141,7 +161,7 @@ public class LoadLevel : LevelTracking
         {
             if(!levelSelected)
             {
-                if (oldPreviousScene == 0)
+                if (previousScene == 0)
                 {
                     currentRunTime = startCutSceneVideo.time;
                     if (currentRunTime >= endTime)
@@ -156,7 +176,7 @@ public class LoadLevel : LevelTracking
                     }
                 }
                     
-                else if (oldPreviousScene == 2)
+                else if (previousScene == 2)
                 {
                     currentRunTime = loadingScreenVideo.time;
                     //Might change loadingScreenVideo.isPlaying to a flat wait time instead depending on how long it is
@@ -172,7 +192,7 @@ public class LoadLevel : LevelTracking
                     }
                 }
                     
-                else if (oldPreviousScene == 3)
+                else if (previousScene == 3 && !youWon)
                 {
                     currentRunTime = endCutSceneVideo.time;
                     //Might change loadingScreenVideo.isPlaying to a flat wait time instead depending on how long it is
@@ -187,8 +207,22 @@ public class LoadLevel : LevelTracking
                         }
                     }
                 }
-                    
+                if (youWon)
+                {
+                    animator.SetBool("FadeOut", false);
+                    currentRunTime = creditsSceneVideo.time;
+                    if (currentRunTime >= endTime)
+                    {
+                        animator.SetBool("FadeOut", true);
+                        changeLevelDelay -= 0.1f;
+                        if (changeLevelDelay <= 0)
+                        {
+                            SceneManager.LoadScene(0);
+                        }
+                    }
+                }
             }
+        }
             else if(levelSelected)
             {
                 currentRunTime = loadingScreenVideo.time;
@@ -209,19 +243,5 @@ public class LoadLevel : LevelTracking
                     }
                 }
             }
-            if(youWon)
-            {
-                currentRunTime = creditsSceneVideo.time;
-                if (currentRunTime >= endTime)
-                {
-                    animator.SetBool("FadeOut", true);
-                    changeLevelDelay -= 0.1f;
-                    if (changeLevelDelay <= 0)
-                    {
-                        SceneManager.LoadScene(0);
-                    }
-                }
-            }
-        }
     }
 }

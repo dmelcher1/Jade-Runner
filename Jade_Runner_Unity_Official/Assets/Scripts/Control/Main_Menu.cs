@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Main_Menu : LevelTracking
+public class Main_Menu : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject levelSelect;
     public GameObject howToPlay;
+    private GameObject levelTracker;
+    private LevelTracking levelTracking;
+    private int chosenScene;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        levelTracker = GameObject.Find("LevelTracker");
+        levelTracking = levelTracker.GetComponent<LevelTracking>();
     }
 
     // Update is called once per frame
@@ -28,14 +32,18 @@ public class Main_Menu : LevelTracking
 
     public void VillageLevel()
     {
-        levelSelected = true;
-        SceneManager.LoadScene(2);
+        levelTracking.levelSelected = true;
+        chosenScene = 2;
+        levelTracking.chosenScene = chosenScene;
+        SceneManager.LoadScene(1);
     }
 
     public void BambooLevel()
     {
-        levelSelected = true;
-        SceneManager.LoadScene(3);
+        levelTracking.levelSelected = true;
+        chosenScene = 3;
+        levelTracking.chosenScene = chosenScene;
+        SceneManager.LoadScene(1);
     }
 
     public void QuitGame ()

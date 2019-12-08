@@ -23,6 +23,22 @@ public class LevelTracking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (sceneNumber != SceneManager.GetActiveScene().buildIndex)
+        {
+            oldPreviousScene = previousScene;
+            previousScene = sceneNumber;
+            sceneNumber = SceneManager.GetActiveScene().buildIndex;
+        }
+        if (sceneNumber == 1)
+        {
+            GameObject levelKicker = GameObject.Find("LevelKicker");
+            LoadLevel levelLoader = levelKicker.GetComponent<LoadLevel>();
+            levelLoader.levelSelected = levelSelected;
+            //levelSelected = false;
+            levelLoader.previousScene = previousScene;
+            levelLoader.chosenScene = chosenScene;
+        }
+
         DontDestroyOnLoad(transform.gameObject);
     }
 }

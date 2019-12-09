@@ -20,6 +20,12 @@
 						<Switch Name="Stone" ID="{A07F7D3A-0A9A-4A11-8792-7E6C5D65221B}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Ambiences" ID="{E62A8FD1-8064-4C39-9EBB-F5B5F4BD0A00}">
+					<ChildrenList>
+						<Switch Name="Village" ID="{DAF606ED-E066-4499-AC8D-355AAB93CD33}"/>
+						<Switch Name="Forrest" ID="{86C46AC4-64A5-426B-8C6D-057D1CAE1961}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

@@ -6,6 +6,7 @@
 				<SoundBank Name="JadeRunner_Soundbank" ID="{5AB202BA-BEA9-417C-8C8B-FCAA60830851}">
 					<ObjectInclusionList>
 						<ObjectRef Name="inTheBeginning" ID="{BFF0E69C-B28F-401E-9D24-92D21157E36A}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Music" ID="{1AF9FD11-3AC3-41AB-A350-407398AF91E4}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="villageImediate" ID="{CF8D7E17-CDF9-4379-80C9-82F24212F34C}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="pendantCrack3" ID="{BB8F39A9-650F-45AF-9049-FD569A89B721}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="UI_Select" ID="{33C76C6E-8236-4692-92DD-70839F9EA483}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
@@ -13,13 +14,15 @@
 						<ObjectRef Name="playerDeath" ID="{F8CB0C41-B1E0-4864-B4B9-F97303E26C8E}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="footStep" ID="{5EC5FA82-3E96-49B6-8EA0-80BFC5CC63C1}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Attack" ID="{E08B240D-AF82-49DB-9172-F1DFCB598C15}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="forestStart" ID="{7C90D9A3-161A-4AB6-8A06-12F1A429A7CB}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Respawn" ID="{95F7EC19-B329-4CA3-831F-0005A6267E4D}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="pendantCrack2" ID="{7B3B585C-C561-4CBB-A0B6-A580BC0FC171}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="PlayerMovement" ID="{B21E6DFB-FFB2-4D06-A847-85768D44DB02}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="bombFuse" ID="{991BF927-BB0B-4D2A-A976-4B41D714D875}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Checkpoint" ID="{164D8A75-6629-4D62-9B8D-42242DD3AD25}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="SoldierMovement" ID="{225F4776-5843-4E54-9A55-405D80BC2C72}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="UI_Hover" ID="{11BE6310-9A0F-4F14-8035-0C634649670F}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="bombExplode" ID="{1AD10F59-3209-4F69-A5B5-C371F46F67E3}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="footLand" ID="{83F4E149-4F8E-4FEB-A28D-013F8BABDDD9}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="levelComplete" ID="{E45B4463-BB53-4FF3-92E5-5A59C8D7CBCB}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

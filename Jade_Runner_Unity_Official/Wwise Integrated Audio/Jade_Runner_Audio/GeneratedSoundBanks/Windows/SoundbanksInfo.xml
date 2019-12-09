@@ -21,21 +21,28 @@
 			<ShortName>JadeRunner_Soundbank</ShortName>
 			<Path>JadeRunner_Soundbank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="180661997" Name="Attack" ObjectPath="\Events\Default Work Unit\Attack"/>
+				<Event Id="180661997" Name="Attack" ObjectPath="\Events\Default Work Unit\PlayerMovement\Attack"/>
+				<Event Id="70120664" Name="bombExplode" ObjectPath="\Events\Default Work Unit\bombExplode"/>
+				<Event Id="1069250406" Name="bombFuse" ObjectPath="\Events\Default Work Unit\bombFuse"/>
 				<Event Id="612075679" Name="Checkpoint" ObjectPath="\Events\Default Work Unit\Checkpoint"/>
-				<Event Id="2498411518" Name="footLand" ObjectPath="\Events\Default Work Unit\footLand"/>
-				<Event Id="1866025847" Name="footStep" ObjectPath="\Events\Default Work Unit\footStep"/>
-				<Event Id="3999288086" Name="forestStart" ObjectPath="\Events\Default Work Unit\forestStart"/>
+				<Event Id="2498411518" Name="footLand" ObjectPath="\Events\Default Work Unit\PlayerMovement\footLand"/>
+				<Event Id="1866025847" Name="footStep" ObjectPath="\Events\Default Work Unit\PlayerMovement\footStep"/>
+				<Event Id="3060982411" Name="fruitHealth" ObjectPath="\Events\Default Work Unit\PlayerMovement\fruitHealth"/>
+				<Event Id="864958663" Name="fruitPowerUp" ObjectPath="\Events\Default Work Unit\PlayerMovement\fruitPowerUp"/>
 				<Event Id="3071493210" Name="inTheBeginning" ObjectPath="\Events\Default Work Unit\inTheBeginning"/>
-				<Event Id="853594596" Name="levelComplete" ObjectPath="\Events\Default Work Unit\levelComplete"/>
 				<Event Id="985050826" Name="pendantCrack1" ObjectPath="\Events\Default Work Unit\pendantCrack1"/>
 				<Event Id="985050825" Name="pendantCrack2" ObjectPath="\Events\Default Work Unit\pendantCrack2"/>
 				<Event Id="985050824" Name="pendantCrack3" ObjectPath="\Events\Default Work Unit\pendantCrack3"/>
-				<Event Id="1656947812" Name="playerDeath" ObjectPath="\Events\Default Work Unit\playerDeath"/>
+				<Event Id="1656947812" Name="playerDeath" ObjectPath="\Events\Default Work Unit\PlayerMovement\playerDeath"/>
 				<Event Id="4279841335" Name="Respawn" ObjectPath="\Events\Default Work Unit\Respawn"/>
+				<Event Id="2426661741" Name="soldierCharge" ObjectPath="\Events\Default Work Unit\SoldierMovement\soldierCharge"/>
+				<Event Id="3874903456" Name="soldierHeadButt" ObjectPath="\Events\Default Work Unit\SoldierMovement\soldierHeadButt"/>
+				<Event Id="4048947044" Name="soldierSpear" ObjectPath="\Events\Default Work Unit\SoldierMovement\soldierSpear"/>
+				<Event Id="139845655" Name="soldierStep" ObjectPath="\Events\Default Work Unit\SoldierMovement\soldierStep"/>
+				<Event Id="391742444" Name="startToVillage" ObjectPath="\Events\Default Work Unit\Music\startToVillage"/>
 				<Event Id="2118900976" Name="UI_Hover" ObjectPath="\Events\Default Work Unit\UI_Hover"/>
 				<Event Id="2774129122" Name="UI_Select" ObjectPath="\Events\Default Work Unit\UI_Select"/>
-				<Event Id="860607337" Name="villageStart" ObjectPath="\Events\Default Work Unit\villageStart"/>
+				<Event Id="3371831861" Name="villageImediate" ObjectPath="\Events\Default Work Unit\Music\villageImediate"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="52760072" Language="SFX">
@@ -45,6 +52,10 @@
 				<File Id="65745406" Language="SFX">
 					<ShortName>Step_Grass_2.wav</ShortName>
 					<Path>SFX/Step_Grass_2_10C4C929.wem</Path>
+				</File>
+				<File Id="91450673" Language="SFX">
+					<ShortName>mx_opening_cutscene.wav</ShortName>
+					<Path>SFX/mx_opening_cutscene_D79FB2B7.wem</Path>
 				</File>
 				<File Id="149824429" Language="SFX">
 					<ShortName>Step_Grass_7.wav</ShortName>
@@ -61,6 +72,10 @@
 				<File Id="189058525" Language="SFX">
 					<ShortName>player_footsteps_stone_04.wav</ShortName>
 					<Path>SFX/player_footsteps_stone_04_10C4C929.wem</Path>
+				</File>
+				<File Id="215896618" Language="SFX">
+					<ShortName>soldier_spears.wav</ShortName>
+					<Path>SFX/soldier_spears_10C4C929.wem</Path>
 				</File>
 				<File Id="235875504" Language="SFX">
 					<ShortName>player_death.wav</ShortName>
@@ -86,6 +101,10 @@
 					<ShortName>Attack1.wav</ShortName>
 					<Path>SFX/Attack1_10C4C929.wem</Path>
 				</File>
+				<File Id="328994259" Language="SFX">
+					<ShortName>soldier_headbutt.wav</ShortName>
+					<Path>SFX/soldier_headbutt_10C4C929.wem</Path>
+				</File>
 				<File Id="341560796" Language="SFX">
 					<ShortName>Step_Grass_1.wav</ShortName>
 					<Path>SFX/Step_Grass_1_10C4C929.wem</Path>
@@ -101,6 +120,10 @@
 				<File Id="365631348" Language="SFX">
 					<ShortName>Bamboo_Stage_Demo_132bpm.wav</ShortName>
 					<Path>SFX/Bamboo_Stage_Demo_132bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="418484840" Language="SFX">
+					<ShortName>BombWhistle.wav</ShortName>
+					<Path>SFX/BombWhistle_10C4C929.wem</Path>
 				</File>
 				<File Id="427821848" Language="SFX">
 					<ShortName>player_footsteps_dirt_1.wav</ShortName>
@@ -142,6 +165,10 @@
 					<ShortName>Step_Grass_4.wav</ShortName>
 					<Path>SFX/Step_Grass_4_10C4C929.wem</Path>
 				</File>
+				<File Id="739116925" Language="SFX">
+					<ShortName>AppleMunch.wav</ShortName>
+					<Path>SFX/AppleMunch_10C4C929.wem</Path>
+				</File>
 				<File Id="796845028" Language="SFX">
 					<ShortName>ambience_night.wav</ShortName>
 					<Path>SFX/ambience_night_D79FB2B7.wem</Path>
@@ -182,9 +209,17 @@
 					<ShortName>player_footsteps_dirt_3.wav</ShortName>
 					<Path>SFX/player_footsteps_dirt_3_10C4C929.wem</Path>
 				</File>
+				<File Id="1008408425" Language="SFX">
+					<ShortName>player_power_up.wav</ShortName>
+					<Path>SFX/player_power_up_10C4C929.wem</Path>
+				</File>
 				<File Id="1010876088" Language="SFX">
 					<ShortName>player_landing_dirt_5.wav</ShortName>
 					<Path>SFX/player_landing_dirt_5_10C4C929.wem</Path>
+				</File>
+				<File Id="1050757800" Language="SFX">
+					<ShortName>soldier_charges.wav</ShortName>
+					<Path>SFX/soldier_charges_10C4C929.wem</Path>
 				</File>
 				<File Id="1051710066" Language="SFX">
 					<ShortName>checkpoint_2.wav</ShortName>

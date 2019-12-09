@@ -34,6 +34,8 @@
 				<Event Id="985050825" Name="pendantCrack2" ObjectPath="\Events\Default Work Unit\pendantCrack2"/>
 				<Event Id="985050824" Name="pendantCrack3" ObjectPath="\Events\Default Work Unit\pendantCrack3"/>
 				<Event Id="1656947812" Name="playerDeath" ObjectPath="\Events\Default Work Unit\PlayerMovement\playerDeath"/>
+				<Event Id="4008126242" Name="playerJump" ObjectPath="\Events\Default Work Unit\PlayerMovement\playerJump"/>
+				<Event Id="937597620" Name="playerJump2" ObjectPath="\Events\Default Work Unit\PlayerMovement\playerJump2"/>
 				<Event Id="4279841335" Name="Respawn" ObjectPath="\Events\Default Work Unit\Respawn"/>
 				<Event Id="2426661741" Name="soldierCharge" ObjectPath="\Events\Default Work Unit\SoldierMovement\soldierCharge"/>
 				<Event Id="3874903456" Name="soldierHeadButt" ObjectPath="\Events\Default Work Unit\SoldierMovement\soldierHeadButt"/>
@@ -48,6 +50,10 @@
 				<File Id="52760072" Language="SFX">
 					<ShortName>Step_Grass_9.wav</ShortName>
 					<Path>SFX/Step_Grass_9_10C4C929.wem</Path>
+				</File>
+				<File Id="63550979" Language="SFX">
+					<ShortName>double_jump.wav</ShortName>
+					<Path>SFX/double_jump_10C4C929.wem</Path>
 				</File>
 				<File Id="65745406" Language="SFX">
 					<ShortName>Step_Grass_2.wav</ShortName>
@@ -184,6 +190,10 @@
 				<File Id="850441153" Language="SFX">
 					<ShortName>player_footsteps_dirt_2.wav</ShortName>
 					<Path>SFX/player_footsteps_dirt_2_10C4C929.wem</Path>
+				</File>
+				<File Id="852903283" Language="SFX">
+					<ShortName>jump.wav</ShortName>
+					<Path>SFX/jump_10C4C929.wem</Path>
 				</File>
 				<File Id="860171682" Language="SFX">
 					<ShortName>Step_Grass_6.wav</ShortName>

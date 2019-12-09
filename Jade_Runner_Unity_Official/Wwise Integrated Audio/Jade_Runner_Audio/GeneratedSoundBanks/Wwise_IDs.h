@@ -26,6 +26,8 @@ namespace AK
         static const AkUniqueID PENDANTCRACK2 = 985050825U;
         static const AkUniqueID PENDANTCRACK3 = 985050824U;
         static const AkUniqueID PLAYERDEATH = 1656947812U;
+        static const AkUniqueID PLAYERJUMP = 4008126242U;
+        static const AkUniqueID PLAYERJUMP2 = 937597620U;
         static const AkUniqueID RESPAWN = 4279841335U;
         static const AkUniqueID SOLDIERCHARGE = 2426661741U;
         static const AkUniqueID SOLDIERHEADBUTT = 3874903456U;
@@ -76,6 +78,17 @@ namespace AK
                 static const AkUniqueID VILLAGEIMEDIATE = 3371831861U;
             } // namespace SWITCH
         } // namespace MUSIC_SWITCHES
+
+        namespace PLAYERATTACKS
+        {
+            static const AkUniqueID GROUP = 3417697001U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID NORMAL = 1160234136U;
+                static const AkUniqueID POWEREDUP = 4231327868U;
+            } // namespace SWITCH
+        } // namespace PLAYERATTACKS
 
     } // namespace SWITCHES
 

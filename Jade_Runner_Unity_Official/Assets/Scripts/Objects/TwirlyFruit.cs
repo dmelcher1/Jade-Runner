@@ -28,12 +28,15 @@ public class TwirlyFruit : MonoBehaviour
             playerLocomotion.fruitCount += 1;
             if (this.gameObject.tag == "Fruit" && playerLocomotion.health < playerLocomotion.startHealth)
             {
+                AkSoundEngine.PostEvent("fruitHealth", gameObject);
                 playerLocomotion.health += 1;
                 playerLocomotion.currentHealth = playerLocomotion.health;
                 playerLocomotion.fruitMeter += 1;
             }
             if (this.gameObject.tag == "PowerFruit" && !playerLocomotion.poweredUp)
             {
+                AkSoundEngine.PostEvent("fruitPowerUp", gameObject);
+                AkSoundEngine.SetSwitch("PlayerAttack", "PoweredUp", gameObject);
                 playerLocomotion.poweredUp = true;
                 playerLocomotion.powerUpJig = true;
                 playerLocomotion.moveSpeed = playerLocomotion.moveSpeed * 1.5f;

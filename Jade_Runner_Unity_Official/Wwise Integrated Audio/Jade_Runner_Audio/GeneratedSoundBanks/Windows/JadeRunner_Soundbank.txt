@@ -5,6 +5,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	391742444	startToVillage			\Default Work Unit\Music\startToVillage	
 	612075679	Checkpoint			\Default Work Unit\Checkpoint	
 	864958663	fruitPowerUp			\Default Work Unit\PlayerMovement\fruitPowerUp	
+	937597620	playerJump2			\Default Work Unit\PlayerMovement\playerJump2	
 	985050824	pendantCrack3			\Default Work Unit\pendantCrack3	
 	985050825	pendantCrack2			\Default Work Unit\pendantCrack2	
 	985050826	pendantCrack1			\Default Work Unit\pendantCrack1	
@@ -19,12 +20,14 @@ Event	ID	Name			Wwise Object Path	Notes
 	3071493210	inTheBeginning			\Default Work Unit\inTheBeginning	
 	3371831861	villageImediate			\Default Work Unit\Music\villageImediate	
 	3874903456	soldierHeadButt			\Default Work Unit\SoldierMovement\soldierHeadButt	
+	4008126242	playerJump			\Default Work Unit\PlayerMovement\playerJump	
 	4048947044	soldierSpear			\Default Work Unit\SoldierMovement\soldierSpear	
 	4279841335	Respawn			\Default Work Unit\Respawn	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	226124245	Music_Switches			\Default Work Unit\Music_Switches	
 	1110811498	FootStep_Switches			\Default Work Unit\FootStep_Switches	
+	3417697001	PlayerAttacks			\Default Work Unit\PlayerAttacks	
 
 Switch	ID	Name	Switch Group			Notes
 	321571300	Forrest_1	Music_Switches			
@@ -36,43 +39,47 @@ Switch	ID	Name	Switch Group			Notes
 	1216965916	Stone	FootStep_Switches			
 	2195636714	Dirt	FootStep_Switches			
 	4248645337	Grass	FootStep_Switches			
+	1160234136	Normal	PlayerAttacks			
+	4231327868	PoweredUp	PlayerAttacks			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	52760072	Step_Grass_9	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\Step_Grass_9_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\grassSteps\Step_Grass_9		52140
+	63550979	double_jump	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\double_jump_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\double_jump		144144
 	65745406	Step_Grass_2	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\Step_Grass_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\grassSteps\Step_Grass_2		38640
 	91450673	mx_opening_cutscene	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\mx_opening_cutscene_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\META_Switch\mx_opening_cutscene\mx_opening_cutscene		5340176
 	149824429	Step_Grass_7	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\Step_Grass_7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\grassSteps\Step_Grass_7		37420
 	155947586	UI_hover	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\UI_hover_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI_hover		254016
 	172937142	stinger_level_complete	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\stinger_level_complete_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\META_Switch\stinger_level_complete\stinger_level_complete		1612944
-	189058525	player_footsteps_stone_04	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_footsteps_stone_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\stoneStep\player_footsteps_stone_04		92708
+	189058525	player_footsteps_stone_04	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_footsteps_stone_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\stoneSteps\player_footsteps_stone_04		92708
 	215896618	soldier_spears	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\soldier_spears_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoldierSounds\soldier_spears		524432
 	235875504	player_death	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_death_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player_death		334524
-	240966390	player_footsteps_stone_02	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_footsteps_stone_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\stoneStep\player_footsteps_stone_02		98072
+	240966390	player_footsteps_stone_02	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_footsteps_stone_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\stoneSteps\player_footsteps_stone_02		98072
 	250515086	GrassLand	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\GrassLand_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footLand_Switch\grassLand\GrassLand		148520
 	253366961	Step_Grass_5	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\Step_Grass_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\grassSteps\Step_Grass_5		37972
 	261884199	jade_pendant_crack_1	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\jade_pendant_crack_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pendant\jade_pendant_crack_1		99884
-	273711767	Attack1	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\Attack1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\bladeAttack\Attack1		62676
+	273711767	Attack1	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\Attack1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\PlayerAttacks\bladeAttack\Attack1		62676
 	328994259	soldier_headbutt	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\soldier_headbutt_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoldierSounds\soldier_headbutt		786576
 	341560796	Step_Grass_1	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\Step_Grass_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\grassSteps\Step_Grass_1		37444
 	342657200	Village_Level_Draft 4	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\Village_Level_Draft 4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\META_Switch\VillageViaCutScene_Playlist\Village_Level_Draft 4\Village_Level_Draft 4		18585792
-	350638146	Attack2	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\Attack2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\bladeAttack\Attack2		61340
+	350638146	Attack2	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\Attack2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\PlayerAttacks\bladeAttack\Attack2		61340
 	365631348	Bamboo_Stage_Demo_132bpm	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\Bamboo_Stage_Demo_132bpm_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\META_Switch\Bamboo_Playlist\Bamboo_Stage_Demo_132bpm\Bamboo_Stage_Demo_132bpm		7696960
 	418484840	BombWhistle	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\BombWhistle_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BombWhistle		701284
 	427821848	player_footsteps_dirt_1	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_footsteps_dirt_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\dirtSteps\player_footsteps_dirt_1		86080
 	437168310	player_landing_dirt_3	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_landing_dirt_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footLand_Switch\dirtLand\player_landing_dirt_3		79296
 	474746038	Step_Grass_3	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\Step_Grass_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\grassSteps\Step_Grass_3		36748
-	495037492	player_footsteps_stone_01	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_footsteps_stone_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\stoneStep\player_footsteps_stone_01		94596
+	495037492	player_footsteps_stone_01	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_footsteps_stone_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\stoneSteps\player_footsteps_stone_01		94596
 	550483470	player_landing_dirt_2	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_landing_dirt_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footLand_Switch\dirtLand\player_landing_dirt_2		100160
 	559824723	player_landing_dirt_4	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_landing_dirt_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footLand_Switch\dirtLand\player_landing_dirt_4		96704
 	560260347	player_landing_dirt_1	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_landing_dirt_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footLand_Switch\dirtLand\player_landing_dirt_1		121920
 	562619060	jade_pendant_crack_2	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\jade_pendant_crack_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pendant\jade_pendant_crack_2		99080
-	587515936	player_footsteps_stone_03	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_footsteps_stone_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\stoneStep\player_footsteps_stone_03		92708
+	587515936	player_footsteps_stone_03	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_footsteps_stone_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\stoneSteps\player_footsteps_stone_03		92708
 	724026448	Step_Grass_4	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\Step_Grass_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\grassSteps\Step_Grass_4		37692
 	739116925	AppleMunch	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\AppleMunch_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\AppleMunch		150328
 	796845028	ambience_night	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\ambience_night_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiences\ambience_night		8578144
 	804659363	player_footsteps_dirt_6	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_footsteps_dirt_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\dirtSteps\player_footsteps_dirt_6		135232
 	806889390	Step_Grass_8	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\Step_Grass_8_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\grassSteps\Step_Grass_8		35724
 	850441153	player_footsteps_dirt_2	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_footsteps_dirt_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\dirtSteps\player_footsteps_dirt_2		89664
+	852903283	jump	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\jump_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\jump		144144
 	860171682	Step_Grass_6	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\Step_Grass_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\grassSteps\Step_Grass_6		37420
 	882511175	jade_pendant_crack_3	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\jade_pendant_crack_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pendant\jade_pendant_crack_3		107936
 	947976714	Menu	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\Menu_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\META_Switch\Menu_Playlist\Menu\Menu		8270960

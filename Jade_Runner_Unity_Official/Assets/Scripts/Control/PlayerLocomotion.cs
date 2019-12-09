@@ -271,6 +271,7 @@ public class PlayerLocomotion : MonoBehaviour
 
                 dblJump = true;
                 jumpCount += 1;
+                
             }
 
             if (Input.GetButtonDown(jumpControl))
@@ -280,6 +281,7 @@ public class PlayerLocomotion : MonoBehaviour
                 {
                     jumpTimer = 0.5f;
                     rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                    AkSoundEngine.PostEvent("playerJump", gameObject);
                     canJump = false;
                     airBorne = true;
                 }
@@ -288,6 +290,7 @@ public class PlayerLocomotion : MonoBehaviour
             {
                 rb.AddForce(Vector3.up * dblJumpForce, ForceMode.Impulse);
                 playerAnim.SetTrigger("DblJump");
+               // AkSoundEngine.PostEvent("playerJump2", gameObject);
                 dblJump = false;
                 dblJumpTimer = 0;
             }
@@ -538,6 +541,8 @@ public class PlayerLocomotion : MonoBehaviour
             moveSpeed = moveSpeedConstant;
             jumpForce = jumpForceConstant;
             poweredUpDurationTimer = poweredUpTimerReset;
+            AkSoundEngine.SetSwitch("PlayerAttacks", "Normal", gameObject);
+            Debug.Log("PlayerAttack to normal switch");
         }
         if(poweredUpInstanceTimer < 0)
         {

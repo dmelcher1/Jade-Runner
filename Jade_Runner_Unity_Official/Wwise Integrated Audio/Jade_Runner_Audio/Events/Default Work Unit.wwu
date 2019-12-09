@@ -247,6 +247,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="playerJump" ID="{FB84EEF5-848C-46EF-882F-8ECEE18D41FB}">
+							<ChildrenList>
+								<Action Name="" ID="{E0507FA1-928C-4342-A771-C9069A5C5B36}" ShortID="698776128">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="jump" ID="{0E5AE20B-0006-44D2-A1B4-0379BEA1ED4C}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="playerJump2" ID="{88A113F9-68AC-4A11-978C-4C1A9972B979}">
+							<ChildrenList>
+								<Action Name="" ID="{C862D13D-0550-4F0D-87C0-4DB6D387AD2E}" ShortID="521381280">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="double_jump" ID="{EAFD021A-F825-404D-97A4-CA38FEACFC48}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Music" ID="{1AF9FD11-3AC3-41AB-A350-407398AF91E4}" ShortID="964600976">

@@ -26,6 +26,12 @@
 						<Switch Name="Forrest" ID="{86C46AC4-64A5-426B-8C6D-057D1CAE1961}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="PlayerAttacks" ID="{D9285521-8E61-4131-A34A-591F8D619EF1}">
+					<ChildrenList>
+						<Switch Name="Normal" ID="{58A7B157-2C6F-4C7C-A508-884004E5C36E}"/>
+						<Switch Name="PoweredUp" ID="{B6BA4F3B-BFA5-4220-836C-B5A9CBEBD4F9}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

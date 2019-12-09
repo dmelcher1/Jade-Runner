@@ -59,6 +59,7 @@ public class Firework : MonoBehaviour
     {
         if (other.CompareTag("Fireworks"))
         {
+            
             StartCoroutine("Combust");
         }
     }
@@ -66,10 +67,12 @@ public class Firework : MonoBehaviour
     IEnumerator Countdown()
     {
         fuseEffect.SetActive(true);
+        AkSoundEngine.PostEvent("bombFuse", gameObject);
 
         yield return new WaitForSeconds(3f);
 
         detonated = true;
+        AkSoundEngine.PostEvent("bombCombust", gameObject);
         Instantiate(explosionEffect, explosionTarget.position, explosionTarget.rotation);
         Destroy(firework);
     }
@@ -79,6 +82,7 @@ public class Firework : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         detonated = true;
+        AkSoundEngine.PostEvent("bombCombust", gameObject);
         Instantiate(explosionEffect, explosionTarget.position, explosionTarget.rotation);
         Destroy(firework);
     }

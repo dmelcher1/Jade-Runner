@@ -30,6 +30,7 @@ public class LoadLevel : MonoBehaviour
     public bool levelSelected;
     public int previousScene;
     public int chosenScene;
+    public LevelTracking levelTracking;
     
 
     // Start is called before the first frame update
@@ -37,6 +38,9 @@ public class LoadLevel : MonoBehaviour
     {
         //animator.SetBool("FadeOut", true);
         //levelTracking = GameObject.Find("LevelTracker").GetComponent<LevelTracking>();
+        //levelSelected = levelTracking.levelSelected;
+        //previousScene = levelTracking.previousScene;
+        //chosenScene = levelTracking.chosenScene;
         StartCoroutine("PlayVideo");
     }
 
@@ -128,8 +132,7 @@ public class LoadLevel : MonoBehaviour
                 }
                 playScreen.texture = loadingScreenVideo.texture;
                 //animator.SetBool("FadeOut", false);
-           
-                    loadingScreenVideo.Play();
+                loadingScreenVideo.Play();
                     //Might change loadingScreenVideo.isPlaying to a flat wait time instead depending on how long it is
                     
             }

@@ -24,7 +24,6 @@ public class GameController : LevelTracking
     public Image fader;
     //public GameObject fader;
     //public Color alpha;
-    private int startHealth;
     private float startFadeDelay;
     private string currentScene;
     //private int nextScene;
@@ -34,6 +33,9 @@ public class GameController : LevelTracking
     public LevelTracking levelTracking;
     public Image healthUI;
     public Sprite[] healthSprites;
+    public bool paused;
+    public GameObject pauseMenu;
+    public GameObject howToPlayMenu;
 
     
     // Start is called before the first frame update
@@ -50,7 +52,7 @@ public class GameController : LevelTracking
         
         playerLocomotion = GameObject.FindObjectOfType<PlayerLocomotion>();
         
-        startHealth = 3;
+        
         startFadeDelay = playerLocomotion.fadeDelay;
         //if(SceneManager.GetActiveScene().name == "VillageMenuScene")
         //{
@@ -62,11 +64,12 @@ public class GameController : LevelTracking
     void Update()
     {
         HealthUI();
+        Pause();
 
-        if(Input.GetButton("Quit"))
-        {
-            Application.Quit();
-        }
+        //if(Input.GetButton("Quit"))
+        //{
+        //    Application.Quit();
+        //}
 
         if(beatLevel == true)
         {
@@ -102,7 +105,7 @@ public class GameController : LevelTracking
         player.transform.position = playerLocomotion.currentCheckpoint.transform.position;
         player.transform.rotation = playerLocomotion.currentCheckpoint.transform.rotation;
         playerLocomotion.activeCam = playerLocomotion.checkPtCam;
-        playerLocomotion.health = startHealth;
+        playerLocomotion.health = playerLocomotion.startHealth;
         playerLocomotion.currentHealth = playerLocomotion.health;
         playerLocomotion.dead = false;
         playerLocomotion.fadeDelay = startFadeDelay;
@@ -165,4 +168,45 @@ public class GameController : LevelTracking
 
         SceneManager.LoadScene(currentScene);
     }
+
+    public void Pause()
+    {
+        if(Input.GetButton("Pause") || Input.GetButton("Pause2"))
+        {
+            Time.timeScale = 0;
+            pauseMenu.SetActive(true);
+        }
+    }
+
+    public void Resume()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void HowToPlay()
+    {
+        pauseMenu.SetActive(false);
+        howToPlayMenu.SetActive(true);
+    }
+
+    public void BackButton()
+    {
+        howToPlayMenu.SetActive(false);
+        pauseMenu.SetActive(true);
+    }
+
+    public void QuitToMenu()
+    {
+        //SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quitting!");
+        Application.Quit();
+    }
+
+
 }

@@ -38,7 +38,7 @@ public class LoadLevel : MonoBehaviour
     void Start()
     {
         //animator.SetBool("FadeOut", true);
-        //levelTracking = GameObject.Find("LevelTracker").GetComponent<LevelTracking>();
+        levelTracking = GameObject.Find("LevelTracker").GetComponent<LevelTracking>();
         //levelSelected = levelTracking.levelSelected;
         //previousScene = levelTracking.previousScene;
         //chosenScene = levelTracking.chosenScene;
@@ -46,9 +46,19 @@ public class LoadLevel : MonoBehaviour
         StartCoroutine("PlayVideo");
     }
 
+    //IEnumerator UnSelectedSequence()
+    //{
+
+    //}
+
+    //IEnumerator LevelSelectedSequence()
+    //{
+
+    //}
+
     IEnumerator PlayVideo()
     {
-        //yield return new WaitForSeconds(1.0f);
+        //yield return new WaitForSeconds(2.0f);
 
         if(!levelSelected)
         {
@@ -85,9 +95,14 @@ public class LoadLevel : MonoBehaviour
                     yield return new WaitForSeconds(1.0f);
                     break;
                 }
+                if (loadingScreenVideo.isPrepared)
+                {
+                    animator.enabled = true;
+                }
                 playScreen.texture = loadingScreenVideo.texture;
                 //animator.SetBool("FadeOut", false);
                 loadingScreenVideo.Play();
+                vidReady = true;
                 GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayForrest();
             }
             if (previousScene == 3)
@@ -100,12 +115,16 @@ public class LoadLevel : MonoBehaviour
                     yield return new WaitForSeconds(1.0f);
                     break;
                 }
+                if (endCutSceneVideo.isPrepared)
+                {
+                    animator.enabled = true;
+                }
                 playScreen.texture = endCutSceneVideo.texture;
                 //animator.SetBool("FadeOut", false);
                
                 endCutSceneVideo.Play();
-
-                if(youWon)
+                vidReady = true;
+                if (youWon)
                 {
                     GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
                     vidRunTime = creditsSceneVideo.clip.length;
@@ -116,49 +135,56 @@ public class LoadLevel : MonoBehaviour
                         yield return new WaitForSeconds(1.0f);
                         break;
                     }
+                    if (creditsSceneVideo.isPrepared)
+                    {
+                        animator.enabled = true;
+                    }
                     playScreen.texture = creditsSceneVideo.texture;
                     //animator.SetBool("FadeOut", false);
 
                     creditsSceneVideo.Play();
+                    vidReady = true;
                     creditsSceneAudio.Play();
                 }
-                    
-                
             }
-            
-            else if(levelSelected)
+        }
+        else if (levelSelected)
+        {
+            vidRunTime = loadingScreenVideo.clip.length;
+            endTime = vidRunTime - 1;
+            loadingScreenVideo.Prepare();
+            while (!loadingScreenVideo.isPrepared)
             {
-                vidRunTime = loadingScreenVideo.clip.length;
-                endTime = vidRunTime - 1;
-                loadingScreenVideo.Prepare();
-                while (!loadingScreenVideo.isPrepared)
-                {
-                    yield return new WaitForSeconds(1.0f);
-                    break;
-                }
-                playScreen.texture = loadingScreenVideo.texture;
-                //animator.SetBool("FadeOut", false);
-                loadingScreenVideo.Play();
-                    //Might change loadingScreenVideo.isPlaying to a flat wait time instead depending on how long it is
-                    
+                yield return new WaitForSeconds(1.0f);
+                break;
             }
+            if (loadingScreenVideo.isPrepared)
+            {
+                animator.enabled = true;
+            }
+            playScreen.texture = loadingScreenVideo.texture;
+            //animator.SetBool("FadeOut", false);
+            loadingScreenVideo.Play();
+            vidReady = true;
+            //Might change loadingScreenVideo.isPlaying to a flat wait time instead depending on how long it is
+
         }
         //else if (youWon)
         //{
-            //vidRunTime = creditsSceneVideo.clip.length;
-            //endTime = vidRunTime - 1;
-            //creditsSceneVideo.Prepare();
-            //while (!creditsSceneVideo.isPrepared)
-            //{
-            //    yield return new WaitForSeconds(1.0f);
-            //    break;
-            //}
-            //playScreen.texture = creditsSceneVideo.texture;
-            ////animator.SetBool("FadeOut", false);
+        //vidRunTime = creditsSceneVideo.clip.length;
+        //endTime = vidRunTime - 1;
+        //creditsSceneVideo.Prepare();
+        //while (!creditsSceneVideo.isPrepared)
+        //{
+        //    yield return new WaitForSeconds(1.0f);
+        //    break;
+        //}
+        //playScreen.texture = creditsSceneVideo.texture;
+        ////animator.SetBool("FadeOut", false);
 
-            //creditsSceneVideo.Play();
-            //creditsSceneAudio.Play();
-            
+        //creditsSceneVideo.Play();
+        //creditsSceneAudio.Play();
+
 
         //}
     }
@@ -166,6 +192,9 @@ public class LoadLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(startReady)
+        StartCoroutine("PlayVideo");
+
         if (vidReady)
         {
             if(!levelSelected)
@@ -175,6 +204,7 @@ public class LoadLevel : MonoBehaviour
                     currentRunTime = startCutSceneVideo.time;
                     if (currentRunTime >= endTime)
                     {
+                        startCutSceneVideo.Pause();
                         Debug.Log("Start Scene Over!");
                         animator.SetBool("FadeOut", true);
                         changeLevelDelay -= 0.1f;
@@ -191,6 +221,7 @@ public class LoadLevel : MonoBehaviour
                     //Might change loadingScreenVideo.isPlaying to a flat wait time instead depending on how long it is
                     if (currentRunTime >= endTime)
                     {
+                        loadingScreenVideo.Pause();
                         Debug.Log("Loading Screen Done!");
                         animator.SetBool("FadeOut", true);
                         changeLevelDelay -= 0.1f;
@@ -207,6 +238,7 @@ public class LoadLevel : MonoBehaviour
                     //Might change loadingScreenVideo.isPlaying to a flat wait time instead depending on how long it is
                     if (currentRunTime >= endTime)
                     {
+                        endCutSceneVideo.Pause();
                         Debug.Log("End Scene Over!");
                         animator.SetBool("FadeOut", true);
                         endCreditsDelay -= 0.1f;
@@ -222,6 +254,7 @@ public class LoadLevel : MonoBehaviour
                     currentRunTime = creditsSceneVideo.time;
                     if (currentRunTime >= endTime)
                     {
+                        creditsSceneVideo.Pause();
                         animator.SetBool("FadeOut", true);
                         changeLevelDelay -= 0.1f;
                         if (changeLevelDelay <= 0)
@@ -231,12 +264,12 @@ public class LoadLevel : MonoBehaviour
                     }
                 }
             }
-        }
-            else if(levelSelected)
+            else if (levelSelected)
             {
                 currentRunTime = loadingScreenVideo.time;
                 if (currentRunTime >= endTime)
                 {
+                    loadingScreenVideo.Pause();
                     animator.SetBool("FadeOut", true);
                     changeLevelDelay -= 0.1f;
                     if (changeLevelDelay <= 0)
@@ -252,5 +285,9 @@ public class LoadLevel : MonoBehaviour
                     }
                 }
             }
+        }
+            
+        //vidReady = false;
+        levelTracking.startLoading = false;
     }
 }

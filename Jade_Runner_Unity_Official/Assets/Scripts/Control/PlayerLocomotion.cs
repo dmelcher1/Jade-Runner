@@ -259,11 +259,11 @@ public class PlayerLocomotion : MonoBehaviour
                 jumpControl = jumpJoystick;
             }
 
-            jumpTimer -= 0.1f;
+            jumpTimer -= 0.1f * Time.deltaTime;
 
             if (airBorne && dblJump)
             {
-                dblJumpTimer -= 0.1f;
+                dblJumpTimer -= 0.1f * Time.deltaTime;
             }
 
             if (Input.GetButtonUp(jumpControl) && airBorne && jumpTimer <= 0.3f && jumpCount < 1)
@@ -279,7 +279,7 @@ public class PlayerLocomotion : MonoBehaviour
                 //Debug.Log("Jumping");
                 if (!airBorne && jumpTimer <= 0)
                 {
-                    jumpTimer = 0.5f;
+                    jumpTimer = 0.1f;
                     rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
                     AkSoundEngine.PostEvent("playerJump", gameObject);
                     canJump = false;
@@ -322,8 +322,8 @@ public class PlayerLocomotion : MonoBehaviour
                 attackControl = attackTrigger;
             }
 
-            multiAttackTimer -= 0.1f;
-            singleAttackTimer -= 0.1f;
+            multiAttackTimer -= 0.1f * Time.deltaTime;
+            singleAttackTimer -= 0.1f * Time.deltaTime;
             
 
             if (!airBorne)
@@ -332,14 +332,19 @@ public class PlayerLocomotion : MonoBehaviour
                 {
                     if (multiAttackTimer <= 0)
                     {
-                        multiAttackTimer = 0.5f;
+                        
                         //canAttack = false;
-                        if (singleAttackTimer < -3.0f)
+                        if (singleAttackTimer < -0.09f)
                         {
                             singleAttack = true;
                             //Debug.Log(singleAttack);
                             singleAttackTimer = 0.0f;
+                            if(singleAttack)
+                            {
+                                multiAttackTimer = 0.1f;
+                            }
                         }
+                        
                     }
                     haltAttack = false;
                 }
@@ -347,7 +352,7 @@ public class PlayerLocomotion : MonoBehaviour
                 if (Input.GetButton(attackControl))
                 {
                     //multiAttack = true;
-                    if (multiAttackTimer <= 0)
+                    if (multiAttackTimer <= 0.07)
                     {
                         //Debug.Log("Multi?");
                         singleAttack = false;

@@ -173,6 +173,7 @@ public class GameController : LevelTracking
     {
         if(Input.GetButton("Pause") || Input.GetButton("Pause2"))
         {
+            Cursor.visible = true;
             Time.timeScale = 0;
             pauseMenu.SetActive(true);
         }
@@ -180,6 +181,7 @@ public class GameController : LevelTracking
 
     public void Resume()
     {
+        Cursor.visible = false;
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
     }

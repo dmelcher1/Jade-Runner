@@ -46,7 +46,8 @@ public class LoadLevel : MonoBehaviour
 
     IEnumerator PlayVideo()
     {
-        
+        //yield return new WaitForSeconds(1.0f);
+
         if(!levelSelected)
         {
             if (previousScene == 0)

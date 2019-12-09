@@ -31,6 +31,7 @@ public class LoadLevel : MonoBehaviour
     public int previousScene;
     public int chosenScene;
     public LevelTracking levelTracking;
+    public bool startReady;
     
 
     // Start is called before the first frame update
@@ -41,14 +42,17 @@ public class LoadLevel : MonoBehaviour
         //levelSelected = levelTracking.levelSelected;
         //previousScene = levelTracking.previousScene;
         //chosenScene = levelTracking.chosenScene;
+        startReady = false;
         StartCoroutine("PlayVideo");
     }
 
     IEnumerator PlayVideo()
     {
-        
+        //yield return new WaitForSeconds(1.0f);
+
         if(!levelSelected)
         {
+            //yield return new WaitForSeconds(1.0f);
             if (previousScene == 0)
             {
                 vidRunTime = startCutSceneVideo.clip.length;

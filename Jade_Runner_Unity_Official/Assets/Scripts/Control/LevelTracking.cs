@@ -31,6 +31,7 @@ public class LevelTracking : MonoBehaviour
         }
         if (sceneNumber == 1)
         {
+            Cursor.visible = false;
             GameObject levelKicker = GameObject.Find("LevelKicker");
             LoadLevel levelLoader = levelKicker.GetComponent<LoadLevel>();
             levelLoader.levelSelected = levelSelected;

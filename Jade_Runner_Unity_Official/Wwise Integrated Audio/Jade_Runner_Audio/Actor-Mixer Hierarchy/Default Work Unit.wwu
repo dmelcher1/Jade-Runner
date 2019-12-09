@@ -676,7 +676,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-9</Value>
+												<Value>-11</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -863,6 +863,27 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="dirtSteps" ID="{6935F4AD-5067-4056-9816-FD8EEBF8CB49}" ShortID="4854937">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{963E41E4-3AA9-4E2E-BC93-022EFB719C93}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="126"/>
+															<Property Name="Min" Type="Real64" Value="-101"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -872,7 +893,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="player_footsteps_dirt_1" ID="{30B9C799-658B-4043-9C36-62C3F985772D}" ShortID="568074806">
+										<Sound Name="DirtStep4" ID="{7AA31C26-E621-4EFF-B66C-97F523300B0B}" ShortID="1068102952">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -882,16 +903,16 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="player_footsteps_dirt_1" ID="{18B1304A-01F7-4095-88AA-752C74A18493}" ShortID="427821848">
+												<AudioFileSource Name="DirtStep4" ID="{3D0259ED-D593-4811-AB65-9C32A3E3B259}" ShortID="258986362">
 													<Language>SFX</Language>
-													<AudioFile>player_footsteps_dirt_1.wav</AudioFile>
+													<AudioFile>DirtStep4.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="player_footsteps_dirt_1" ID="{18B1304A-01F7-4095-88AA-752C74A18493}" Platform="Linked"/>
+												<ActiveSource Name="DirtStep4" ID="{3D0259ED-D593-4811-AB65-9C32A3E3B259}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="player_footsteps_dirt_2" ID="{6ABFFBFC-8989-44E3-B2F4-E6B2EC8D1507}" ShortID="48929786">
+										<Sound Name="DirtStep5" ID="{014A80B6-6206-4BB5-99AB-B9E6748C034E}" ShortID="917162445">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -901,16 +922,16 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="player_footsteps_dirt_2" ID="{A3D1BA47-843A-4D22-BDA4-AAC1D276EB39}" ShortID="850441153">
+												<AudioFileSource Name="DirtStep5" ID="{667CC661-302D-4DA2-8AC8-DC4E060E89D4}" ShortID="91078144">
 													<Language>SFX</Language>
-													<AudioFile>player_footsteps_dirt_2.wav</AudioFile>
+													<AudioFile>DirtStep5.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="player_footsteps_dirt_2" ID="{A3D1BA47-843A-4D22-BDA4-AAC1D276EB39}" Platform="Linked"/>
+												<ActiveSource Name="DirtStep5" ID="{667CC661-302D-4DA2-8AC8-DC4E060E89D4}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="player_footsteps_dirt_3" ID="{A846C6FC-15DE-4194-A70D-A5E8DA9E4C75}" ShortID="861038292">
+										<Sound Name="DirtStep2" ID="{CA3DAD39-BC32-4AAB-9B42-C62CA789AA87}" ShortID="101967322">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -920,16 +941,16 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="player_footsteps_dirt_3" ID="{30B3B2CB-AA40-41E9-9748-73522ED851EB}" ShortID="994380550">
+												<AudioFileSource Name="DirtStep2" ID="{9EC1A5A6-3CCB-41B6-BC6F-851A589806A9}" ShortID="146350128">
 													<Language>SFX</Language>
-													<AudioFile>player_footsteps_dirt_3.wav</AudioFile>
+													<AudioFile>DirtStep2.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="player_footsteps_dirt_3" ID="{30B3B2CB-AA40-41E9-9748-73522ED851EB}" Platform="Linked"/>
+												<ActiveSource Name="DirtStep2" ID="{9EC1A5A6-3CCB-41B6-BC6F-851A589806A9}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="player_footsteps_dirt_4" ID="{BD3EF6C4-3913-43D8-913C-350F7109F35C}" ShortID="667338873">
+										<Sound Name="DirtStep3" ID="{A9A3812E-F599-4303-888F-C47672F60049}" ShortID="1053116493">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -939,16 +960,16 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="player_footsteps_dirt_4" ID="{2C0AE0D5-8360-4C66-BA71-C4965ACB4D32}" ShortID="1067948419">
+												<AudioFileSource Name="DirtStep3" ID="{14F141D2-1527-47A2-BC16-DC9A78772C15}" ShortID="709126130">
 													<Language>SFX</Language>
-													<AudioFile>player_footsteps_dirt_4.wav</AudioFile>
+													<AudioFile>DirtStep3.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="player_footsteps_dirt_4" ID="{2C0AE0D5-8360-4C66-BA71-C4965ACB4D32}" Platform="Linked"/>
+												<ActiveSource Name="DirtStep3" ID="{14F141D2-1527-47A2-BC16-DC9A78772C15}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="player_footsteps_dirt_5" ID="{D3E934FF-7051-411C-AC6C-C00E9BD97445}" ShortID="940204526">
+										<Sound Name="DirtStep1" ID="{4C3ED78E-2368-4F5C-970A-94C1F5C54CC8}" ShortID="188150433">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -958,37 +979,35 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="player_footsteps_dirt_5" ID="{FA32C401-7B39-4ACD-9684-AB496A8EB1D5}" ShortID="976594680">
+												<AudioFileSource Name="DirtStep1" ID="{88B3BA92-7117-4948-BFE4-46170D160E6F}" ShortID="816873126">
 													<Language>SFX</Language>
-													<AudioFile>player_footsteps_dirt_5.wav</AudioFile>
+													<AudioFile>DirtStep1.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="player_footsteps_dirt_5" ID="{FA32C401-7B39-4ACD-9684-AB496A8EB1D5}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="player_footsteps_dirt_6" ID="{85D935E3-99D2-44FF-B4BC-CB3E267A81B0}" ShortID="657852267">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D478289E-F68C-4D31-9BA7-74334B0E3A56}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="player_footsteps_dirt_6" ID="{3E22B984-CC7A-4ECF-98B5-322DBBEF8098}" ShortID="804659363">
-													<Language>SFX</Language>
-													<AudioFile>player_footsteps_dirt_6.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="player_footsteps_dirt_6" ID="{3E22B984-CC7A-4ECF-98B5-322DBBEF8098}" Platform="Linked"/>
+												<ActiveSource Name="DirtStep1" ID="{88B3BA92-7117-4948-BFE4-46170D160E6F}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="stoneSteps" ID="{4F4AA962-B7CB-4115-AB05-BC773B05890F}" ShortID="357097484">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>28</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>22</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -999,6 +1018,18 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="player_footsteps_stone_01" ID="{6C25900E-559F-4EBD-8593-67E979A53C76}" ShortID="207340966">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>26</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>15</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -1018,6 +1049,18 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="player_footsteps_stone_02" ID="{2A2D9771-BB3E-49AC-B231-034B68E4932B}" ShortID="707242126">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>25</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>19</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -1037,6 +1080,18 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="player_footsteps_stone_03" ID="{B563C6B7-B150-448D-8C87-AD3D87925766}" ShortID="1040841628">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>22</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -1056,6 +1111,18 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="player_footsteps_stone_04" ID="{CCA124A6-BECC-48AC-AA29-A858B04919F9}" ShortID="89745802">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>20</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>14</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -1091,6 +1158,11 @@
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1102,6 +1174,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="player_footsteps_wood_1" ID="{B229BE74-8C2C-4CE9-9BBD-35DD99404906}" ShortID="5972449">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -1121,6 +1200,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="player_footsteps_wood_2" ID="{6A3948DB-2BF9-4F84-B99C-8AEA4A162A89}" ShortID="544188556">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -1140,6 +1226,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="player_footsteps_wood_4" ID="{65FC6730-9B88-4EBE-A7BB-081E7A18275D}" ShortID="431748662">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -1159,6 +1252,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="player_footsteps_wood_3" ID="{9C63A19E-AAEB-4AE3-AE27-107BF8DCC07F}" ShortID="931609901">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -1178,6 +1278,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="player_footsteps_wood_5" ID="{576CC8D5-E29E-49B6-8B77-2AE46E3A18FE}" ShortID="916739883">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -1197,6 +1304,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="player_footsteps_wood_6" ID="{A083B919-F7B4-4FBE-B803-6455071E3C9C}" ShortID="34445313">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -1244,6 +1358,12 @@
 										<SwitchRef Name="Dirt" ID="{AAA5336C-B398-4449-B6D1-F08F94F0C29C}"/>
 										<ItemList>
 											<ItemRef Name="dirtSteps" ID="{6935F4AD-5067-4056-9816-FD8EEBF8CB49}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wood" ID="{33F7FEA0-9B5C-430E-BEA6-9A7475495193}"/>
+										<ItemList>
+											<ItemRef Name="woodSteps" ID="{54068EA0-67D1-4F6D-98BD-1C36BFDFB7CA}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>

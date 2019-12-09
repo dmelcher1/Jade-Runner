@@ -32,7 +32,12 @@ public class AudioManager : MonoBehaviour
 
     public void PlayVillageScene()
     {
-        AkSoundEngine.PostEvent("villageStart", gameObject);
+        AkSoundEngine.PostEvent("startToVillage", gameObject);
+    }
+
+    public void PlayVillageImmediately()
+    {
+        AkSoundEngine.SetSwitch("Music_Switches", "VillageImmediate", gameObject);
     }
 
     public void PlayEndCredits()
@@ -42,6 +47,6 @@ public class AudioManager : MonoBehaviour
 
     public void PlayForrest()
     {
-
+        AkSoundEngine.SetSwitch("Music_Switches", "Forrest_1", gameObject);
     }
 }

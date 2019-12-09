@@ -909,6 +909,14 @@
 								<AudioNodeRef Name="Bamboo_Playlist" ID="{9C957375-8E9F-4709-80A4-F84EBC61A505}" WorkUnitID="{A3113F7D-FEBB-48BF-A777-7DFB46808496}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="VillageImmediate" ID="{9093E62D-F790-4843-A944-D7B88A272240}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="toVillage_Playlist" ID="{3188C71B-B309-4768-A431-7A43CF8633BF}" WorkUnitID="{A3113F7D-FEBB-48BF-A777-7DFB46808496}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
 					</EntryList>
 				</MusicSwitchContainer>
 			</ChildrenList>

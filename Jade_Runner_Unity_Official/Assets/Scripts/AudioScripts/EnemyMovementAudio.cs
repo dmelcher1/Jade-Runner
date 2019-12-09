@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class EnemyMovementAudio : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Step()
     {
-        
+        AkSoundEngine.PostEvent("soldierStep", gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Swat()
     {
-        
+        AkSoundEngine.PostEvent("soldierSpear", gameObject);
     }
+
+    private void Charge()
+    {
+        AkSoundEngine.PostEvent("soldierCharge", gameObject);
+    }
+
 }

@@ -30,9 +30,11 @@ namespace AK
         static const AkUniqueID PLAYERJUMP2 = 937597620U;
         static const AkUniqueID RESPAWN = 4279841335U;
         static const AkUniqueID SOLDIERCHARGE = 2426661741U;
+        static const AkUniqueID SOLDIERDEATH = 962204745U;
         static const AkUniqueID SOLDIERHEADBUTT = 3874903456U;
         static const AkUniqueID SOLDIERSPEAR = 4048947044U;
         static const AkUniqueID SOLDIERSTEP = 139845655U;
+        static const AkUniqueID SOLDIERTAKESDAMAGE = 4293947536U;
         static const AkUniqueID STARTTOVILLAGE = 391742444U;
         static const AkUniqueID UI_HOVER = 2118900976U;
         static const AkUniqueID UI_SELECT = 2774129122U;
@@ -61,6 +63,7 @@ namespace AK
                 static const AkUniqueID DIRT = 2195636714U;
                 static const AkUniqueID GRASS = 4248645337U;
                 static const AkUniqueID STONE = 1216965916U;
+                static const AkUniqueID WOOD = 2058049674U;
             } // namespace SWITCH
         } // namespace FOOTSTEP_SWITCHES
 
@@ -75,7 +78,7 @@ namespace AK
                 static const AkUniqueID MENU = 2607556080U;
                 static const AkUniqueID VILLAGE_1 = 1868129171U;
                 static const AkUniqueID VILLAGE_2 = 1868129168U;
-                static const AkUniqueID VILLAGEIMEDIATE = 3371831861U;
+                static const AkUniqueID VILLAGEIMMEDIATE = 17780674U;
             } // namespace SWITCH
         } // namespace MUSIC_SWITCHES
 

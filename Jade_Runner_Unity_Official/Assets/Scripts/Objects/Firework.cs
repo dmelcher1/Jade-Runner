@@ -72,7 +72,7 @@ public class Firework : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         detonated = true;
-        AkSoundEngine.PostEvent("bombCombust", gameObject);
+        AkSoundEngine.PostEvent("bombExplode", gameObject);
         Instantiate(explosionEffect, explosionTarget.position, explosionTarget.rotation);
         Destroy(firework);
     }
@@ -82,7 +82,7 @@ public class Firework : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         detonated = true;
-        AkSoundEngine.PostEvent("bombCombust", gameObject);
+        AkSoundEngine.PostEvent("bombExplode", gameObject);
         Instantiate(explosionEffect, explosionTarget.position, explosionTarget.rotation);
         Destroy(firework);
     }

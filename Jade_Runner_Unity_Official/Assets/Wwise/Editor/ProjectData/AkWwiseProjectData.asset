@@ -207,7 +207,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 1bead272cd7e9048b19c37dcb88683b3
     GuidInternal: 
-    m_lastTime: -8586257488054775808
+    m_lastTime: -8586257392644775808
     List:
     - name: Attack
       guid: 0d248be082afdb499172f1dfcb598c15
@@ -431,6 +431,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: soldierDeath
+      guid: 0af0e4df190d3647995bfa0b7a94ebdb
+      id: 962204745
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SoldierMovement
+        ObjectType: 4
+      - ElementName: soldierDeath
+        ObjectType: 3
+      Path: Default Work Unit/SoldierMovement/soldierDeath
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: soldierHeadButt
       guid: 5abc3e7f768ece44889137815ea06c23
       id: 3874903456
@@ -470,6 +484,20 @@ MonoBehaviour:
       - ElementName: soldierStep
         ObjectType: 3
       Path: Default Work Unit/SoldierMovement/soldierStep
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: soldierTakesDamage
+      guid: 3780b09aa8d4a146a89956ea26743684
+      id: 4293947536
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SoldierMovement
+        ObjectType: 4
+      - ElementName: soldierTakesDamage
+        ObjectType: 3
+      Path: Default Work Unit/SoldierMovement/soldierTakesDamage
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -664,7 +692,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 99fce58a1634eb418529c7d61df57c3a
     GuidInternal: 
-    m_lastTime: -8586257524014775808
+    m_lastTime: -8586257397174775808
     List:
     - name: Ambiences
       guid: d18f2ae66480394c9ebbf5b5f4bd0a00
@@ -719,6 +747,12 @@ MonoBehaviour:
         PathAndIcons:
         - ElementName: Stone
           ObjectType: 10
+      - name: Wood
+        guid: a0fef7335c9b0e43bea69a7475495193
+        id: 2058049674
+        PathAndIcons:
+        - ElementName: Wood
+          ObjectType: 10
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -762,11 +796,11 @@ MonoBehaviour:
         PathAndIcons:
         - ElementName: Village_2
           ObjectType: 10
-      - name: VillageImediate
+      - name: VillageImmediate
         guid: 2de6939090f74348a944d7b88a272240
-        id: 3371831861
+        id: 17780674
         PathAndIcons:
-        - ElementName: VillageImediate
+        - ElementName: VillageImmediate
           ObjectType: 10
       ValueGuids: []
       ValueIcons: []
@@ -807,12 +841,11 @@ MonoBehaviour:
   - /Jade_Runner_Audio
   - /Jade_Runner_Audio/Events
   - /Jade_Runner_Audio/Events/Default Work Unit
-  - /Jade_Runner_Audio/Events/Default Work Unit/PlayerMovement
+  - /Jade_Runner_Audio/Events/Default Work Unit/Music
   - /Jade_Runner_Audio/SoundBanks
   - /Jade_Runner_Audio/SoundBanks/Default Work Unit
   - /Jade_Runner_Audio/Switches
   - /Jade_Runner_Audio/Switches/Default Work Unit
   - /Jade_Runner_Audio/Switches/Default Work Unit/Music_Switches
-  - /Jade_Runner_Audio/Switches/Default Work Unit/PlayerAttacks
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

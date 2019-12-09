@@ -28,6 +28,7 @@ public class Main_Menu : MonoBehaviour
     public void StartGame()
     {
         GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayVillageScene();
+        Debug.Log("PlayingVillageSceneMusic");
         //AkSoundEngine.PostEvent("villageStart", gameObject);
         SceneManager.LoadScene(1);
         
@@ -36,6 +37,7 @@ public class Main_Menu : MonoBehaviour
     public void VillageLevel()
     {
         GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayVillageScene();
+        Debug.Log("PlayingVillageSceneMusic");
         levelTracking.levelSelected = true;
         chosenScene = 2;
         levelTracking.chosenScene = chosenScene;

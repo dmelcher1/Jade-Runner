@@ -129,7 +129,17 @@
 				</Event>
 				<Folder Name="SoldierMovement" ID="{225F4776-5843-4E54-9A55-405D80BC2C72}" ShortID="846527194">
 					<ChildrenList>
-						<Event Name="soldierStep" ID="{C23789D4-2532-4141-9320-C0E9BB09DAA9}"/>
+						<Event Name="soldierStep" ID="{C23789D4-2532-4141-9320-C0E9BB09DAA9}">
+							<ChildrenList>
+								<Action Name="" ID="{567488F2-750E-4D2C-AFC7-D86FE382128D}" ShortID="52492453">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="soldierStep" ID="{37E200E9-2151-4761-8302-827EF3DD82D5}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="soldierCharge" ID="{F6004D8B-24B7-4FC4-B77A-C1B3219A602C}">
 							<ChildrenList>
 								<Action Name="" ID="{15671670-E467-491B-B0D1-82A6232C1D34}" ShortID="397294172">
@@ -158,6 +168,28 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="soldier_headbutt" ID="{EFCFFBE0-0A35-4529-B9C8-54F87C6F1436}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="soldierTakesDamage" ID="{9AB08037-D4A8-46A1-A899-56EA26743684}">
+							<ChildrenList>
+								<Action Name="" ID="{29B8C824-2001-481B-972C-FCAA7637E622}" ShortID="42280382">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="soldierTakesDamage" ID="{3AC01E08-A004-404D-8896-D5A2031D04B9}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="soldierDeath" ID="{DFE4F00A-0D19-4736-995B-FA0B7A94EBDB}">
+							<ChildrenList>
+								<Action Name="" ID="{E962379A-7D05-4E5F-9354-BED51D3611BD}" ShortID="87549557">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="soldierDeath" ID="{FDDFF372-C8A9-40D7-AE45-75A14125F938}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -293,6 +325,16 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="ambience_forest" ID="{79AE95B4-06E6-4A9C-BD01-1B18328BE352}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F3D2B36F-76A7-46AF-88CF-1F9CA2EC84D0}" ShortID="908369782">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Village_1" ID="{941591EF-E4B0-424C-A873-DADBD5BC0277}" WorkUnitID="{8AE5FC99-3416-41EB-8529-C7D61DF57C3A}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

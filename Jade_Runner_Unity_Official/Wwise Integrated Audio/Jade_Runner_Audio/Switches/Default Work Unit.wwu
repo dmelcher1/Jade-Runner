@@ -10,7 +10,7 @@
 						<Switch Name="Village_2" ID="{25B5AB01-9F08-4B4B-B829-A522E93069F9}"/>
 						<Switch Name="Forrest_1" ID="{A22743F8-2C2D-4F01-ABF6-898ADCED0EC4}"/>
 						<Switch Name="Forrest_2" ID="{717B4F83-0EA0-4F63-91FE-AE59025709DD}"/>
-						<Switch Name="VillageImediate" ID="{9093E62D-F790-4843-A944-D7B88A272240}"/>
+						<Switch Name="VillageImmediate" ID="{9093E62D-F790-4843-A944-D7B88A272240}"/>
 					</ChildrenList>
 				</SwitchGroup>
 				<SwitchGroup Name="FootStep_Switches" ID="{C25727E9-AA15-4F05-86BA-478398A70117}">
@@ -18,6 +18,7 @@
 						<Switch Name="Grass" ID="{8AC805D9-00CB-407C-ADB5-303AA9BBFBC9}"/>
 						<Switch Name="Dirt" ID="{AAA5336C-B398-4449-B6D1-F08F94F0C29C}"/>
 						<Switch Name="Stone" ID="{A07F7D3A-0A9A-4A11-8792-7E6C5D65221B}"/>
+						<Switch Name="Wood" ID="{33F7FEA0-9B5C-430E-BEA6-9A7475495193}"/>
 					</ChildrenList>
 				</SwitchGroup>
 				<SwitchGroup Name="Ambiences" ID="{E62A8FD1-8064-4C39-9EBB-F5B5F4BD0A00}">

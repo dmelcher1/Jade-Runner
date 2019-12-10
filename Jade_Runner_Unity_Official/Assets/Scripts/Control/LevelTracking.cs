@@ -47,6 +47,8 @@ public class LevelTracking : MonoBehaviour
             }
         }
 
+    
+
         DontDestroyOnLoad(transform.gameObject);
     }
 }

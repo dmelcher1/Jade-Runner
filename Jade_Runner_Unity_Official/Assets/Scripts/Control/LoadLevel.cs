@@ -22,7 +22,7 @@ public class LoadLevel : MonoBehaviour
     public float changeLevelDelay;
     //private float transitionDelay = 3.0f;
     private float endCreditsDelay = 3.0f;
-    //public bool youWon;
+    public bool youWon;
     public double vidRunTime;
     public double currentRunTime;
     public double endTime;
@@ -132,9 +132,10 @@ public class LoadLevel : MonoBehaviour
 
                 endCutSceneVideo.Play();
                 vidReady = true;
+                GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
                 //if (youWon)
                 //{
-                //GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
+
                 //    vidRunTime = creditsSceneVideo.clip.length;
                 //    endTime = vidRunTime - 1;
                 //    creditsSceneVideo.Prepare();
@@ -256,14 +257,14 @@ public class LoadLevel : MonoBehaviour
                         if (endCreditsDelay <= 0)
                         {
                             SceneManager.LoadScene(4);
-                            //youWon = true;
+                            youWon = true;
                         }
                     }
                 }
-                //if (youWon)
+                //if (youWon == true)
                 //{
                 //   animator.SetBool("FadeOut", false);
-                //   GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
+                   //GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
                 //    currentRunTime = creditsSceneVideo.time;
                 //    if (currentRunTime >= endTime)
                 //    {

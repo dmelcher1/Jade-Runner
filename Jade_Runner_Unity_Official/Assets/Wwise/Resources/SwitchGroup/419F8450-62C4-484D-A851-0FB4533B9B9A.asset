@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf77ab5357a23d48b94ce995fd28015, type: 3}
+  m_Name: 419F8450-62C4-484D-A851-0FB4533B9B9A
+  m_EditorClassIdentifier: 
+  objectName: Music_Switches
+  id: 226124245
+  guid: 419F8450-62C4-484D-A851-0FB4533B9B9A

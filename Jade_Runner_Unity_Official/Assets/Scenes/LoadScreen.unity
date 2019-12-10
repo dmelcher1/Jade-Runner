@@ -598,6 +598,7 @@ GameObject:
   - component: {fileID: 1374475301}
   - component: {fileID: 1374475303}
   - component: {fileID: 1374475300}
+  - component: {fileID: 1374475304}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -698,6 +699,14 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!81 &1374475304
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374475299}
+  m_Enabled: 1
 --- !u!1 &1378768668
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,6 +748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1481199272}
   - component: {fileID: 1481199271}
+  - component: {fileID: 1481199273}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -787,6 +797,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1481199273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481199270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25bac6c88002546e0b555c9f4405017c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1515883250
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,6 +1471,7 @@ MonoBehaviour:
   startCutSceneAudio: {fileID: 1515883253}
   endCutSceneAudio: {fileID: 1970897804}
   changeLevelDelay: 7
+  youWon: 0
   vidRunTime: 0
   currentRunTime: 0
   endTime: 0

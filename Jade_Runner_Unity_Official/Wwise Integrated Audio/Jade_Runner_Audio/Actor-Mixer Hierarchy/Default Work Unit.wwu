@@ -1160,7 +1160,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>6</Value>
+												<Value>10</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1849,17 +1849,118 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="powerAttack" ID="{FEFEA5D8-F179-493B-A757-DEC01806D14F}" ShortID="1064190284">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{73192FC0-B5B7-47F8-853E-757D41B8C388}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="202"/>
+															<Property Name="Min" Type="Real64" Value="-177"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D478289E-F68C-4D31-9BA7-74334B0E3A56}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="PowerAttack1" ID="{3FA3AA5A-7F9B-4CFC-8D3B-0B3BE272F676}" ShortID="477258120">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D478289E-F68C-4D31-9BA7-74334B0E3A56}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="PowerAttack1" ID="{43AF802A-CF39-483A-9E07-A6BA99024364}" ShortID="611719648">
+													<Language>SFX</Language>
+													<AudioFile>PowerAttack1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="PowerAttack1" ID="{43AF802A-CF39-483A-9E07-A6BA99024364}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="PowerAttack2" ID="{55E12FD8-E5BE-42FF-AD15-6B93DA284680}" ShortID="416098542">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D478289E-F68C-4D31-9BA7-74334B0E3A56}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="PowerAttack2" ID="{BA898972-785E-463C-9D70-32AFD51E174C}" ShortID="1060311542">
+													<Language>SFX</Language>
+													<AudioFile>PowerAttack2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="PowerAttack2" ID="{BA898972-785E-463C-9D70-32AFD51E174C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
 							<GroupingInfo>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
 										<ItemRef Name="bladeAttack" ID="{010127AD-6971-49DD-BD5F-31C313580E75}"/>
 									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="powerAttack" ID="{FEFEA5D8-F179-493B-A757-DEC01806D14F}"/>
+									</GroupingBehavior>
 								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="PoweredUp" ID="{B6BA4F3B-BFA5-4220-836C-B5A9CBEBD4F9}"/>
+										<ItemList>
+											<ItemRef Name="powerAttack" ID="{FEFEA5D8-F179-493B-A757-DEC01806D14F}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Normal" ID="{58A7B157-2C6F-4C7C-A508-884004E5C36E}"/>
+										<ItemList>
+											<ItemRef Name="bladeAttack" ID="{010127AD-6971-49DD-BD5F-31C313580E75}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
 					</ChildrenList>
 				</Folder>
+				<Sound Name="Explosion" ID="{9E9D681D-4207-4CCE-A2EA-5C71A887B472}" ShortID="592194493">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D478289E-F68C-4D31-9BA7-74334B0E3A56}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Explosion" ID="{346E7A13-BF07-4F33-9A56-30969C7C0246}" ShortID="878825932">
+							<Language>SFX</Language>
+							<AudioFile>Explosion.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Explosion" ID="{346E7A13-BF07-4F33-9A56-30969C7C0246}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

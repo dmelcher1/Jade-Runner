@@ -125,6 +125,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{5336793C-E79A-4437-AF73-2F8D67DA7113}" ShortID="733306879">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Explosion" ID="{9E9D681D-4207-4CCE-A2EA-5C71A887B472}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Folder Name="SoldierMovement" ID="{225F4776-5843-4E54-9A55-405D80BC2C72}" ShortID="846527194">

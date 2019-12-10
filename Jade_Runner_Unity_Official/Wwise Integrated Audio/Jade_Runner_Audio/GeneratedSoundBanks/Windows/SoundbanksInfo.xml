@@ -275,6 +275,10 @@
 					<ShortName>Step_Grass_6.wav</ShortName>
 					<Path>SFX/Step_Grass_6_10C4C929.wem</Path>
 				</File>
+				<File Id="878825932" Language="SFX">
+					<ShortName>Explosion.wav</ShortName>
+					<Path>SFX/Explosion_10C4C929.wem</Path>
+				</File>
 				<File Id="882511175" Language="SFX">
 					<ShortName>jade_pendant_crack_3.wav</ShortName>
 					<Path>SFX/jade_pendant_crack_3_10C4C929.wem</Path>

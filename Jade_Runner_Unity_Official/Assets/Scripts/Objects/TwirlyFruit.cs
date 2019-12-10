@@ -36,7 +36,7 @@ public class TwirlyFruit : MonoBehaviour
             if (this.gameObject.tag == "PowerFruit" && !playerLocomotion.poweredUp)
             {
                 AkSoundEngine.PostEvent("fruitPowerUp", gameObject);
-                AkSoundEngine.SetSwitch("PlayerAttack", "PoweredUp", gameObject);
+                AkSoundEngine.SetSwitch("PlayerAttacks", "PoweredUp", gameObject);
                 playerLocomotion.poweredUp = true;
                 playerLocomotion.powerUpJig = true;
                 playerLocomotion.moveSpeed = playerLocomotion.moveSpeed * 1.5f;

@@ -22,6 +22,7 @@ namespace AK
         static const AkUniqueID FRUITHEALTH = 3060982411U;
         static const AkUniqueID FRUITPOWERUP = 864958663U;
         static const AkUniqueID INTHEBEGINNING = 3071493210U;
+        static const AkUniqueID PAUSE = 3092587493U;
         static const AkUniqueID PENDANTCRACK1 = 985050826U;
         static const AkUniqueID PENDANTCRACK2 = 985050825U;
         static const AkUniqueID PENDANTCRACK3 = 985050824U;
@@ -29,6 +30,7 @@ namespace AK
         static const AkUniqueID PLAYERJUMP = 4008126242U;
         static const AkUniqueID PLAYERJUMP2 = 937597620U;
         static const AkUniqueID RESPAWN = 4279841335U;
+        static const AkUniqueID RESUME = 953277036U;
         static const AkUniqueID SOLDIERCHARGE = 2426661741U;
         static const AkUniqueID SOLDIERDEATH = 962204745U;
         static const AkUniqueID SOLDIERHEADBUTT = 3874903456U;
@@ -73,8 +75,10 @@ namespace AK
 
             namespace SWITCH
             {
+                static const AkUniqueID ENDCREDITS = 1271758346U;
                 static const AkUniqueID FORREST_1 = 321571300U;
                 static const AkUniqueID FORREST_2 = 321571303U;
+                static const AkUniqueID FORRESTTOCUTSCENE = 601240775U;
                 static const AkUniqueID MENU = 2607556080U;
                 static const AkUniqueID VILLAGE_1 = 1868129171U;
                 static const AkUniqueID VILLAGE_2 = 1868129168U;
@@ -110,6 +114,11 @@ namespace AK
         static const AkUniqueID SS_AIR_TIMEOFDAY = 3203397129U;
         static const AkUniqueID SS_AIR_TURBULENCE = 4160247818U;
     } // namespace GAME_PARAMETERS
+
+    namespace TRIGGERS
+    {
+        static const AkUniqueID ENDSCENESTING = 3296901703U;
+    } // namespace TRIGGERS
 
     namespace BANKS
     {

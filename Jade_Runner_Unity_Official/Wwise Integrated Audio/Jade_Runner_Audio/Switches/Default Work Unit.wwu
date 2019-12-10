@@ -11,6 +11,8 @@
 						<Switch Name="Forrest_1" ID="{A22743F8-2C2D-4F01-ABF6-898ADCED0EC4}"/>
 						<Switch Name="Forrest_2" ID="{717B4F83-0EA0-4F63-91FE-AE59025709DD}"/>
 						<Switch Name="VillageImmediate" ID="{9093E62D-F790-4843-A944-D7B88A272240}"/>
+						<Switch Name="ForrestToCutScene" ID="{CD76956D-FCAC-4EB9-A798-D1485FFF2E64}"/>
+						<Switch Name="EndCredits" ID="{F688E6B1-472A-4548-83D9-E3AE4DC43FDF}"/>
 					</ChildrenList>
 				</SwitchGroup>
 				<SwitchGroup Name="FootStep_Switches" ID="{C25727E9-AA15-4F05-86BA-478398A70117}">

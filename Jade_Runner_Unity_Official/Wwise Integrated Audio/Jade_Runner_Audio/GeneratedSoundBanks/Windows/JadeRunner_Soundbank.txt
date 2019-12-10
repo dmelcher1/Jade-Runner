@@ -6,6 +6,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	612075679	Checkpoint			\Default Work Unit\Checkpoint	
 	864958663	fruitPowerUp			\Default Work Unit\PlayerMovement\fruitPowerUp	
 	937597620	playerJump2			\Default Work Unit\PlayerMovement\playerJump2	
+	953277036	Resume			\Default Work Unit\Resume	
 	962204745	soldierDeath			\Default Work Unit\SoldierMovement\soldierDeath	
 	985050824	pendantCrack3			\Default Work Unit\pendantCrack3	
 	985050825	pendantCrack2			\Default Work Unit\pendantCrack2	
@@ -19,6 +20,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2774129122	UI_Select			\Default Work Unit\UI_Select	
 	3060982411	fruitHealth			\Default Work Unit\PlayerMovement\fruitHealth	
 	3071493210	inTheBeginning			\Default Work Unit\inTheBeginning	
+	3092587493	Pause			\Default Work Unit\Pause	
 	3371831861	villageImediate			\Default Work Unit\Music\villageImediate	
 	3874903456	soldierHeadButt			\Default Work Unit\SoldierMovement\soldierHeadButt	
 	4008126242	playerJump			\Default Work Unit\PlayerMovement\playerJump	
@@ -35,6 +37,8 @@ Switch	ID	Name	Switch Group			Notes
 	17780674	VillageImmediate	Music_Switches			
 	321571300	Forrest_1	Music_Switches			
 	321571303	Forrest_2	Music_Switches			
+	601240775	ForrestToCutScene	Music_Switches			
+	1271758346	EndCredits	Music_Switches			
 	1868129168	Village_2	Music_Switches			
 	1868129171	Village_1	Music_Switches			
 	2607556080	Menu	Music_Switches			
@@ -44,6 +48,9 @@ Switch	ID	Name	Switch Group			Notes
 	4248645337	Grass	FootStep_Switches			
 	1160234136	Normal	PlayerAttacks			
 	4231327868	PoweredUp	PlayerAttacks			
+
+Trigger	ID	Name			Wwise Object Path	Notes
+	3296901703	EndSceneSting			\Default Work Unit\EndSceneSting	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	49321668	player_footsteps_wood_6	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_footsteps_wood_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\woodSteps\player_footsteps_wood_6		128144
@@ -60,6 +67,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	172937142	stinger_level_complete	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\stinger_level_complete_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\META_Switch\stinger_level_complete\stinger_level_complete		1612944
 	189058525	player_footsteps_stone_04	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_footsteps_stone_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\stoneSteps\player_footsteps_stone_04		92708
 	192917189	player_footsteps_wood_4	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_footsteps_wood_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\woodSteps\player_footsteps_wood_4		128144
+	209841407	mx_credits	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\mx_credits_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\META_Switch\EndCredits_Playlist\mx_credits\mx_credits		7390448
 	214821067	player_footsteps_wood_5	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_footsteps_wood_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\woodSteps\player_footsteps_wood_5		128144
 	215896618	soldier_spears	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\soldier_spears_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoldierSounds\soldier_spears		524432
 	235875504	player_death	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_death_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player_death		334524
@@ -108,6 +116,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1010876088	player_landing_dirt_5	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_landing_dirt_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footLand_Switch\dirtLand\player_landing_dirt_5		98368
 	1027864175	player_footsteps_wood_1	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\player_footsteps_wood_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\woodSteps\player_footsteps_wood_1		120144
 	1047306221	soldier_takes_damage_1	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\soldier_takes_damage_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoldierSounds\soldierTakesDamage\soldier_takes_damage_1		262288
+	1048130063	mx_ending_cutscene	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\mx_ending_cutscene_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\META_Switch\mx_ending_cutscene\mx_ending_cutscene		7104192
 	1050757800	soldier_charges	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\soldier_charges_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoldierSounds\soldier_charges		524432
 	1051710066	checkpoint_2	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\checkpoint_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Checkpoint\checkpoint_2		1152192
 	1058334562	ambience_birds	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Windows\SFX\ambience_birds_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiences\ambience_birds		10222204

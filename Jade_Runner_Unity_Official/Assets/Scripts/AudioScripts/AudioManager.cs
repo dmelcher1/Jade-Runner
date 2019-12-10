@@ -45,9 +45,14 @@ public class AudioManager : MonoBehaviour
         AkSoundEngine.SetSwitch("Music_Switches", "Menu", gameObject);
     }
 
+    public  void EndForrestLevel()
+    {
+        AkSoundEngine.SetSwitch("Music_Switches", "ForrestToCutScene", gameObject);
+    }
+
     public void PlayEndCredits()
     {
-
+        AkSoundEngine.SetSwitch("Music_Switches", "EndCredits", gameObject);
     }
 
     public void PlayForrest()

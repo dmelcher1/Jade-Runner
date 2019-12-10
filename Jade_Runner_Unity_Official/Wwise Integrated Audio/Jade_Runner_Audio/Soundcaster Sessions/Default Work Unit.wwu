@@ -106,7 +106,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Village_1" ID="{941591EF-E4B0-424C-A873-DADBD5BC0277}"/>
+						<CurrentSwitchRef Name="EndCredits" ID="{F688E6B1-472A-4548-83D9-E3AE4DC43FDF}"/>
 						<CurrentSwitchRef Name="Dirt" ID="{AAA5336C-B398-4449-B6D1-F08F94F0C29C}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>

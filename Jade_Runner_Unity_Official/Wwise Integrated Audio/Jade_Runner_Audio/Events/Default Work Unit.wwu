@@ -386,6 +386,34 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Pause" ID="{DE0FBB55-DEAF-40E1-BACF-21E631DDCB4A}">
+					<ChildrenList>
+						<Action Name="" ID="{0438BF28-E1BE-4FAB-B4BB-C38F3383BADE}" ShortID="391625198">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="11"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Volume" Type="Real64" Value="-15"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D478289E-F68C-4D31-9BA7-74334B0E3A56}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Resume" ID="{AF88720F-53DC-4671-8467-383B97F835F0}">
+					<ChildrenList>
+						<Action Name="" ID="{E7D117FF-9CF7-4CCF-A170-B3500BB7A010}" ShortID="902305223">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="15"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Volume" Type="Real64" Value="-15"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

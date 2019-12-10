@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F9855671-EE1E-4A4F-B893-84A47559B7BF}" SchemaVersion="94">
 	<Triggers>
-		<WorkUnit Name="Default Work Unit" ID="{F9855671-EE1E-4A4F-B893-84A47559B7BF}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{F9855671-EE1E-4A4F-B893-84A47559B7BF}" PersistMode="Standalone">
+			<ChildrenList>
+				<Trigger Name="EndSceneSting" ID="{87296066-F415-4D88-9D6E-71921C4B8056}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Triggers>
 </WwiseDocument>

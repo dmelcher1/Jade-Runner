@@ -30,6 +30,7 @@
 				<Event Id="3060982411" Name="fruitHealth" ObjectPath="\Events\Default Work Unit\PlayerMovement\fruitHealth"/>
 				<Event Id="864958663" Name="fruitPowerUp" ObjectPath="\Events\Default Work Unit\PlayerMovement\fruitPowerUp"/>
 				<Event Id="3071493210" Name="inTheBeginning" ObjectPath="\Events\Default Work Unit\inTheBeginning"/>
+				<Event Id="3092587493" Name="Pause" ObjectPath="\Events\Default Work Unit\Pause"/>
 				<Event Id="985050826" Name="pendantCrack1" ObjectPath="\Events\Default Work Unit\pendantCrack1"/>
 				<Event Id="985050825" Name="pendantCrack2" ObjectPath="\Events\Default Work Unit\pendantCrack2"/>
 				<Event Id="985050824" Name="pendantCrack3" ObjectPath="\Events\Default Work Unit\pendantCrack3"/>
@@ -37,6 +38,7 @@
 				<Event Id="4008126242" Name="playerJump" ObjectPath="\Events\Default Work Unit\PlayerMovement\playerJump"/>
 				<Event Id="937597620" Name="playerJump2" ObjectPath="\Events\Default Work Unit\PlayerMovement\playerJump2"/>
 				<Event Id="4279841335" Name="Respawn" ObjectPath="\Events\Default Work Unit\Respawn"/>
+				<Event Id="953277036" Name="Resume" ObjectPath="\Events\Default Work Unit\Resume"/>
 				<Event Id="2426661741" Name="soldierCharge" ObjectPath="\Events\Default Work Unit\SoldierMovement\soldierCharge"/>
 				<Event Id="962204745" Name="soldierDeath" ObjectPath="\Events\Default Work Unit\SoldierMovement\soldierDeath"/>
 				<Event Id="3874903456" Name="soldierHeadButt" ObjectPath="\Events\Default Work Unit\SoldierMovement\soldierHeadButt"/>
@@ -104,6 +106,10 @@
 				<File Id="192917189" Language="SFX">
 					<ShortName>player_footsteps_wood_4.wav</ShortName>
 					<Path>SFX/player_footsteps_wood_4_10C4C929.wem</Path>
+				</File>
+				<File Id="209841407" Language="SFX">
+					<ShortName>mx_credits.wav</ShortName>
+					<Path>SFX/mx_credits_D79FB2B7.wem</Path>
 				</File>
 				<File Id="214821067" Language="SFX">
 					<ShortName>player_footsteps_wood_5.wav</ShortName>
@@ -296,6 +302,10 @@
 				<File Id="1047306221" Language="SFX">
 					<ShortName>soldier_takes_damage_1.wav</ShortName>
 					<Path>SFX/soldier_takes_damage_1_10C4C929.wem</Path>
+				</File>
+				<File Id="1048130063" Language="SFX">
+					<ShortName>mx_ending_cutscene.wav</ShortName>
+					<Path>SFX/mx_ending_cutscene_D79FB2B7.wem</Path>
 				</File>
 				<File Id="1050757800" Language="SFX">
 					<ShortName>soldier_charges.wav</ShortName>

@@ -33097,6 +33097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf477743ff5c4a9a8fea2295f072419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endMusicTrigger: {fileID: 1292691558}
 --- !u!65 &1292691560
 BoxCollider:
   m_ObjectHideFlags: 0

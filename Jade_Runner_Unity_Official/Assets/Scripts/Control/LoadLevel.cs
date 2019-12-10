@@ -241,6 +241,8 @@ public class LoadLevel : MonoBehaviour
                     //Might change loadingScreenVideo.isPlaying to a flat wait time instead depending on how long it is
                     if (currentRunTime >= endTime)
                     {
+                        GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
+                        Debug.Log("music Switch to PlayEndCredits");
                         endCutSceneVideo.Pause();
                         Debug.Log("End Scene Over!");
                         animator.SetBool("FadeOut", true);

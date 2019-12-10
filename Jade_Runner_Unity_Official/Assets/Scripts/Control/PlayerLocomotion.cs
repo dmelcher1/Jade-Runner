@@ -404,6 +404,10 @@ public class PlayerLocomotion : MonoBehaviour
                     stepTimer = 0.03f;
                 }
             }
+            else
+            {
+                stepTimer = 0.03f;
+            }
             if((playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Running - Start") || 
                 playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Idle - Healthy - Loop")) && !singleAttack)
             {
@@ -442,6 +446,7 @@ public class PlayerLocomotion : MonoBehaviour
         //transform.Translate(0, 0, vertical);
         if(!attackActive && stepTimer > 0)
         {
+            Debug.Log("Moving!");
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
         

@@ -733,7 +733,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1515883250}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: a2912a045afdd3b45bb0b7db5cec194b, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: fb6326bf7b97e524eb17f70387fee40f, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -1542,6 +1542,8 @@ MonoBehaviour:
   levelSelected: 0
   previousScene: 0
   chosenScene: 0
+  levelTracking: {fileID: 0}
+  startReady: 0
 --- !u!4 &2115141954
 Transform:
   m_ObjectHideFlags: 0

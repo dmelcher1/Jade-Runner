@@ -16,6 +16,7 @@
 						<ObjectRef Name="playerDeath" ID="{F8CB0C41-B1E0-4864-B4B9-F97303E26C8E}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="footStep" ID="{5EC5FA82-3E96-49B6-8EA0-80BFC5CC63C1}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Attack" ID="{E08B240D-AF82-49DB-9172-F1DFCB598C15}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="PlayerFall" ID="{288C1E8D-96A8-4C98-90B2-BB6E78C0DB2E}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Respawn" ID="{95F7EC19-B329-4CA3-831F-0005A6267E4D}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="pendantCrack2" ID="{7B3B585C-C561-4CBB-A0B6-A580BC0FC171}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="PlayerMovement" ID="{B21E6DFB-FFB2-4D06-A847-85768D44DB02}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>

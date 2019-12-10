@@ -15,6 +15,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{F641FD0B-EA83-45FA-91EA-2DC76EDF75C0}" ShortID="474801013">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FireworkAmbience" ID="{7E74E148-35E8-4444-A434-1EC0E6CF95B9}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{ABC24429-587F-4EF3-A1C6-A09BCC35C413}" ShortID="21579558">
 							<ReferenceList>
 								<Reference Name="Target">
@@ -418,6 +425,27 @@
 								<Property Name="Volume" Type="Real64" Value="-15"/>
 							</PropertyList>
 							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PlayerFall" ID="{288C1E8D-96A8-4C98-90B2-BB6E78C0DB2E}">
+					<ChildrenList>
+						<Action Name="" ID="{A5F9E218-4E40-4A82-9346-81598BFC5D33}" ShortID="445687563">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlayerFall" ID="{9573AFFB-768C-4254-B0AF-D33EECC64782}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FFC59EE5-A0F8-4081-AD76-E097AE6B31AF}" ShortID="526070085">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_death" ID="{951716EC-3E76-48DB-8C0A-2279F5111C53}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>

@@ -35,6 +35,7 @@
 				<Event Id="985050825" Name="pendantCrack2" ObjectPath="\Events\Default Work Unit\pendantCrack2"/>
 				<Event Id="985050824" Name="pendantCrack3" ObjectPath="\Events\Default Work Unit\pendantCrack3"/>
 				<Event Id="1656947812" Name="playerDeath" ObjectPath="\Events\Default Work Unit\PlayerMovement\playerDeath"/>
+				<Event Id="2715294761" Name="PlayerFall" ObjectPath="\Events\Default Work Unit\PlayerFall"/>
 				<Event Id="4008126242" Name="playerJump" ObjectPath="\Events\Default Work Unit\PlayerMovement\playerJump"/>
 				<Event Id="937597620" Name="playerJump2" ObjectPath="\Events\Default Work Unit\PlayerMovement\playerJump2"/>
 				<Event Id="4279841335" Name="Respawn" ObjectPath="\Events\Default Work Unit\Respawn"/>
@@ -231,6 +232,10 @@
 					<ShortName>PowerAttack1.wav</ShortName>
 					<Path>SFX/PowerAttack1_10C4C929.wem</Path>
 				</File>
+				<File Id="620738708" Language="SFX">
+					<ShortName>PlayerFall.wav</ShortName>
+					<Path>SFX/PlayerFall_10C4C929.wem</Path>
+				</File>
 				<File Id="621940946" Language="SFX">
 					<ShortName>player_footsteps_wood_3.wav</ShortName>
 					<Path>SFX/player_footsteps_wood_3_10C4C929.wem</Path>
@@ -254,6 +259,10 @@
 				<File Id="739116925" Language="SFX">
 					<ShortName>AppleMunch.wav</ShortName>
 					<Path>SFX/AppleMunch_10C4C929.wem</Path>
+				</File>
+				<File Id="758542800" Language="SFX">
+					<ShortName>FireworkAmbience.wav</ShortName>
+					<Path>SFX/FireworkAmbience_10C4C929.wem</Path>
 				</File>
 				<File Id="780773924" Language="SFX">
 					<ShortName>soldier_footstep_1.wav</ShortName>

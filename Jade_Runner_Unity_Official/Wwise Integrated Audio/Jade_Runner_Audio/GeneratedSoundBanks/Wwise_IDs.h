@@ -27,6 +27,7 @@ namespace AK
         static const AkUniqueID PENDANTCRACK2 = 985050825U;
         static const AkUniqueID PENDANTCRACK3 = 985050824U;
         static const AkUniqueID PLAYERDEATH = 1656947812U;
+        static const AkUniqueID PLAYERFALL = 2715294761U;
         static const AkUniqueID PLAYERJUMP = 4008126242U;
         static const AkUniqueID PLAYERJUMP2 = 937597620U;
         static const AkUniqueID RESPAWN = 4279841335U;

@@ -32,7 +32,14 @@ public class LoadLevel : MonoBehaviour
     public int chosenScene;
     public LevelTracking levelTracking;
     public bool startReady;
-    
+    public bool testingMode;
+    public bool startScenePlay;
+    public bool endScenePlay;
+    public bool creditScenePlay;
+    public bool villageToBamboo;
+    public bool loadToVillage;
+    public bool loadToBamboo;
+
 
     // Start is called before the first frame update
     void Start()
@@ -60,10 +67,10 @@ public class LoadLevel : MonoBehaviour
     {
         //yield return new WaitForSeconds(2.0f);
 
-        if(!levelSelected)
+        if (!levelSelected)
         {
             //yield return new WaitForSeconds(1.0f);
-            if (previousScene == 0)
+            if (previousScene == 0 || startScenePlay)
             {
                 vidRunTime = startCutSceneVideo.clip.length;
                 endTime = vidRunTime - 1;
@@ -74,18 +81,18 @@ public class LoadLevel : MonoBehaviour
                     yield return new WaitForSeconds(1.0f);
                     break;
                 }
-                if(startCutSceneVideo.isPrepared)
+                if (startCutSceneVideo.isPrepared)
                 {
                     animator.enabled = true;
                 }
                 playScreen.texture = startCutSceneVideo.texture;
                 //animator.SetBool("FadeOut", false);
-                
+
                 startCutSceneVideo.Play();
                 vidReady = true;
                 startCutSceneAudio.Play();
             }
-            if (previousScene == 2)
+            if (previousScene == 2 || villageToBamboo)
             {
                 vidRunTime = loadingScreenVideo.clip.length;
                 endTime = vidRunTime - 1;
@@ -105,7 +112,7 @@ public class LoadLevel : MonoBehaviour
                 vidReady = true;
                 GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayForrest();
             }
-            if (previousScene == 3)
+            if (previousScene == 3 || endScenePlay)
             {
                 vidRunTime = endCutSceneVideo.clip.length;
                 endTime = vidRunTime - 1;
@@ -121,8 +128,9 @@ public class LoadLevel : MonoBehaviour
                 }
                 playScreen.texture = endCutSceneVideo.texture;
                 //animator.SetBool("FadeOut", false);
-               
+
                 endCutSceneVideo.Play();
+                GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().EndForrestLevel();
                 vidReady = true;
                 //if (youWon)
                 //{
@@ -148,7 +156,7 @@ public class LoadLevel : MonoBehaviour
                 //}
             }
         }
-        else if (levelSelected)
+        else if (levelSelected || testingMode)
         {
             vidRunTime = loadingScreenVideo.clip.length;
             endTime = vidRunTime - 1;
@@ -192,14 +200,14 @@ public class LoadLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(startReady)
-        StartCoroutine("PlayVideo");
+        if (startReady)
+            StartCoroutine("PlayVideo");
 
         if (vidReady)
         {
-            if(!levelSelected)
+            if (!levelSelected || (!levelSelected && testingMode))
             {
-                if (previousScene == 0)
+                if (previousScene == 0 || startScenePlay)
                 {
                     currentRunTime = startCutSceneVideo.time;
                     if (currentRunTime >= endTime)
@@ -214,11 +222,11 @@ public class LoadLevel : MonoBehaviour
                         }
                     }
                 }
-                    
-                else if (previousScene == 2)
+
+                else if (previousScene == 2 || villageToBamboo)
                 {
                     currentRunTime = loadingScreenVideo.time;
-                   // GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().EndForrestLevel();
+                    // GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().EndForrestLevel();
                     //Might change loadingScreenVideo.isPlaying to a flat wait time instead depending on how long it is
                     if (currentRunTime >= endTime)
                     {
@@ -228,21 +236,20 @@ public class LoadLevel : MonoBehaviour
                         changeLevelDelay -= 0.1f;
                         if (changeLevelDelay <= 0)
                         {
+                            GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
                             SceneManager.LoadScene(3);
 
                         }
                     }
                 }
-                    
-                else if (previousScene == 3)
+
+                else if (previousScene == 3 || endScenePlay)
                 {
-                    
+
                     currentRunTime = endCutSceneVideo.time;
                     //Might change loadingScreenVideo.isPlaying to a flat wait time instead depending on how long it is
                     if (currentRunTime >= endTime)
                     {
-                        GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
-                        Debug.Log("music Switch to PlayEndCredits");
                         endCutSceneVideo.Pause();
                         Debug.Log("End Scene Over!");
                         animator.SetBool("FadeOut", true);
@@ -271,7 +278,7 @@ public class LoadLevel : MonoBehaviour
                 //    }
                 //}
             }
-            else if (levelSelected)
+            else if (levelSelected || (levelSelected && testingMode))
             {
                 currentRunTime = loadingScreenVideo.time;
                 if (currentRunTime >= endTime)
@@ -281,11 +288,11 @@ public class LoadLevel : MonoBehaviour
                     changeLevelDelay -= 0.1f;
                     if (changeLevelDelay <= 0)
                     {
-                        if (chosenScene == 2)
+                        if (chosenScene == 2 || loadToVillage)
                         {
                             SceneManager.LoadScene(2);
                         }
-                        else if (chosenScene == 3)
+                        else if (chosenScene == 3 || loadToBamboo)
                         {
                             SceneManager.LoadScene(3);
                         }
@@ -293,7 +300,7 @@ public class LoadLevel : MonoBehaviour
                 }
             }
         }
-            
+
         //vidReady = false;
         levelTracking.startLoading = false;
     }

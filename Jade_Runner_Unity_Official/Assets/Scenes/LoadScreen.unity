@@ -120,6 +120,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &111030652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 111030653}
+  m_Layer: 0
+  m_Name: DEBUG_ONLY_TURN_OFF
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &111030653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111030652}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -87.04374, y: 81.5125, z: -21.599117}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 332793321}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &192705510
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +410,55 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 1873106375}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &332793319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 332793321}
+  - component: {fileID: 332793320}
+  m_Layer: 0
+  m_Name: LevelTracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &332793320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332793319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca9f8bd685641640a32921f1d1f79d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneNumber: 0
+  chosenScene: 0
+  levelSelected: 0
+  previousScene: 0
+  startLoading: 0
+  oldPreviousScene: 0
+--- !u!4 &332793321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332793319}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 87.04374, y: -81.5125, z: 21.599117}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 111030653}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &363992900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,12 +1446,9 @@ MonoBehaviour:
   loadingScreenVideo: {fileID: 205689049}
   startCutSceneVideo: {fileID: 1515883251}
   endCutSceneVideo: {fileID: 1970897805}
-  creditsSceneVideo: {fileID: 0}
   startCutSceneAudio: {fileID: 1515883253}
   endCutSceneAudio: {fileID: 1970897804}
-  creditsSceneAudio: {fileID: 0}
   changeLevelDelay: 7
-  youWon: 0
   vidRunTime: 0
   currentRunTime: 0
   endTime: 0
@@ -1381,6 +1458,13 @@ MonoBehaviour:
   chosenScene: 0
   levelTracking: {fileID: 0}
   startReady: 0
+  testingMode: 0
+  startScenePlay: 0
+  endScenePlay: 0
+  creditScenePlay: 0
+  villageToBamboo: 0
+  loadToVillage: 0
+  loadToBamboo: 0
 --- !u!4 &2115141954
 Transform:
   m_ObjectHideFlags: 0

@@ -11,9 +11,10 @@ public class TriggerCutsceneMX : MonoBehaviour
         DontDestroyOnLoad(transform.gameObject);
     }
 
-    private void OnTriggerEnter()
+    void OnTriggerEnter()
     {
         GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
+        //AkSoundEngine.SetSwitch("Music_Switches", "EndCredits", gameObject);
         Debug.Log("music switch to EndForrestLevel");
     }
 }

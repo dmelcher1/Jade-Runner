@@ -132,7 +132,8 @@ public class LoadLevel : MonoBehaviour
 
                 endCutSceneVideo.Play();
                 vidReady = true;
-                GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
+                //GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
+                //AkSoundEngine.SetSwitch("Music_Switches", "EndCredits", gameObject);
                 //if (youWon)
                 //{
 

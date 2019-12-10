@@ -44,6 +44,11 @@ public class AudioManager : MonoBehaviour
         AkSoundEngine.SetSwitch("Music_Switches", "VillageImmediate", gameObject);
     }
 
+    public void PlayForrest()
+    {
+        AkSoundEngine.SetSwitch("Music_Switches", "Forrest_1", gameObject);
+    }
+
     public void BackToMenu()
     {
         AkSoundEngine.SetSwitch("Music_Switches", "Menu", gameObject);
@@ -57,10 +62,5 @@ public class AudioManager : MonoBehaviour
     public void PlayEndCredits()
     {
         AkSoundEngine.SetSwitch("Music_Switches", "EndCredits", gameObject);
-    }
-
-    public void PlayForrest()
-    {
-        AkSoundEngine.SetSwitch("Music_Switches", "Forrest_1", gameObject);
     }
 }

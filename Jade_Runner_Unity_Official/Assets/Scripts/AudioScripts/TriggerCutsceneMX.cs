@@ -6,16 +6,9 @@ public class TriggerCutsceneMX : MonoBehaviour
 {
     public GameObject endMusicTrigger;
 
-    private void Awake()
+    private void Update()
     {
-        if (endMusicTrigger == null)
-        {
-            DontDestroyOnLoad(endMusicTrigger);
-        }
-        else if (endMusicTrigger == this)
-        {
-            Destroy(endMusicTrigger);
-        }
+        DontDestroyOnLoad(transform.gameObject);
     }
 
     private void OnTriggerEnter()

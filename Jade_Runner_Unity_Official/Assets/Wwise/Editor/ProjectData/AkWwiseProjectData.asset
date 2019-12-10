@@ -184,14 +184,14 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 9e2878d48cf6314d9ba774334b0e3a56
     GuidInternal: 
-    m_lastTime: -8586257661394775808
+    m_lastTime: -8586256048544775808
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9d57935ecbf9c74ea26dde10967945cf
     GuidInternal: 
-    m_lastTime: -8586257526544775808
+    m_lastTime: -8586256501694775808
     List:
     - name: JadeRunner_Soundbank
       guid: ba02b25aa9be7c418c8bfcaa60830851
@@ -207,7 +207,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 1bead272cd7e9048b19c37dcb88683b3
     GuidInternal: 
-    m_lastTime: -8586257392644775808
+    m_lastTime: -8586256054564775808
     List:
     - name: Attack
       guid: 0d248be082afdb499172f1dfcb598c15
@@ -327,6 +327,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Pause
+      guid: 55bb0fdeafdee140bacf21e631ddcb4a
+      id: 3092587493
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Pause
+        ObjectType: 3
+      Path: Default Work Unit/Pause
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: pendantCrack1
       guid: a003e161cc000147aa7deaacb00f86a2
       id: 985050826
@@ -414,6 +426,18 @@ MonoBehaviour:
       - ElementName: Respawn
         ObjectType: 3
       Path: Default Work Unit/Respawn
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Resume
+      guid: 0f7288afdc5371468467383b97f835f0
+      id: 953277036
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Resume
+        ObjectType: 3
+      Path: Default Work Unit/Resume
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -692,7 +716,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 99fce58a1634eb418529c7d61df57c3a
     GuidInternal: 
-    m_lastTime: -8586257397174775808
+    m_lastTime: -8586256539814775808
     List:
     - name: Ambiences
       guid: d18f2ae66480394c9ebbf5b5f4bd0a00
@@ -766,6 +790,12 @@ MonoBehaviour:
         ObjectType: 11
       Path: Default Work Unit/Music_Switches
       values:
+      - name: EndCredits
+        guid: b1e688f62a47484583d9e3ae4dc43fdf
+        id: 1271758346
+        PathAndIcons:
+        - ElementName: EndCredits
+          ObjectType: 10
       - name: Forrest_1
         guid: f84327a22d2c014fabf6898adced0ec4
         id: 321571300
@@ -777,6 +807,12 @@ MonoBehaviour:
         id: 321571303
         PathAndIcons:
         - ElementName: Forrest_2
+          ObjectType: 10
+      - name: ForrestToCutScene
+        guid: 6d9576cdacfcb94ea798d1485fff2e64
+        id: 601240775
+        PathAndIcons:
+        - ElementName: ForrestToCutScene
           ObjectType: 10
       - name: Menu
         guid: 3275135a53a3c441babd5b45bd7e02ef
@@ -835,13 +871,21 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 715685f91eee4f4ab89384a47559b7bf
     GuidInternal: 
-    m_lastTime: -8586257661374775808
-    List: []
+    m_lastTime: -8586256562684775808
+    List:
+    - name: EndSceneSting
+      guid: 6660298715f4884d9d6e71921c4b8056
+      id: 3296901703
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: EndSceneSting
+        ObjectType: 14
+      Path: Default Work Unit/EndSceneSting
   ExpandedItems:
   - /Jade_Runner_Audio
   - /Jade_Runner_Audio/Events
   - /Jade_Runner_Audio/Events/Default Work Unit
-  - /Jade_Runner_Audio/Events/Default Work Unit/Music
   - /Jade_Runner_Audio/SoundBanks
   - /Jade_Runner_Audio/SoundBanks/Default Work Unit
   - /Jade_Runner_Audio/Switches

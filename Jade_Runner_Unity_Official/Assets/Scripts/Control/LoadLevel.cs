@@ -114,6 +114,7 @@ public class LoadLevel : MonoBehaviour
             }
             if (previousScene == 3 || endScenePlay)
             {
+
                 vidRunTime = endCutSceneVideo.clip.length;
                 endTime = vidRunTime - 1;
                 endCutSceneVideo.Prepare();
@@ -130,11 +131,10 @@ public class LoadLevel : MonoBehaviour
                 //animator.SetBool("FadeOut", false);
 
                 endCutSceneVideo.Play();
-                GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().EndForrestLevel();
                 vidReady = true;
                 //if (youWon)
                 //{
-                //    GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
+                //GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
                 //    vidRunTime = creditsSceneVideo.clip.length;
                 //    endTime = vidRunTime - 1;
                 //    creditsSceneVideo.Prepare();
@@ -226,7 +226,6 @@ public class LoadLevel : MonoBehaviour
                 else if (previousScene == 2 || villageToBamboo)
                 {
                     currentRunTime = loadingScreenVideo.time;
-                    // GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().EndForrestLevel();
                     //Might change loadingScreenVideo.isPlaying to a flat wait time instead depending on how long it is
                     if (currentRunTime >= endTime)
                     {
@@ -236,7 +235,6 @@ public class LoadLevel : MonoBehaviour
                         changeLevelDelay -= 0.1f;
                         if (changeLevelDelay <= 0)
                         {
-                            GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
                             SceneManager.LoadScene(3);
 
                         }
@@ -245,11 +243,12 @@ public class LoadLevel : MonoBehaviour
 
                 else if (previousScene == 3 || endScenePlay)
                 {
-
                     currentRunTime = endCutSceneVideo.time;
                     //Might change loadingScreenVideo.isPlaying to a flat wait time instead depending on how long it is
                     if (currentRunTime >= endTime)
                     {
+                        //GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
+                        //Debug.Log("Playing End Credit Music");
                         endCutSceneVideo.Pause();
                         Debug.Log("End Scene Over!");
                         animator.SetBool("FadeOut", true);

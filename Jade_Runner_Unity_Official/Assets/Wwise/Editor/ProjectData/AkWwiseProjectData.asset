@@ -17,13 +17,13 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 7d49826ae610cd46956f1a3f867b3d06
     GuidInternal: 
-    m_lastTime: -8586280819094775808
+    m_lastTime: -8586257661374775808
     List: []
   - PhysicalPath: Virtual Acoustics/Factory Reflect Acoustic Textures.wwu
     ParentPhysicalPath: 
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8586280819094775808
+    m_lastTime: -8586257661374775808
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -184,14 +184,14 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 9e2878d48cf6314d9ba774334b0e3a56
     GuidInternal: 
-    m_lastTime: -8586280819114775808
+    m_lastTime: -8586257661394775808
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9d57935ecbf9c74ea26dde10967945cf
     GuidInternal: 
-    m_lastTime: -8586263709214775808
+    m_lastTime: -8586257526544775808
     List:
     - name: JadeRunner_Soundbank
       guid: ba02b25aa9be7c418c8bfcaa60830851
@@ -207,7 +207,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 1bead272cd7e9048b19c37dcb88683b3
     GuidInternal: 
-    m_lastTime: -8586263709604775808
+    m_lastTime: -8586257392644775808
     List:
     - name: Attack
       guid: 0d248be082afdb499172f1dfcb598c15
@@ -215,12 +215,38 @@ MonoBehaviour:
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: PlayerMovement
+        ObjectType: 4
       - ElementName: Attack
         ObjectType: 3
-      Path: Default Work Unit/Attack
+      Path: Default Work Unit/PlayerMovement/Attack
       maxAttenuation: 0
-      maxDuration: 0.335854
-      minDuration: 0.275754
+      maxDuration: -1
+      minDuration: -1
+    - name: bombExplode
+      guid: 590fd11a0932694fa5b5c371f46f67e3
+      id: 70120664
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: bombExplode
+        ObjectType: 3
+      Path: Default Work Unit/bombExplode
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: bombFuse
+      guid: 27f91b990bbb2a4da9764b41d714d875
+      id: 1069250406
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: bombFuse
+        ObjectType: 3
+      Path: Default Work Unit/bombFuse
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Checkpoint
       guid: 758a4d162966624d9b8d42242dd3ad25
       id: 612075679
@@ -231,32 +257,64 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/Checkpoint
       maxAttenuation: 0
-      maxDuration: 6
-      minDuration: 6
+      maxDuration: -1
+      minDuration: -1
     - name: footLand
       guid: 49e1f4838e4feb4fa28d013f8babddd9
       id: 2498411518
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: PlayerMovement
+        ObjectType: 4
       - ElementName: footLand
         ObjectType: 3
-      Path: Default Work Unit/footLand
+      Path: Default Work Unit/PlayerMovement/footLand
       maxAttenuation: 0
-      maxDuration: 0.773208
-      minDuration: 0.412667
+      maxDuration: -1
+      minDuration: -1
     - name: footStep
       guid: 82fac55e963eb6498ea080bfc5cc63c1
       id: 1866025847
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: PlayerMovement
+        ObjectType: 4
       - ElementName: footStep
         ObjectType: 3
-      Path: Default Work Unit/footStep
+      Path: Default Work Unit/PlayerMovement/footStep
       maxAttenuation: 0
-      maxDuration: 0.704
-      minDuration: 0.185729
+      maxDuration: -1
+      minDuration: -1
+    - name: fruitHealth
+      guid: eec5dc03eee25747a9d3e01887cbbe38
+      id: 3060982411
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerMovement
+        ObjectType: 4
+      - ElementName: fruitHealth
+        ObjectType: 3
+      Path: Default Work Unit/PlayerMovement/fruitHealth
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: fruitPowerUp
+      guid: d90c19018f5b934ab0db5f2c517e86ff
+      id: 864958663
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerMovement
+        ObjectType: 4
+      - ElementName: fruitPowerUp
+        ObjectType: 3
+      Path: Default Work Unit/PlayerMovement/fruitPowerUp
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: inTheBeginning
       guid: 9ce6f0bf8fb21e409d2492d21157e36a
       id: 3071493210
@@ -269,42 +327,244 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: UI_hover
+    - name: pendantCrack1
+      guid: a003e161cc000147aa7deaacb00f86a2
+      id: 985050826
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: pendantCrack1
+        ObjectType: 3
+      Path: Default Work Unit/pendantCrack1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: pendantCrack2
+      guid: 5c583b7b61c5bb4ca0b6a580bc0fc171
+      id: 985050825
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: pendantCrack2
+        ObjectType: 3
+      Path: Default Work Unit/pendantCrack2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: pendantCrack3
+      guid: a9398fbb0f65af459049fd569a89b721
+      id: 985050824
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: pendantCrack3
+        ObjectType: 3
+      Path: Default Work Unit/pendantCrack3
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: playerDeath
+      guid: 410ccbf8e0b16448b4b9f97303e26c8e
+      id: 1656947812
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerMovement
+        ObjectType: 4
+      - ElementName: playerDeath
+        ObjectType: 3
+      Path: Default Work Unit/PlayerMovement/playerDeath
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: playerJump
+      guid: f5ee84fb8c84ef46882f8ecee18d41fb
+      id: 4008126242
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerMovement
+        ObjectType: 4
+      - ElementName: playerJump
+        ObjectType: 3
+      Path: Default Work Unit/PlayerMovement/playerJump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: playerJump2
+      guid: f913a188ac68114a978c4c1a9972b979
+      id: 937597620
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerMovement
+        ObjectType: 4
+      - ElementName: playerJump2
+        ObjectType: 3
+      Path: Default Work Unit/PlayerMovement/playerJump2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Respawn
+      guid: 19ecf79529b3a34c831f0005a6267e4d
+      id: 4279841335
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Respawn
+        ObjectType: 3
+      Path: Default Work Unit/Respawn
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: soldierCharge
+      guid: 8b4d00f6b724c44fb77ac1b3219a602c
+      id: 2426661741
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SoldierMovement
+        ObjectType: 4
+      - ElementName: soldierCharge
+        ObjectType: 3
+      Path: Default Work Unit/SoldierMovement/soldierCharge
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: soldierDeath
+      guid: 0af0e4df190d3647995bfa0b7a94ebdb
+      id: 962204745
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SoldierMovement
+        ObjectType: 4
+      - ElementName: soldierDeath
+        ObjectType: 3
+      Path: Default Work Unit/SoldierMovement/soldierDeath
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: soldierHeadButt
+      guid: 5abc3e7f768ece44889137815ea06c23
+      id: 3874903456
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SoldierMovement
+        ObjectType: 4
+      - ElementName: soldierHeadButt
+        ObjectType: 3
+      Path: Default Work Unit/SoldierMovement/soldierHeadButt
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: soldierSpear
+      guid: 8b5d966bbff0c8449a94569687d91aa5
+      id: 4048947044
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SoldierMovement
+        ObjectType: 4
+      - ElementName: soldierSpear
+        ObjectType: 3
+      Path: Default Work Unit/SoldierMovement/soldierSpear
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: soldierStep
+      guid: d48937c2322541419320c0e9bb09daa9
+      id: 139845655
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SoldierMovement
+        ObjectType: 4
+      - ElementName: soldierStep
+        ObjectType: 3
+      Path: Default Work Unit/SoldierMovement/soldierStep
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: soldierTakesDamage
+      guid: 3780b09aa8d4a146a89956ea26743684
+      id: 4293947536
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SoldierMovement
+        ObjectType: 4
+      - ElementName: soldierTakesDamage
+        ObjectType: 3
+      Path: Default Work Unit/SoldierMovement/soldierTakesDamage
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: startToVillage
+      guid: c438f37e1102514cad9f0502508f3c8e
+      id: 391742444
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: startToVillage
+        ObjectType: 3
+      Path: Default Work Unit/Music/startToVillage
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: UI_Hover
       guid: 1063be110f9a144f80350c634649670f
       id: 2118900976
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: UI_hover
+      - ElementName: UI_Hover
         ObjectType: 3
-      Path: Default Work Unit/UI_hover
+      Path: Default Work Unit/UI_Hover
       maxAttenuation: 0
-      maxDuration: 1.322667
-      minDuration: 1.322667
-    - name: UI_select
+      maxDuration: -1
+      minDuration: -1
+    - name: UI_Select
       guid: 6e6cc7333682924692dd70839f9ea483
       id: 2774129122
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: UI_select
+      - ElementName: UI_Select
         ObjectType: 3
-      Path: Default Work Unit/UI_select
+      Path: Default Work Unit/UI_Select
       maxAttenuation: 0
-      maxDuration: 2.368
-      minDuration: 2.368
+      maxDuration: -1
+      minDuration: -1
+    - name: villageImediate
+      guid: 177e8dcff9cd794380c982f24212f34c
+      id: 3371831861
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: villageImediate
+        ObjectType: 3
+      Path: Default Work Unit/Music/villageImediate
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 1ceaa1157464a040828f125dfd8808fe
     GuidInternal: 
-    m_lastTime: -8586280819114775808
+    m_lastTime: -8586257661404775808
     List: []
   - PhysicalPath: Game Parameters/Factory Motion.wwu
     ParentPhysicalPath: 
     guid: 225213d7dbd1d042adc0930743567776
     GuidInternal: 
-    m_lastTime: -8586280819104775808
+    m_lastTime: -8586257661404775808
     List:
     - name: Playback_Rate
       guid: e37e38283ac11643b9c3db5c521624af
@@ -328,7 +588,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8586280819104775808
+    m_lastTime: -8586257661404775808
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -425,15 +685,40 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 397ba9f46f3e984cb678731ff834c2c5
     GuidInternal: 
-    m_lastTime: -8586280819104775808
+    m_lastTime: -8586257661374775808
     List: []
   SwitchWwu:
   - PhysicalPath: Switches/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 99fce58a1634eb418529c7d61df57c3a
     GuidInternal: 
-    m_lastTime: -8586263710934775808
+    m_lastTime: -8586257397174775808
     List:
+    - name: Ambiences
+      guid: d18f2ae66480394c9ebbf5b5f4bd0a00
+      id: 1017660616
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambiences
+        ObjectType: 11
+      Path: Default Work Unit/Ambiences
+      values:
+      - name: Forrest
+        guid: c46ac486a5646b428c6d057d1cae1961
+        id: 760316600
+        PathAndIcons:
+        - ElementName: Forrest
+          ObjectType: 10
+      - name: Village
+        guid: ed06f6da66e09944ac8d355aab93cd33
+        id: 3945572659
+        PathAndIcons:
+        - ElementName: Village
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: FootStep_Switches
       guid: e92757c215aa054f86ba478398a70117
       id: 1110811498
@@ -461,6 +746,12 @@ MonoBehaviour:
         id: 1216965916
         PathAndIcons:
         - ElementName: Stone
+          ObjectType: 10
+      - name: Wood
+        guid: a0fef7335c9b0e43bea69a7475495193
+        id: 2058049674
+        PathAndIcons:
+        - ElementName: Wood
           ObjectType: 10
       ValueGuids: []
       ValueIcons: []
@@ -505,6 +796,37 @@ MonoBehaviour:
         PathAndIcons:
         - ElementName: Village_2
           ObjectType: 10
+      - name: VillageImmediate
+        guid: 2de6939090f74348a944d7b88a272240
+        id: 17780674
+        PathAndIcons:
+        - ElementName: VillageImmediate
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: PlayerAttacks
+      guid: 215528d9618e3141a34a591f8d619ef1
+      id: 3417697001
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerAttacks
+        ObjectType: 11
+      Path: Default Work Unit/PlayerAttacks
+      values:
+      - name: Normal
+        guid: 57b1a7586f2c7c4ca508884004e5c36e
+        id: 1160234136
+        PathAndIcons:
+        - ElementName: Normal
+          ObjectType: 10
+      - name: PoweredUp
+        guid: 3b4fbab6a5bf2042836cb5a9cbebd4f9
+        id: 4231327868
+        PathAndIcons:
+        - ElementName: PoweredUp
+          ObjectType: 10
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -513,12 +835,13 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 715685f91eee4f4ab89384a47559b7bf
     GuidInternal: 
-    m_lastTime: -8586280819094775808
+    m_lastTime: -8586257661374775808
     List: []
   ExpandedItems:
   - /Jade_Runner_Audio
   - /Jade_Runner_Audio/Events
   - /Jade_Runner_Audio/Events/Default Work Unit
+  - /Jade_Runner_Audio/Events/Default Work Unit/Music
   - /Jade_Runner_Audio/SoundBanks
   - /Jade_Runner_Audio/SoundBanks/Default Work Unit
   - /Jade_Runner_Audio/Switches

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6565982738694354721}
   - component: {fileID: 6565982738694354733}
   m_Layer: 0
-  m_Name: LevelEndDetect
+  m_Name: LevelEnd
   m_TagString: LevelEnd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,11 +104,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e4f52a6d992ce4c8922134398b5bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneNumber: 0
+  chosenScene: 0
+  levelSelected: 0
+  previousScene: 0
+  oldPreviousScene: 0
   levelEnder: {fileID: 6565982738694354721}
-  levelComplete: 0
   beatLevel: 0
-  changeLevelDelay: 15
   playerLocomotion: {fileID: 0}
   animator: {fileID: 0}
   player: {fileID: 0}
   fader: {fileID: 0}
+  levelTracker: {fileID: 0}
+  levelTracking: {fileID: 0}
+  healthUI: {fileID: 0}
+  healthSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

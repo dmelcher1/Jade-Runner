@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerLocomotion : MonoBehaviour
 {
+    //private GameController gameController;
+
     [SerializeField]
     private float playerMagnitude;
 
@@ -117,6 +119,7 @@ public class PlayerLocomotion : MonoBehaviour
     public Collider triggerCollider;
 
     public int health;
+    public int startHealth;
     public int currentHealth;
 
     public bool hit = false;
@@ -148,6 +151,7 @@ public class PlayerLocomotion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startHealth = health;
         this.transform.position = currentCheckpoint.transform.position;
         rb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
@@ -176,7 +180,7 @@ public class PlayerLocomotion : MonoBehaviour
         AttackControls();
         KillBox();
         DamageDeath();
-        FruitCollection();
+        //FruitCollection();
         PoweredUpState();
 
         if(!dead && !powerUpJig)
@@ -255,11 +259,11 @@ public class PlayerLocomotion : MonoBehaviour
                 jumpControl = jumpJoystick;
             }
 
-            jumpTimer -= 0.1f;
+            jumpTimer -= 0.1f * Time.deltaTime;
 
             if (airBorne && dblJump)
             {
-                dblJumpTimer -= 0.1f;
+                dblJumpTimer -= 0.1f * Time.deltaTime;
             }
 
             if (Input.GetButtonUp(jumpControl) && airBorne && jumpTimer <= 0.3f && jumpCount < 1)
@@ -267,6 +271,7 @@ public class PlayerLocomotion : MonoBehaviour
 
                 dblJump = true;
                 jumpCount += 1;
+                
             }
 
             if (Input.GetButtonDown(jumpControl))
@@ -274,8 +279,9 @@ public class PlayerLocomotion : MonoBehaviour
                 //Debug.Log("Jumping");
                 if (!airBorne && jumpTimer <= 0)
                 {
-                    jumpTimer = 0.5f;
+                    jumpTimer = 0.1f;
                     rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                    AkSoundEngine.PostEvent("playerJump", gameObject);
                     canJump = false;
                     airBorne = true;
                 }
@@ -284,6 +290,7 @@ public class PlayerLocomotion : MonoBehaviour
             {
                 rb.AddForce(Vector3.up * dblJumpForce, ForceMode.Impulse);
                 playerAnim.SetTrigger("DblJump");
+               // AkSoundEngine.PostEvent("playerJump2", gameObject);
                 dblJump = false;
                 dblJumpTimer = 0;
             }
@@ -315,8 +322,8 @@ public class PlayerLocomotion : MonoBehaviour
                 attackControl = attackTrigger;
             }
 
-            multiAttackTimer -= 0.1f;
-            singleAttackTimer -= 0.1f;
+            multiAttackTimer -= 0.1f * Time.deltaTime;
+            singleAttackTimer -= 0.1f * Time.deltaTime;
             
 
             if (!airBorne)
@@ -325,14 +332,19 @@ public class PlayerLocomotion : MonoBehaviour
                 {
                     if (multiAttackTimer <= 0)
                     {
-                        multiAttackTimer = 0.5f;
+                        
                         //canAttack = false;
-                        if (singleAttackTimer < -3.0f)
+                        if (singleAttackTimer < -0.09f)
                         {
                             singleAttack = true;
                             //Debug.Log(singleAttack);
                             singleAttackTimer = 0.0f;
+                            if(singleAttack)
+                            {
+                                multiAttackTimer = 0.1f;
+                            }
                         }
+                        
                     }
                     haltAttack = false;
                 }
@@ -340,7 +352,7 @@ public class PlayerLocomotion : MonoBehaviour
                 if (Input.GetButton(attackControl))
                 {
                     //multiAttack = true;
-                    if (multiAttackTimer <= 0)
+                    if (multiAttackTimer <= 0.08)
                     {
                         //Debug.Log("Multi?");
                         singleAttack = false;
@@ -392,6 +404,10 @@ public class PlayerLocomotion : MonoBehaviour
                     stepTimer = 0.03f;
                 }
             }
+            else
+            {
+                stepTimer = 0.03f;
+            }
             if((playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Running - Start") || 
                 playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Idle - Healthy - Loop")) && !singleAttack)
             {
@@ -430,6 +446,7 @@ public class PlayerLocomotion : MonoBehaviour
         //transform.Translate(0, 0, vertical);
         if(!attackActive && stepTimer > 0)
         {
+            Debug.Log("Moving!");
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
         
@@ -497,15 +514,15 @@ public class PlayerLocomotion : MonoBehaviour
         playerAnim.SetBool("Dead", dead);
     }
 
-    void FruitCollection()
-    {
-        if(fruitMeter == 10)
-        {
-            health += 1;
-            currentHealth = health;
-            fruitMeter = 0;
-        }
-    }
+    //void FruitCollection()
+    //{
+    //    if(fruitMeter == 10)
+    //    {
+    //        //health += 1;
+    //        currentHealth = health;
+    //        fruitMeter = 0;
+    //    }
+    //}
 
     void PoweredUpState()
     {
@@ -534,6 +551,8 @@ public class PlayerLocomotion : MonoBehaviour
             moveSpeed = moveSpeedConstant;
             jumpForce = jumpForceConstant;
             poweredUpDurationTimer = poweredUpTimerReset;
+            AkSoundEngine.SetSwitch("PlayerAttacks", "Normal", gameObject);
+            Debug.Log("PlayerAttack to normal switch");
         }
         if(poweredUpInstanceTimer < 0)
         {
@@ -560,6 +579,10 @@ public class PlayerLocomotion : MonoBehaviour
                 jumpCount = 0;
             }
         }
+        //if(collision.gameObject.CompareTag("Debug"))
+        //{
+        //    Debug.Log("What the fuck?");
+        //}
     }
 
     private void OnTriggerEnter(Collider other)

@@ -17,6 +17,22 @@ public class MovementAudio : MonoBehaviour
     {
         AkSoundEngine.PostEvent("Attack", gameObject);
     }
+
+    private void Jump()
+    {
+        AkSoundEngine.PostEvent("playerJump", gameObject);
+    }
+
+    private void Jump2()
+    {
+        AkSoundEngine.PostEvent("playerJump2", gameObject);
+    }
+
+    private void Death()
+    {
+        AkSoundEngine.PostEvent("playerDeath", gameObject);
+    }
+
     //[SerializeField]
     //private AudioClip[] footStep;
 

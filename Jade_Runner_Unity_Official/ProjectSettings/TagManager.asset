@@ -23,6 +23,7 @@ TagManager:
   - PowerFruit
   - Player_Detector
   - Stopper
+  - Debug
   layers:
   - Default
   - TransparentFX

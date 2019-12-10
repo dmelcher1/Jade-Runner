@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/bambooForest.unity
     guid: 0963e9cb4db25234d9668f81d8ecdb08
+  - enabled: 1
+    path: Assets/Scenes/EndCredits.unity
+    guid: 4f3b5d7c6eb17e644a237bb196de024f
   m_configObjects: {}

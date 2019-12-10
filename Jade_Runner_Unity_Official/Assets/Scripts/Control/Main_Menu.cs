@@ -15,6 +15,7 @@ public class Main_Menu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = true;
         levelTracker = GameObject.Find("LevelTracker");
         levelTracking = levelTracker.GetComponent<LevelTracking>();
     }

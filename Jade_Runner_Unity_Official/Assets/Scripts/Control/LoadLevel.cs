@@ -14,15 +14,15 @@ public class LoadLevel : MonoBehaviour
     public VideoPlayer loadingScreenVideo;
     public VideoPlayer startCutSceneVideo;
     public VideoPlayer endCutSceneVideo;
-    public VideoPlayer creditsSceneVideo;
+    //public VideoPlayer creditsSceneVideo;
     public AudioSource startCutSceneAudio;
     public AudioSource endCutSceneAudio;
-    public AudioSource creditsSceneAudio;
+    //public AudioSource creditsSceneAudio;
     //private float videoLength;
     public float changeLevelDelay;
     //private float transitionDelay = 3.0f;
     private float endCreditsDelay = 3.0f;
-    public bool youWon;
+    //public bool youWon;
     public double vidRunTime;
     public double currentRunTime;
     public double endTime;
@@ -124,28 +124,28 @@ public class LoadLevel : MonoBehaviour
                
                 endCutSceneVideo.Play();
                 vidReady = true;
-                if (youWon)
-                {
-                    GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
-                    vidRunTime = creditsSceneVideo.clip.length;
-                    endTime = vidRunTime - 1;
-                    creditsSceneVideo.Prepare();
-                    while (!creditsSceneVideo.isPrepared)
-                    {
-                        yield return new WaitForSeconds(1.0f);
-                        break;
-                    }
-                    if (creditsSceneVideo.isPrepared)
-                    {
-                        animator.enabled = true;
-                    }
-                    playScreen.texture = creditsSceneVideo.texture;
-                    //animator.SetBool("FadeOut", false);
+                //if (youWon)
+                //{
+                //    GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
+                //    vidRunTime = creditsSceneVideo.clip.length;
+                //    endTime = vidRunTime - 1;
+                //    creditsSceneVideo.Prepare();
+                //    while (!creditsSceneVideo.isPrepared)
+                //    {
+                //        yield return new WaitForSeconds(1.0f);
+                //        break;
+                //    }
+                //    if (creditsSceneVideo.isPrepared)
+                //    {
+                //        animator.enabled = true;
+                //    }
+                //    playScreen.texture = creditsSceneVideo.texture;
+                //    //animator.SetBool("FadeOut", false);
 
-                    creditsSceneVideo.Play();
-                    vidReady = true;
-                    creditsSceneAudio.Play();
-                }
+                //    creditsSceneVideo.Play();
+                //    vidReady = true;
+                //    creditsSceneAudio.Play();
+                //}
             }
         }
         else if (levelSelected)
@@ -232,7 +232,7 @@ public class LoadLevel : MonoBehaviour
                     }
                 }
                     
-                else if (previousScene == 3 && !youWon)
+                else if (previousScene == 3)
                 {
                     GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().EndForrestLevel();
                     currentRunTime = endCutSceneVideo.time;
@@ -245,26 +245,27 @@ public class LoadLevel : MonoBehaviour
                         endCreditsDelay -= 0.1f;
                         if (endCreditsDelay <= 0)
                         {
-                            youWon = true;
+                            SceneManager.LoadScene(4);
+                            //youWon = true;
                         }
                     }
                 }
-                if (youWon)
-                {
-                    animator.SetBool("FadeOut", false);
-                   GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
-                    currentRunTime = creditsSceneVideo.time;
-                    if (currentRunTime >= endTime)
-                    {
-                        creditsSceneVideo.Pause();
-                        animator.SetBool("FadeOut", true);
-                        changeLevelDelay -= 0.1f;
-                        if (changeLevelDelay <= 0)
-                        {
-                            SceneManager.LoadScene(0);
-                        }
-                    }
-                }
+                //if (youWon)
+                //{
+                //   animator.SetBool("FadeOut", false);
+                //   GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
+                //    currentRunTime = creditsSceneVideo.time;
+                //    if (currentRunTime >= endTime)
+                //    {
+                //        creditsSceneVideo.Pause();
+                //        animator.SetBool("FadeOut", true);
+                //        changeLevelDelay -= 0.1f;
+                //        if (changeLevelDelay <= 0)
+                //        {
+                //            SceneManager.LoadScene(0);
+                //        }
+                //    }
+                //}
             }
             else if (levelSelected)
             {

@@ -211,7 +211,7 @@
 								<Action Name="" ID="{2615B893-0137-4C96-88A8-67C27ED0D9F3}" ShortID="839728126">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="bladeAttack" ID="{010127AD-6971-49DD-BD5F-31C313580E75}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+											<ObjectRef Name="PlayerAttacks" ID="{E194EF81-9235-4349-A0BD-B63759FAD38F}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

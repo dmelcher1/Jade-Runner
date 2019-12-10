@@ -227,6 +227,10 @@
 					<ShortName>player_footsteps_stone_03.wav</ShortName>
 					<Path>SFX/player_footsteps_stone_03_10C4C929.wem</Path>
 				</File>
+				<File Id="611719648" Language="SFX">
+					<ShortName>PowerAttack1.wav</ShortName>
+					<Path>SFX/PowerAttack1_10C4C929.wem</Path>
+				</File>
 				<File Id="621940946" Language="SFX">
 					<ShortName>player_footsteps_wood_3.wav</ShortName>
 					<Path>SFX/player_footsteps_wood_3_10C4C929.wem</Path>
@@ -322,6 +326,10 @@
 				<File Id="1058334562" Language="SFX">
 					<ShortName>ambience_birds.wav</ShortName>
 					<Path>SFX/ambience_birds_D79FB2B7.wem</Path>
+				</File>
+				<File Id="1060311542" Language="SFX">
+					<ShortName>PowerAttack2.wav</ShortName>
+					<Path>SFX/PowerAttack2_10C4C929.wem</Path>
 				</File>
 				<File Id="1061781004" Language="SFX">
 					<ShortName>UI_select.wav</ShortName>

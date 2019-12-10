@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{67101436-91C0-4226-8C9B-CB71F41D7C22}" SchemaVersion="94">
 	<Presets>
-		<WorkUnit Name="Default Work Unit" ID="{67101436-91C0-4226-8C9B-CB71F41D7C22}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{67101436-91C0-4226-8C9B-CB71F41D7C22}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Explosion" ID="{B7823046-DC68-4068-9EE9-997F5958FF80}">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D478289E-F68C-4D31-9BA7-74334B0E3A56}"/>
+						</Reference>
+					</ReferenceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</Presets>
 </WwiseDocument>

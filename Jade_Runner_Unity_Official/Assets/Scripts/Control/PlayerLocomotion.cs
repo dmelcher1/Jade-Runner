@@ -531,6 +531,7 @@ public class PlayerLocomotion : MonoBehaviour
             //powerUpJig = true;
             poweredUpDurationTimer -= 1.0f * Time.deltaTime;
             poweredUpInstanceTimer -= 1.0f * Time.deltaTime;
+            AkSoundEngine.SetSwitch("PlayerAttacks", "PoweredUp", gameObject);
             //if (poweredUpInstanceTimer < 0.01)
             //{
             //    poweredUpInstanceTimer = 0;

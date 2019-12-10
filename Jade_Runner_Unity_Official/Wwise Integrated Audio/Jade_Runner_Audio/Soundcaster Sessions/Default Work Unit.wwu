@@ -106,6 +106,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Normal" ID="{58A7B157-2C6F-4C7C-A508-884004E5C36E}"/>
 						<CurrentSwitchRef Name="EndCredits" ID="{F688E6B1-472A-4548-83D9-E3AE4DC43FDF}"/>
 						<CurrentSwitchRef Name="Dirt" ID="{AAA5336C-B398-4449-B6D1-F08F94F0C29C}"/>
 					</CurrentSwitchList>

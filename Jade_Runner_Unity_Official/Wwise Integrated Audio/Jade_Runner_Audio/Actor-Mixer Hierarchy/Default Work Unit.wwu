@@ -365,6 +365,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<RandomSequenceContainer Name="soldierTakesDamage" ID="{3AC01E08-A004-404D-8896-D5A2031D04B9}" ShortID="37445278">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -556,6 +563,11 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -1757,6 +1769,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<SwitchContainer Name="PlayerAttacks" ID="{E194EF81-9235-4349-A0BD-B63759FAD38F}" ShortID="422932130">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>
@@ -1851,6 +1870,11 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="powerAttack" ID="{FEFEA5D8-F179-493B-A757-DEC01806D14F}" ShortID="1064190284">
 									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>31</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -1863,6 +1887,11 @@
 													</Modifier>
 												</ModifierInfo>
 											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -1943,6 +1972,13 @@
 					</ChildrenList>
 				</Folder>
 				<Sound Name="Explosion" ID="{9E9D681D-4207-4CCE-A2EA-5C71A887B472}" ShortID="592194493">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58E10F3A-8569-476C-9F80-0083232C5C72}"/>

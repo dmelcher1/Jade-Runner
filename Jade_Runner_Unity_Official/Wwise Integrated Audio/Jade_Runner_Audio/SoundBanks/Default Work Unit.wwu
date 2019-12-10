@@ -6,9 +6,11 @@
 				<SoundBank Name="JadeRunner_Soundbank" ID="{5AB202BA-BEA9-417C-8C8B-FCAA60830851}">
 					<ObjectInclusionList>
 						<ObjectRef Name="inTheBeginning" ID="{BFF0E69C-B28F-401E-9D24-92D21157E36A}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Pause" ID="{DE0FBB55-DEAF-40E1-BACF-21E631DDCB4A}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Music" ID="{1AF9FD11-3AC3-41AB-A350-407398AF91E4}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="villageImediate" ID="{CF8D7E17-CDF9-4379-80C9-82F24212F34C}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="pendantCrack3" ID="{BB8F39A9-650F-45AF-9049-FD569A89B721}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Resume" ID="{AF88720F-53DC-4671-8467-383B97F835F0}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="UI_Select" ID="{33C76C6E-8236-4692-92DD-70839F9EA483}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="pendantCrack1" ID="{61E103A0-00CC-4701-AA7D-EAACB00F86A2}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="playerDeath" ID="{F8CB0C41-B1E0-4864-B4B9-F97303E26C8E}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>

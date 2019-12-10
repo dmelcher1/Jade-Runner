@@ -40,6 +40,11 @@ public class AudioManager : MonoBehaviour
         AkSoundEngine.SetSwitch("Music_Switches", "VillageImmediate", gameObject);
     }
 
+    public void BackToMenu()
+    {
+        AkSoundEngine.SetSwitch("Music_Switches", "Menu", gameObject);
+    }
+
     public void PlayEndCredits()
     {
 

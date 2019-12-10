@@ -201,6 +201,7 @@ public class GameController : LevelTracking
     public void QuitToMenu()
     {
         //SceneManager.LoadScene(1);
+        GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().BackToMenu();
         SceneManager.LoadScene(0);
     }
 

@@ -36,7 +36,7 @@ public class Main_Menu : MonoBehaviour
 
     public void VillageLevel()
     {
-        GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayVillageScene();
+        GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayVillageImmediately();
         Debug.Log("PlayingVillageSceneMusic");
         levelTracking.levelSelected = true;
         chosenScene = 2;
@@ -46,7 +46,7 @@ public class Main_Menu : MonoBehaviour
 
     public void BambooLevel()
     {
-        GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayVillageScene();
+        GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayForrest();
         levelTracking.levelSelected = true;
         chosenScene = 3;
         levelTracking.chosenScene = chosenScene;

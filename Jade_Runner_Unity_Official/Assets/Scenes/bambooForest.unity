@@ -4198,11 +4198,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 691891261396626273, guid: 35966af63608b4a45aeeb0d49f07accd,
-        type: 3}
-      propertyPath: m_Name
-      value: Start_Checkpt.Box_
-      objectReference: {fileID: 0}
     - target: {fileID: 8325872805154012845, guid: 35966af63608b4a45aeeb0d49f07accd,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -4212,6 +4207,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 691891261396626273, guid: 35966af63608b4a45aeeb0d49f07accd,
+        type: 3}
+      propertyPath: m_Name
+      value: Start_Checkpt.Box_
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35966af63608b4a45aeeb0d49f07accd, type: 3}
@@ -35071,9 +35071,9 @@ MonoBehaviour:
     roll: 0
   - position: {x: 122.990555, y: 0, z: -130.61273}
     roll: 0
-  - position: {x: 152.20631, y: 17.34586, z: -146.41661}
+  - position: {x: 152.20631, y: 9.524679, z: -146.41661}
     roll: 0
-  - position: {x: 166.98697, y: 22.935926, z: -157.30551}
+  - position: {x: 168.67952, y: 11.868069, z: -147.19864}
     roll: 0
   - position: {x: 197.93451, y: 6.4140434, z: -165.43315}
     roll: 0

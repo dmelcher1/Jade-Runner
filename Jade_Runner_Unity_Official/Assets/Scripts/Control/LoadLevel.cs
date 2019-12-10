@@ -228,7 +228,6 @@ public class LoadLevel : MonoBehaviour
                         changeLevelDelay -= 0.1f;
                         if (changeLevelDelay <= 0)
                         {
-                            GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
                             SceneManager.LoadScene(3);
 
                         }

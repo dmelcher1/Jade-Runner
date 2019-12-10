@@ -31,7 +31,7 @@ public class AudioManager : MonoBehaviour
 
         //Make sure to comment out the following line BEFORE YOU LEAVE LEVEL.
         //Its for testing purposes only
-        AkSoundEngine.SetSwitch("Music_Switches", "Forrest_1", gameObject);
+        //AkSoundEngine.SetSwitch("Music_Switches", "Forrest_1", gameObject);
     }
 
     public void PlayVillageScene()

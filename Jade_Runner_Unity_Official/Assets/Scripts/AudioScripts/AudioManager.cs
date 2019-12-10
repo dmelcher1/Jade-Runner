@@ -28,6 +28,10 @@ public class AudioManager : MonoBehaviour
     {
         //posts event to set up music and sfx correctly
         AkSoundEngine.PostEvent("inTheBeginning", gameObject);
+
+        //Make sure to comment out BEFORE YOU LEAVE LEVEL.
+        //Its for testing purposes only
+        AkSoundEngine.SetSwitch("Music_Switches", "Forrest_1", gameObject);
     }
 
     public void PlayVillageScene()

@@ -4725,6 +4725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224303493}
   - component: {fileID: 224303492}
+  - component: {fileID: 224303494}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -4773,6 +4774,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &224303494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224303491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25bac6c88002546e0b555c9f4405017c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &228518171 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 86c7b3e63bdec40468889ac13f19b0cc,
@@ -20217,7 +20230,7 @@ PrefabInstance:
     - target: {fileID: 6565982738694354721, guid: 7290a690cce17fc4b9501a055b4e2629,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7290a690cce17fc4b9501a055b4e2629, type: 3}
@@ -20227,28 +20240,10 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1071748497}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071748499}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80e4f52a6d992ce4c8922134398b5bc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &1071748499 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6565982738694354722, guid: 7290a690cce17fc4b9501a055b4e2629,
-    type: 3}
-  m_PrefabInstance: {fileID: 1071748497}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1071748500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071748499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bf477743ff5c4a9a8fea2295f072419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1087537904 stripped

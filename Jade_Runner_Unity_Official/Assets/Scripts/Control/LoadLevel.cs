@@ -235,6 +235,7 @@ public class LoadLevel : MonoBehaviour
                 else if (previousScene == 3 && !youWon)
                 {
                     currentRunTime = endCutSceneVideo.time;
+                   GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().EndForrestLevel();
                     //Might change loadingScreenVideo.isPlaying to a flat wait time instead depending on how long it is
                     if (currentRunTime >= endTime)
                     {
@@ -251,6 +252,7 @@ public class LoadLevel : MonoBehaviour
                 if (youWon)
                 {
                     animator.SetBool("FadeOut", false);
+                   GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
                     currentRunTime = creditsSceneVideo.time;
                     if (currentRunTime >= endTime)
                     {

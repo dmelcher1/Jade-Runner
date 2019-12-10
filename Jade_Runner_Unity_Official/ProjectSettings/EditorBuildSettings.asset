@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/VillageMenuScene.unity
     guid: 3983829722dcaf74fa3dbd2bdb9184a8
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/LoadScreen.unity
     guid: e2413104fb757b34babda718b90100de
   - enabled: 1
     path: Assets/Scenes/VillageScene.unity
     guid: 10690ab72bdb261468f88deaf2d4fa22
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/bambooForest.unity
     guid: 0963e9cb4db25234d9668f81d8ecdb08
   m_configObjects: {}

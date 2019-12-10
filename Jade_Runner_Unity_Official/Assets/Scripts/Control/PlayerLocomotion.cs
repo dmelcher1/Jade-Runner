@@ -352,7 +352,7 @@ public class PlayerLocomotion : MonoBehaviour
                 if (Input.GetButton(attackControl))
                 {
                     //multiAttack = true;
-                    if (multiAttackTimer <= 0.07)
+                    if (multiAttackTimer <= 0.08)
                     {
                         //Debug.Log("Multi?");
                         singleAttack = false;

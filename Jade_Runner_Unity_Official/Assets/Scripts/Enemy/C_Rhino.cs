@@ -14,12 +14,18 @@ public class C_Rhino : BaseEnemy
     public float chargeSpeed;
     public bool charge;
     public bool hitByPlayer;
+    public GameObject spawnSplosion;
+    public GameObject deathSplosion;
+    public GameObject deathSplosionUpper;
+    public Transform explosionTarget;
+    public bool spawned;
 
     // Start is called before the first frame update
     void Start()
     {
         playerDetectorScript = playerDetector.GetComponent<PlayerDetector>();
         rb = GetComponent<Rigidbody>();
+        spawned = true;
     }
 
     // Update is called once per frame
@@ -32,6 +38,12 @@ public class C_Rhino : BaseEnemy
             //Instantiate Dust Cloud at transform.position
             statueAnim.enabled = true;
             rhinoRenderer.SetActive(true);
+            if(spawned)
+            {
+                Instantiate(spawnSplosion, explosionTarget.position, explosionTarget.rotation);
+                spawned = false;
+            }
+            
             //charge = true;
         }
         statueAnim.SetBool("Charging", charge);
@@ -54,6 +66,8 @@ public class C_Rhino : BaseEnemy
         if (destroyed)
         {
             Debug.Log("Please die?");
+            Instantiate(deathSplosion, explosionTarget.position, explosionTarget.rotation);
+            //Instantiate(deathSplosionUpper, new Vector3(explosionTarget.position.x, explosionTarget.position.y + 1, explosionTarget.position.z), explosionTarget.rotation);
             StartCoroutine("DestroyEnemy");
             destroyed = false;
         }

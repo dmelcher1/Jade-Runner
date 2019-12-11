@@ -22,6 +22,7 @@ namespace AK
         static const AkUniqueID FRUITHEALTH = 3060982411U;
         static const AkUniqueID FRUITPOWERUP = 864958663U;
         static const AkUniqueID INTHEBEGINNING = 3071493210U;
+        static const AkUniqueID MUTEMENUAMB = 1715032301U;
         static const AkUniqueID PAUSE = 3092587493U;
         static const AkUniqueID PENDANTCRACK1 = 985050826U;
         static const AkUniqueID PENDANTCRACK2 = 985050825U;
@@ -129,6 +130,7 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID BOMBEXPLODE = 70120664U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MOTION_FACTORY_BUS = 985987111U;
     } // namespace BUSSES

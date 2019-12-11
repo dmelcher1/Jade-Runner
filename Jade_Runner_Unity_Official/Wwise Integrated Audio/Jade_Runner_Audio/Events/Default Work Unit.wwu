@@ -322,6 +322,9 @@
 						<Event Name="startToVillage" ID="{7EF338C4-0211-4C51-AD9F-0502508F3C8E}">
 							<ChildrenList>
 								<Action Name="" ID="{18D43BC9-2844-413D-8720-E1C465C2E529}" ShortID="544076062">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="28"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="ambience_night" ID="{F6281334-681C-4EC6-A7FD-E78EC1190016}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
@@ -329,6 +332,9 @@
 									</ReferenceList>
 								</Action>
 								<Action Name="" ID="{8F870223-6551-43DB-93BD-F554B3353F29}" ShortID="859123478">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="28"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="ambience_birds" ID="{BC1902CB-F3D2-4EB6-9497-33D2C8E06558}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
@@ -336,6 +342,9 @@
 									</ReferenceList>
 								</Action>
 								<Action Name="" ID="{840ED816-58E0-4242-86B2-BA361F1BE00C}" ShortID="415637594">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="28"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="ambience_forest" ID="{79AE95B4-06E6-4A9C-BD01-1B18328BE352}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
@@ -444,6 +453,21 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="player_death" ID="{951716EC-3E76-48DB-8C0A-2279F5111C53}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MuteMenuAmb" ID="{42018F59-1860-4040-93CD-17331484A02A}">
+					<ChildrenList>
+						<Action Name="" ID="{D011FCFE-8C83-4C71-B3A8-6E03BB1ADE67}" ShortID="107711397">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FireworkAmbience" ID="{7E74E148-35E8-4444-A434-1EC0E6CF95B9}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

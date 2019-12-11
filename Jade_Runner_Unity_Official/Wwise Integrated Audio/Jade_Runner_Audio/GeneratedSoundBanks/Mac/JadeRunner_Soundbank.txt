@@ -13,6 +13,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	985050826	pendantCrack1			\Default Work Unit\pendantCrack1	
 	1069250406	bombFuse			\Default Work Unit\bombFuse	
 	1656947812	playerDeath			\Default Work Unit\PlayerMovement\playerDeath	
+	1715032301	MuteMenuAmb			\Default Work Unit\MuteMenuAmb	
 	1866025847	footStep			\Default Work Unit\PlayerMovement\footStep	
 	2118900976	UI_Hover			\Default Work Unit\UI_Hover	
 	2426661741	soldierCharge			\Default Work Unit\SoldierMovement\soldierCharge	
@@ -106,7 +107,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	709126130	DirtStep3	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\DirtStep3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\dirtSteps\DirtStep3		100240
 	724026448	Step_Grass_4	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\Step_Grass_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\grassSteps\Step_Grass_4		37692
 	739116925	AppleMunch	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\AppleMunch_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\AppleMunch		150328
-	758542800	FireworkAmbience	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\FireworkAmbience_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiences\FireworkAmbience		4007024
+	758542800	FireworkAmbience	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\FireworkAmbience_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiences\FireworkAmbience		4007024
 	780773924	soldier_footstep_1	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\soldier_footstep_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SoldierSounds\soldierStep\soldier_footstep_1		252688
 	796845028	ambience_night	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\ambience_night_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiences\ambience_night		8578144
 	806889390	Step_Grass_8	Z:\Volumes\EOR\_JadeRunner\Jade-Runner\Jade_Runner_Unity_Official\Wwise Integrated Audio\Jade_Runner_Audio\.cache\Mac\SFX\Step_Grass_8_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\footStep_Switch\grassSteps\Step_Grass_8		35724

@@ -18,6 +18,10 @@
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="MuteMenuAmb" ID="{42018F59-1860-4040-93CD-17331484A02A}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="footStep" ID="{5EC5FA82-3E96-49B6-8EA0-80BFC5CC63C1}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -28,6 +32,10 @@
 						<Module>
 							<ObjectRef Name="UI_Select" ID="{33C76C6E-8236-4692-92DD-70839F9EA483}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
 							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="bombExplode" ID="{1AD10F59-3209-4F69-A5B5-C371F46F67E3}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
+							<Position X="1" Y="3"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="footLand" ID="{83F4E149-4F8E-4FEB-A28D-013F8BABDDD9}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}"/>
@@ -107,7 +115,7 @@
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Normal" ID="{58A7B157-2C6F-4C7C-A508-884004E5C36E}"/>
-						<CurrentSwitchRef Name="EndCredits" ID="{F688E6B1-472A-4548-83D9-E3AE4DC43FDF}"/>
+						<CurrentSwitchRef Name="Village_1" ID="{941591EF-E4B0-424C-A873-DADBD5BC0277}"/>
 						<CurrentSwitchRef Name="Dirt" ID="{AAA5336C-B398-4449-B6D1-F08F94F0C29C}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>

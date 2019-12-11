@@ -63,4 +63,14 @@ public class AudioManager : MonoBehaviour
     {
         AkSoundEngine.SetSwitch("Music_Switches", "EndCredits", gameObject);
     }
+
+    public void UISelect()
+    {
+        AkSoundEngine.PostEvent("UI_Select", gameObject);
+    }
+
+    public void MuteMenuAmb()
+    {
+        AkSoundEngine.PostEvent("MuteMenuAmb", gameObject);
+    }
 }

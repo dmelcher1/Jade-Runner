@@ -30,6 +30,7 @@
 				<Event Id="3060982411" Name="fruitHealth" ObjectPath="\Events\Default Work Unit\PlayerMovement\fruitHealth"/>
 				<Event Id="864958663" Name="fruitPowerUp" ObjectPath="\Events\Default Work Unit\PlayerMovement\fruitPowerUp"/>
 				<Event Id="3071493210" Name="inTheBeginning" ObjectPath="\Events\Default Work Unit\inTheBeginning"/>
+				<Event Id="1715032301" Name="MuteMenuAmb" ObjectPath="\Events\Default Work Unit\MuteMenuAmb"/>
 				<Event Id="3092587493" Name="Pause" ObjectPath="\Events\Default Work Unit\Pause"/>
 				<Event Id="985050826" Name="pendantCrack1" ObjectPath="\Events\Default Work Unit\pendantCrack1"/>
 				<Event Id="985050825" Name="pendantCrack2" ObjectPath="\Events\Default Work Unit\pendantCrack2"/>
@@ -262,7 +263,7 @@
 				</File>
 				<File Id="758542800" Language="SFX">
 					<ShortName>FireworkAmbience.wav</ShortName>
-					<Path>SFX/FireworkAmbience_10C4C929.wem</Path>
+					<Path>SFX/FireworkAmbience_D79FB2B7.wem</Path>
 				</File>
 				<File Id="780773924" Language="SFX">
 					<ShortName>soldier_footstep_1.wav</ShortName>

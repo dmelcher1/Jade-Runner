@@ -28,6 +28,7 @@ public class Main_Menu : MonoBehaviour
 
     public void StartGame()
     {
+        AkSoundEngine.PostEvent("UI_Select", gameObject);
         GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayVillageScene();
         Debug.Log("PlayingVillageSceneMusic");
         //AkSoundEngine.PostEvent("villageStart", gameObject);
@@ -37,6 +38,7 @@ public class Main_Menu : MonoBehaviour
 
     public void VillageLevel()
     {
+        AkSoundEngine.PostEvent("UI_Select", gameObject);
         GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayVillageImmediately();
         Debug.Log("PlayingVillageSceneMusic");
         levelTracking.levelSelected = true;
@@ -47,6 +49,7 @@ public class Main_Menu : MonoBehaviour
 
     public void BambooLevel()
     {
+        AkSoundEngine.PostEvent("UI_Select", gameObject);
         GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayForrest();
         levelTracking.levelSelected = true;
         chosenScene = 3;
@@ -58,18 +61,21 @@ public class Main_Menu : MonoBehaviour
     {
         Debug.Log("Quit");
         Application.Quit();
+        AkSoundEngine.PostEvent("UI_Select", gameObject);
     }
 
     public void HowToPlay()
     {
         mainMenu.SetActive(false);
         howToPlay.SetActive(true);
+        AkSoundEngine.PostEvent("UI_Hover", gameObject);
     }
 
     public void LevelSelect()
     {
         mainMenu.SetActive(false);
         levelSelect.SetActive(true);
+        AkSoundEngine.PostEvent("UI_Hover", gameObject);
     }
 
     public void BackButton()
@@ -77,5 +83,6 @@ public class Main_Menu : MonoBehaviour
         mainMenu.SetActive(true);
         levelSelect.SetActive(false);
         howToPlay.SetActive(false);
+        AkSoundEngine.PostEvent("UI_Hover", gameObject);
     }
 }

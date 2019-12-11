@@ -6,6 +6,7 @@
 				<SoundBank Name="JadeRunner_Soundbank" ID="{5AB202BA-BEA9-417C-8C8B-FCAA60830851}">
 					<ObjectInclusionList>
 						<ObjectRef Name="inTheBeginning" ID="{BFF0E69C-B28F-401E-9D24-92D21157E36A}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="MuteMenuAmb" ID="{42018F59-1860-4040-93CD-17331484A02A}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Pause" ID="{DE0FBB55-DEAF-40E1-BACF-21E631DDCB4A}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Music" ID="{1AF9FD11-3AC3-41AB-A350-407398AF91E4}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="villageImediate" ID="{CF8D7E17-CDF9-4379-80C9-82F24212F34C}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>

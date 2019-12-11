@@ -111,6 +111,7 @@ public class LoadLevel : MonoBehaviour
                 loadingScreenVideo.Play();
                 vidReady = true;
                 GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayForrest();
+                GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().MuteMenuAmb();
             }
             if (previousScene == 3 || endScenePlay)
             {

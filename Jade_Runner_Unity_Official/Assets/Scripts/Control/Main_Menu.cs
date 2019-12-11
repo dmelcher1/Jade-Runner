@@ -51,6 +51,7 @@ public class Main_Menu : MonoBehaviour
     {
         AkSoundEngine.PostEvent("UI_Select", gameObject);
         GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayForrest();
+        GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().MuteMenuAmb();
         levelTracking.levelSelected = true;
         chosenScene = 3;
         levelTracking.chosenScene = chosenScene;

@@ -525,6 +525,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1226960019}
   - component: {fileID: 1226960018}
+  - component: {fileID: 1226960020}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -573,6 +574,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1226960020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226960017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25bac6c88002546e0b555c9f4405017c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1900562581
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +596,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1900562583}
   - component: {fileID: 1900562582}
+  - component: {fileID: 1900562584}
   m_Layer: 0
   m_Name: PlayCredits
   m_TagString: Untagged
@@ -625,6 +639,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &1900562584
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900562581}
+  m_Enabled: 1
 --- !u!1 &1939124626
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,7 +801,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8b9bca11aafdd06469206eb0bd42013b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

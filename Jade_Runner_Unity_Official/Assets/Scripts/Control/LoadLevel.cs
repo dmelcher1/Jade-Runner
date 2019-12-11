@@ -131,6 +131,8 @@ public class LoadLevel : MonoBehaviour
                 //animator.SetBool("FadeOut", false);
 
                 endCutSceneVideo.Play();
+                GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().EndForrestLevel();
+                endCutSceneAudio.Play();
                 vidReady = true;
                 //GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
                 //AkSoundEngine.SetSwitch("Music_Switches", "EndCredits", gameObject);
@@ -202,6 +204,10 @@ public class LoadLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if(endCutSceneAudio.isPlaying)
+        //{
+        //    Debug.Log("Can you hear me?");
+        //}
         if (startReady)
             StartCoroutine("PlayVideo");
 

@@ -43,7 +43,7 @@ public class Credits : MonoBehaviour
 
         creditsSceneVideo.Play();
         GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
-        creditsSceneAudio.Play();
+        //creditsSceneAudio.Play();
     }
 
     // Update is called once per frame

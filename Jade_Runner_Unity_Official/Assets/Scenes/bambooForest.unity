@@ -12278,6 +12278,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 691891261396626273, guid: 35966af63608b4a45aeeb0d49f07accd,
+        type: 3}
+      propertyPath: m_Name
+      value: Start_Checkpt.Box_
+      objectReference: {fileID: 0}
     - target: {fileID: 8325872805154012845, guid: 35966af63608b4a45aeeb0d49f07accd,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -12317,11 +12322,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.614
-      objectReference: {fileID: 0}
-    - target: {fileID: 691891261396626273, guid: 35966af63608b4a45aeeb0d49f07accd,
-        type: 3}
-      propertyPath: m_Name
-      value: Start_Checkpt.Box_
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35966af63608b4a45aeeb0d49f07accd, type: 3}

@@ -462,8 +462,35 @@
 					<ChildrenList>
 						<Action Name="" ID="{D011FCFE-8C83-4C71-B3A8-6E03BB1ADE67}" ShortID="107711397">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="ActionType" Type="int16" Value="7"/>
 								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FireworkAmbience" ID="{7E74E148-35E8-4444-A434-1EC0E6CF95B9}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AB657763-D98F-49A9-8F71-03F9FF63DB2C}" ShortID="233267501">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="9"/>
+								<Property Name="Delay" Type="Real64" Value="28"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FireworkAmbience" ID="{7E74E148-35E8-4444-A434-1EC0E6CF95B9}" WorkUnitID="{085763AD-C5A6-427B-961D-BCF28D03228A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="StopMenuAmb" ID="{92F1552D-CA0D-426D-B817-357E2852DE07}">
+					<ChildrenList>
+						<Action Name="" ID="{C3A1A7C5-85B8-4DE1-AA6F-428786107F18}" ShortID="737087541">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">

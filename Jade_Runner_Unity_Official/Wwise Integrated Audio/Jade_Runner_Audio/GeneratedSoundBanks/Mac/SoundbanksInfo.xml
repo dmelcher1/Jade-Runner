@@ -48,6 +48,7 @@
 				<Event Id="139845655" Name="soldierStep" ObjectPath="\Events\Default Work Unit\SoldierMovement\soldierStep"/>
 				<Event Id="4293947536" Name="soldierTakesDamage" ObjectPath="\Events\Default Work Unit\SoldierMovement\soldierTakesDamage"/>
 				<Event Id="391742444" Name="startToVillage" ObjectPath="\Events\Default Work Unit\Music\startToVillage"/>
+				<Event Id="3779008832" Name="StopMenuAmb" ObjectPath="\Events\Default Work Unit\StopMenuAmb"/>
 				<Event Id="2118900976" Name="UI_Hover" ObjectPath="\Events\Default Work Unit\UI_Hover"/>
 				<Event Id="2774129122" Name="UI_Select" ObjectPath="\Events\Default Work Unit\UI_Select"/>
 				<Event Id="3371831861" Name="villageImediate" ObjectPath="\Events\Default Work Unit\Music\villageImediate"/>

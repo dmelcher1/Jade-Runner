@@ -24,6 +24,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3071493210	inTheBeginning			\Default Work Unit\inTheBeginning	
 	3092587493	Pause			\Default Work Unit\Pause	
 	3371831861	villageImediate			\Default Work Unit\Music\villageImediate	
+	3779008832	StopMenuAmb			\Default Work Unit\StopMenuAmb	
 	3874903456	soldierHeadButt			\Default Work Unit\SoldierMovement\soldierHeadButt	
 	4008126242	playerJump			\Default Work Unit\PlayerMovement\playerJump	
 	4048947044	soldierSpear			\Default Work Unit\SoldierMovement\soldierSpear	

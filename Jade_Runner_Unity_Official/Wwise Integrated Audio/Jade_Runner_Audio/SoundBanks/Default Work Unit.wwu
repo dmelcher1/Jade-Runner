@@ -9,6 +9,7 @@
 						<ObjectRef Name="MuteMenuAmb" ID="{42018F59-1860-4040-93CD-17331484A02A}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Pause" ID="{DE0FBB55-DEAF-40E1-BACF-21E631DDCB4A}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Music" ID="{1AF9FD11-3AC3-41AB-A350-407398AF91E4}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="StopMenuAmb" ID="{92F1552D-CA0D-426D-B817-357E2852DE07}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="villageImediate" ID="{CF8D7E17-CDF9-4379-80C9-82F24212F34C}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="pendantCrack3" ID="{BB8F39A9-650F-45AF-9049-FD569A89B721}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Resume" ID="{AF88720F-53DC-4671-8467-383B97F835F0}" WorkUnitID="{72D2EA1B-7ECD-4890-B19C-37DCB88683B3}" Filter="7" Origin="Manual"/>

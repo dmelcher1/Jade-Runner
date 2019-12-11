@@ -30,6 +30,7 @@ public class Main_Menu : MonoBehaviour
     {
         AkSoundEngine.PostEvent("UI_Select", gameObject);
         GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayVillageScene();
+        GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().MuteMenuAmb();
         Debug.Log("PlayingVillageSceneMusic");
         //AkSoundEngine.PostEvent("villageStart", gameObject);
         SceneManager.LoadScene(1);
@@ -51,7 +52,7 @@ public class Main_Menu : MonoBehaviour
     {
         AkSoundEngine.PostEvent("UI_Select", gameObject);
         GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayForrest();
-        GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().MuteMenuAmb();
+        GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().StopMenuAmb();
         levelTracking.levelSelected = true;
         chosenScene = 3;
         levelTracking.chosenScene = chosenScene;

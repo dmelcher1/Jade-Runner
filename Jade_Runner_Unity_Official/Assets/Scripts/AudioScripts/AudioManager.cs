@@ -73,4 +73,9 @@ public class AudioManager : MonoBehaviour
     {
         AkSoundEngine.PostEvent("MuteMenuAmb", gameObject);
     }
+
+    public void StopMenuAmb()
+    {
+        AkSoundEngine.PostEvent("StopMenuAmb", gameObject);
+    }
 }

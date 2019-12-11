@@ -40,6 +40,7 @@ namespace AK
         static const AkUniqueID SOLDIERSTEP = 139845655U;
         static const AkUniqueID SOLDIERTAKESDAMAGE = 4293947536U;
         static const AkUniqueID STARTTOVILLAGE = 391742444U;
+        static const AkUniqueID STOPMENUAMB = 3779008832U;
         static const AkUniqueID UI_HOVER = 2118900976U;
         static const AkUniqueID UI_SELECT = 2774129122U;
         static const AkUniqueID VILLAGEIMEDIATE = 3371831861U;

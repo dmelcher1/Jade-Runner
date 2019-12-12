@@ -42,7 +42,7 @@ public class Credits : MonoBehaviour
         //animator.SetBool("FadeOut", false);
 
         creditsSceneVideo.Play();
-        GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
+        //GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
         //creditsSceneAudio.Play();
     }
 

@@ -44,24 +44,15 @@ public class LoadLevel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //animator.SetBool("FadeOut", true);
+        
         levelTracking = GameObject.Find("LevelTracker").GetComponent<LevelTracking>();
-        //levelSelected = levelTracking.levelSelected;
-        //previousScene = levelTracking.previousScene;
-        //chosenScene = levelTracking.chosenScene;
+        loadingScreenVideo.time = 0;
+        startCutSceneVideo.time = 0;
+        endCutSceneVideo.time = 0;
+        
         startReady = false;
-        StartCoroutine("PlayVideo");
+        //StartCoroutine("PlayVideo");
     }
-
-    //IEnumerator UnSelectedSequence()
-    //{
-
-    //}
-
-    //IEnumerator LevelSelectedSequence()
-    //{
-
-    //}
 
     IEnumerator PlayVideo()
     {
@@ -132,7 +123,7 @@ public class LoadLevel : MonoBehaviour
                 //animator.SetBool("FadeOut", false);
 
                 endCutSceneVideo.Play();
-                GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
+                //GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
                 endCutSceneAudio.Play();
                 vidReady = true;
                 //GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();

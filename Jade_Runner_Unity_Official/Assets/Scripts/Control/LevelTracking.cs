@@ -10,12 +10,13 @@ public class LevelTracking : MonoBehaviour
     public bool levelSelected;
     public int previousScene;
     public bool startLoading;
-   
     public int oldPreviousScene;
+    public bool theEnd;
 
     // Start is called before the first frame update
     void Start()
     {
+        Destroy(GameObject.FindGameObjectWithTag("DestroyThis"));
         oldPreviousScene = previousScene;
         previousScene = sceneNumber;
         sceneNumber = SceneManager.GetActiveScene().buildIndex;
@@ -36,6 +37,7 @@ public class LevelTracking : MonoBehaviour
         {
             if(startLoading)
             {
+                //mainMenu = false;
                 Cursor.visible = false;
                 GameObject levelKicker = GameObject.Find("LevelKicker");
                 LoadLevel levelLoader = levelKicker.GetComponent<LoadLevel>();
@@ -46,8 +48,18 @@ public class LevelTracking : MonoBehaviour
                 levelLoader.startReady = true;
             }
         }
-
-    
+        if(sceneNumber == 3)
+        {
+            if(GameObject.Find("LevelEnd").GetComponent<GameController>().beatLevel)
+            {
+                theEnd = true;
+            }
+        }
+        if(theEnd)
+        {
+            GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
+            //GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().
+        }
 
         DontDestroyOnLoad(transform.gameObject);
     }

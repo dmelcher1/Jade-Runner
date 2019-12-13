@@ -16,7 +16,7 @@ public class Main_Menu : MonoBehaviour
     void Start()
     {
         Cursor.visible = true;
-        levelTracker = GameObject.Find("LevelTracker");
+        levelTracker = GameObject.FindGameObjectWithTag("Original");
         levelTracking = levelTracker.GetComponent<LevelTracking>();
     }
 

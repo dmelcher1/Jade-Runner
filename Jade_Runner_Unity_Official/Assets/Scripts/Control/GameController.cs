@@ -29,7 +29,7 @@ public class GameController : LevelTracking
     //private int nextScene;
     //private Scene loadingScene;
     //public bool menuScene;
-    public GameObject levelTracker;
+    private GameObject levelTracker;
     public LevelTracking levelTracking;
     public Image healthUI;
     public Sprite[] healthSprites;
@@ -41,7 +41,9 @@ public class GameController : LevelTracking
     // Start is called before the first frame update
     void Start()
     {
-        levelTracking = GameObject.Find("LevelTracker").GetComponent<LevelTracking>();
+
+        levelTracker = GameObject.Find("LevelTracker");
+        levelTracking = levelTracker.GetComponent<LevelTracking>();
         levelSelected = false;
         levelTracking.levelSelected = levelSelected;
 
@@ -54,6 +56,7 @@ public class GameController : LevelTracking
         
         
         startFadeDelay = playerLocomotion.fadeDelay;
+        //animator.SetBool("FadeOut", false);
         //if(SceneManager.GetActiveScene().name == "VillageMenuScene")
         //{
         //    menuScene = true;
@@ -78,6 +81,10 @@ public class GameController : LevelTracking
             {
                 //StartCoroutine("Reset");
                 //SceneManager.LoadScene(currentScene);
+                //if(sceneNumber == 3)
+                //{
+                //    GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
+                //}
                 SceneManager.LoadScene("LoadScreen");
                 //SceneManager.LoadScene("NextLevel"); :P
             }
@@ -162,12 +169,12 @@ public class GameController : LevelTracking
         }
     }
 
-    IEnumerator Reset ()
-    {
-        yield return new WaitForSeconds(10.0f);
+    //IEnumerator Reset ()
+    //{
+    //    yield return new WaitForSeconds(10.0f);
 
-        SceneManager.LoadScene(currentScene);
-    }
+    //    SceneManager.LoadScene(currentScene);
+    //}
 
     public void Pause()
     {
@@ -201,6 +208,12 @@ public class GameController : LevelTracking
     public void QuitToMenu()
     {
         //SceneManager.LoadScene(1);
+        //levelTracking.chosenScene = 0;
+        //levelTracking.previousScene = 0;
+        //levelTracking.oldPreviousScene = 0;
+        //levelTracking.startLoading = false;
+        //levelTracking.levelSelected = false;
+        levelTracker.tag = "DestroyThis";
         GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().BackToMenu();
         SceneManager.LoadScene(0);
     }

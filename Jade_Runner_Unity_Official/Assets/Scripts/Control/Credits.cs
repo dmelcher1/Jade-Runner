@@ -12,6 +12,8 @@ public class Credits : MonoBehaviour
     public RawImage playScreen;
     public VideoPlayer creditsSceneVideo;
     public AudioSource creditsSceneAudio;
+    private LevelTracking levelTracking;
+    private GameObject levelTracker;
     public float changeLevelDelay;
     public double vidRunTime;
     public double currentRunTime;
@@ -20,6 +22,8 @@ public class Credits : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        levelTracker = GameObject.Find("LevelTracker");
+        levelTracking = levelTracker.GetComponent<LevelTracking>();
         StartCoroutine("PlayVideo");
     }
 
@@ -58,7 +62,14 @@ public class Credits : MonoBehaviour
             changeLevelDelay -= 0.1f;
             if (changeLevelDelay <= 0)
             {
+                levelTracker.tag = "DestroyThis";
                 //SceneManager.LoadScene(1);
+                //levelTracking.chosenScene = 0;
+                //levelTracking.previousScene = 0;
+                //levelTracking.oldPreviousScene = 0;
+                //levelTracking.startLoading = false;
+                //levelTracking.levelSelected = false;
+                levelTracking.theEnd = false;
                 SceneManager.LoadScene(0);
             }
         }

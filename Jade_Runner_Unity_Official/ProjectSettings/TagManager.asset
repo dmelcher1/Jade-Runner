@@ -24,6 +24,8 @@ TagManager:
   - Player_Detector
   - Stopper
   - Debug
+  - DestroyThis
+  - Original
   layers:
   - Default
   - TransparentFX

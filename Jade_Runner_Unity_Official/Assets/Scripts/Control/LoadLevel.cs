@@ -132,7 +132,7 @@ public class LoadLevel : MonoBehaviour
                 //animator.SetBool("FadeOut", false);
 
                 endCutSceneVideo.Play();
-                GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().EndForrestLevel();
+                GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();
                 endCutSceneAudio.Play();
                 vidReady = true;
                 //GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayEndCredits();

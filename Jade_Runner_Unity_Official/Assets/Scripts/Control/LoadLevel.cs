@@ -44,7 +44,7 @@ public class LoadLevel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Time.timeScale = 1;
         levelTracking = GameObject.Find("LevelTracker").GetComponent<LevelTracking>();
         loadingScreenVideo.time = 0;
         startCutSceneVideo.time = 0;

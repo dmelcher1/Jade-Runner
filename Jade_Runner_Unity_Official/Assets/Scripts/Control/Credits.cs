@@ -70,6 +70,7 @@ public class Credits : MonoBehaviour
                 //levelTracking.startLoading = false;
                 //levelTracking.levelSelected = false;
                 levelTracking.theEnd = false;
+                GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().BackToMenu();
                 SceneManager.LoadScene(0);
             }
         }

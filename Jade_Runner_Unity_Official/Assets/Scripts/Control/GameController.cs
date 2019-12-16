@@ -41,7 +41,7 @@ public class GameController : LevelTracking
     // Start is called before the first frame update
     void Start()
     {
-
+        Time.timeScale = 1;
         levelTracker = GameObject.Find("LevelTracker");
         levelTracking = levelTracker.GetComponent<LevelTracking>();
         levelSelected = false;

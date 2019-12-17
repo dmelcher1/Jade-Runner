@@ -699,7 +699,6 @@ MonoBehaviour:
   playerMagnitude: 0
   stickDeadZone: 0.1
   moveSpeed: 7
-  pivotMoveSpeed: 2
   currentSpeed: 0
   stepTimer: 0
   lookSpeed: 8

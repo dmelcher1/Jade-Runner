@@ -13608,11 +13608,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 691891261396626273, guid: 35966af63608b4a45aeeb0d49f07accd,
-        type: 3}
-      propertyPath: m_Name
-      value: Start_Checkpt.Box_
-      objectReference: {fileID: 0}
     - target: {fileID: 8325872805154012845, guid: 35966af63608b4a45aeeb0d49f07accd,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -13652,6 +13647,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.614
+      objectReference: {fileID: 0}
+    - target: {fileID: 691891261396626273, guid: 35966af63608b4a45aeeb0d49f07accd,
+        type: 3}
+      propertyPath: m_Name
+      value: Start_Checkpt.Box_
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35966af63608b4a45aeeb0d49f07accd, type: 3}
@@ -34801,12 +34801,12 @@ PrefabInstance:
     - target: {fileID: 1274343114366029458, guid: d05dc4d081e0e85408df6b12035265e5,
         type: 3}
       propertyPath: keyboardActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1274343114366029458, guid: d05dc4d081e0e85408df6b12035265e5,
         type: 3}
       propertyPath: controllerActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1274343114366029458, guid: d05dc4d081e0e85408df6b12035265e5,
         type: 3}
@@ -72409,6 +72409,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5083559173365888316, guid: 1fb0afe53c2527e4da522747c8304df6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 285656337679960590, guid: 1fb0afe53c2527e4da522747c8304df6,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -72463,11 +72468,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 5083559173365888316, guid: 1fb0afe53c2527e4da522747c8304df6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fb0afe53c2527e4da522747c8304df6, type: 3}

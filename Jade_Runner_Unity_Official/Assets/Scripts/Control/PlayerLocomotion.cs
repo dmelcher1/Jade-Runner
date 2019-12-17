@@ -10,11 +10,11 @@ public class PlayerLocomotion : MonoBehaviour
     private float playerMagnitude;
 
     public float stickDeadZone;
-    public float rotationDeadZone;
-    [SerializeField]
-    private float moveSpeed;
-    public float regularMoveSpeed;
-    public float pivotMoveSpeed;
+    //public float rotationDeadZone;
+    
+    public float moveSpeed;
+    //public float regularMoveSpeed;
+    //public float pivotMoveSpeed;
     private float moveSpeedConstant;
     //public float lungeSpeed;
     [SerializeField]
@@ -169,7 +169,7 @@ public class PlayerLocomotion : MonoBehaviour
         clawLeft = tigerClaws[1].GetComponent<BoxCollider>();
         poweredUpTimerReset = poweredUpDurationTimer;
         poweredUpInstanceTimerReset = poweredUpInstanceTimer;
-        moveSpeedConstant = regularMoveSpeed;
+        moveSpeedConstant = moveSpeed;
         //moveSpeedConstant = moveSpeed;
         jumpForceConstant = jumpForce;
         currentHealth = health;
@@ -220,7 +220,9 @@ public class PlayerLocomotion : MonoBehaviour
                 
                 playerInput.y = Input.GetAxisRaw("Vertical2");
 
-                if (playerInput.sqrMagnitude < stickDeadZone)
+                //playerInput.magnitude
+
+                if (playerInput.magnitude < stickDeadZone)
                 {
                     playerInput = Vector2.zero;
                 }
@@ -230,14 +232,14 @@ public class PlayerLocomotion : MonoBehaviour
                 }
             }
 
-            if(playerInput.magnitude < rotationDeadZone)
-            {
-                moveSpeed = pivotMoveSpeed;
-            }
-            else
-            {
-                moveSpeed = regularMoveSpeed;
-            }
+            //if(playerInput.magnitude < rotationDeadZone)
+            //{
+            //    moveSpeed = pivotMoveSpeed;
+            //}
+            //else
+            //{
+                
+            //}
 
             //moveSpeed = regularMoveSpeed;
 
@@ -793,10 +795,7 @@ public class PlayerLocomotion : MonoBehaviour
         //    }
         //    Destroy(other.gameObject);
         //}
-        if (other.gameObject.tag == "Killbox")
-        {
-            inKillbox = true;
-        }
+       
 
         if (other.gameObject.CompareTag("Fireworks"))
         {
@@ -814,6 +813,14 @@ public class PlayerLocomotion : MonoBehaviour
             health -= 1;
             hit = true;
             attackedByEnemy = false;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Killbox")
+        {
+            inKillbox = true;
         }
     }
 

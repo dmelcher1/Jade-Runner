@@ -69,7 +69,7 @@ public class Firework : MonoBehaviour
         fuseEffect.SetActive(true);
         AkSoundEngine.PostEvent("bombFuse", gameObject);
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
 
         detonated = true;
         AkSoundEngine.PostEvent("bombExplode", gameObject);

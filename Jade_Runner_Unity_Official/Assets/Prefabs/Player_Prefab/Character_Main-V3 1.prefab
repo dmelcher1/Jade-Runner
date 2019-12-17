@@ -698,9 +698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMagnitude: 0
   stickDeadZone: 0.1
-  rotationDeadZone: 0.15
-  moveSpeed: 0
-  regularMoveSpeed: 7
+  moveSpeed: 7
   pivotMoveSpeed: 2
   currentSpeed: 0
   stepTimer: 0

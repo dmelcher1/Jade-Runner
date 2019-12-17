@@ -34811,12 +34811,12 @@ PrefabInstance:
     - target: {fileID: 1274343114366029458, guid: d05dc4d081e0e85408df6b12035265e5,
         type: 3}
       propertyPath: rotationDeadZone
-      value: 0.15
+      value: 1.01
       objectReference: {fileID: 0}
     - target: {fileID: 1274343114366029458, guid: d05dc4d081e0e85408df6b12035265e5,
         type: 3}
       propertyPath: stickDeadZone
-      value: 0.05
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1274343114366029459, guid: d05dc4d081e0e85408df6b12035265e5,
         type: 3}
@@ -86889,6 +86889,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 243209109511274873, guid: 375ed5afc3659884d97620954caa95de,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 243209109511274875, guid: 375ed5afc3659884d97620954caa95de,
         type: 3}

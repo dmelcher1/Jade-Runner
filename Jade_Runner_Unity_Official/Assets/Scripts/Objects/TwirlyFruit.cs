@@ -39,7 +39,7 @@ public class TwirlyFruit : MonoBehaviour
                 AkSoundEngine.SetSwitch("PlayerAttacks", "PoweredUp", gameObject);
                 playerLocomotion.poweredUp = true;
                 playerLocomotion.powerUpJig = true;
-                playerLocomotion.regularMoveSpeed = playerLocomotion.regularMoveSpeed * 1.5f;
+                playerLocomotion.moveSpeed = playerLocomotion.moveSpeed * 1.5f;
                 playerLocomotion.jumpForce = playerLocomotion.jumpForce * 1.25f;
                 //put ranged attack code here
             }

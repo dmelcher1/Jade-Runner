@@ -42,6 +42,7 @@ public class Main_Menu : MonoBehaviour
     {
         AkSoundEngine.PostEvent("UI_Select", gameObject);
         GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().PlayVillageImmediately();
+        GameObject.Find("WwiseGlobal").GetComponent<AudioManager>().StopMenuAmb();
         Debug.Log("PlayingVillageSceneMusic");
         levelTracking.levelSelected = true;
         chosenScene = 2;

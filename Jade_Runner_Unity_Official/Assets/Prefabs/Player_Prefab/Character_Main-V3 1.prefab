@@ -698,10 +698,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMagnitude: 0
   stickDeadZone: 0.1
-  moveSpeed: 6
+  rotationDeadZone: 0.15
+  moveSpeed: 0
+  regularMoveSpeed: 7
+  pivotMoveSpeed: 2
   currentSpeed: 0
   stepTimer: 0
-  lookSpeed: 5
+  lookSpeed: 8
   handFires:
   - {fileID: 7342389281952174777}
   - {fileID: 7342389280014636914}
@@ -709,6 +712,7 @@ MonoBehaviour:
   - {fileID: 7101769078140518283}
   - {fileID: 7101769079209063150}
   playerInput: {x: 0, y: 0}
+  playerInputHolder: {x: 0, y: 0}
   temp: 0
   fruitCount: 0
   fruitMeter: 0
@@ -757,6 +761,7 @@ MonoBehaviour:
   numberOfFlashes: 16
   characterBody: {fileID: 1274343115908195910}
   noInput: 0
+  attacking: 0
 --- !u!114 &3322556974309050773
 MonoBehaviour:
   m_ObjectHideFlags: 0

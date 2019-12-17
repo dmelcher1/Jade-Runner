@@ -9,8 +9,12 @@ public class PlayerLocomotion : MonoBehaviour
     [SerializeField]
     private float playerMagnitude;
 
-    public float stickDeadZone = 0.25f;
-    public float moveSpeed;
+    public float stickDeadZone;
+    public float rotationDeadZone;
+    [SerializeField]
+    private float moveSpeed;
+    public float regularMoveSpeed;
+    public float pivotMoveSpeed;
     private float moveSpeedConstant;
     //public float lungeSpeed;
     [SerializeField]
@@ -34,6 +38,9 @@ public class PlayerLocomotion : MonoBehaviour
 
     [SerializeField]
     private Vector2 playerInput;
+
+    [SerializeField]
+    private Vector2 playerInputHolder;
 
     [SerializeField]
     private int temp = 0;
@@ -149,6 +156,9 @@ public class PlayerLocomotion : MonoBehaviour
     //public GameObject[] checkpointList;
 
     // Start is called before the first frame update
+
+    public bool attacking;
+
     void Start()
     {
         startHealth = health;
@@ -159,11 +169,12 @@ public class PlayerLocomotion : MonoBehaviour
         clawLeft = tigerClaws[1].GetComponent<BoxCollider>();
         poweredUpTimerReset = poweredUpDurationTimer;
         poweredUpInstanceTimerReset = poweredUpInstanceTimer;
-        moveSpeedConstant = moveSpeed;
+        moveSpeedConstant = regularMoveSpeed;
+        //moveSpeedConstant = moveSpeed;
         jumpForceConstant = jumpForce;
         currentHealth = health;
         activeCam = pathOneCam;
-        stepTimer = 0.03f;
+        stepTimer = 0.02f;
         dead = false;
     }
 
@@ -209,7 +220,7 @@ public class PlayerLocomotion : MonoBehaviour
                 
                 playerInput.y = Input.GetAxisRaw("Vertical2");
 
-                if (playerInput.magnitude < stickDeadZone)
+                if (playerInput.sqrMagnitude < stickDeadZone)
                 {
                     playerInput = Vector2.zero;
                 }
@@ -218,6 +229,17 @@ public class PlayerLocomotion : MonoBehaviour
                     playerInput = playerInput.normalized * ((playerInput.magnitude - stickDeadZone) / (1 - stickDeadZone));
                 }
             }
+
+            if(playerInput.magnitude < rotationDeadZone)
+            {
+                moveSpeed = pivotMoveSpeed;
+            }
+            else
+            {
+                moveSpeed = regularMoveSpeed;
+            }
+
+            //moveSpeed = regularMoveSpeed;
 
             //Keeps player facing direction of last input
             if (Mathf.Abs(playerInput.x) < 1 && Mathf.Abs(playerInput.y) < 1) return;
@@ -311,6 +333,18 @@ public class PlayerLocomotion : MonoBehaviour
     {
         //multiAttack = true;
         //Debug.Log(multiAttack);
+        if((playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-Single") ||
+                playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-ContinueCombo") ||
+                playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-ExitCombo") || 
+                playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-Combo")))
+        {
+            attacking = true;
+        }
+        else
+        {
+            attacking = false;
+        }
+
         if (!dead && !powerUpJig)
         {
             if (keyboardActive && !controllerActive)
@@ -399,14 +433,14 @@ public class PlayerLocomotion : MonoBehaviour
                 playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack-Combo")))
             {
                 stepTimer -= 0.1f * Time.deltaTime;
-                if(stepTimer < -0.03)
+                if(stepTimer < -0.02)
                 {
-                    stepTimer = 0.03f;
+                    stepTimer = 0.02f;
                 }
             }
             else
             {
-                stepTimer = 0.03f;
+                stepTimer = 0.02f;
             }
             if((playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Running - Start") || 
                 playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Idle - Healthy - Loop")) && !singleAttack)
@@ -420,7 +454,7 @@ public class PlayerLocomotion : MonoBehaviour
             
             if(!multiAttack)
             {
-                stepTimer = 0.03f;
+                stepTimer = 0.02f;
             }
 
             playerAnim.SetBool("MultiAttack", multiAttack);
@@ -443,8 +477,10 @@ public class PlayerLocomotion : MonoBehaviour
 
     void PlayerMove()
     {
+        //playerInputHolder = playerInput;
         //transform.Translate(0, 0, vertical);
-        if(!attackActive && stepTimer > 0)
+        // && playerInput.magnitude > rotationDeadZone
+        if (!attackActive && stepTimer > 0)
         {
             Debug.Log("Moving!");
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
@@ -772,7 +808,7 @@ public class PlayerLocomotion : MonoBehaviour
             hit = true;
         }
 
-        if(attackedByEnemy)
+        if(attackedByEnemy && !attacking)
         {
             Debug.Log("Arrg!");
             health -= 1;

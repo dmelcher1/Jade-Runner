@@ -92,7 +92,7 @@ public class GameController : LevelTracking
         
         if(playerLocomotion.dead == true && playerLocomotion.fadeDelay <= 0.0f)
         {
-            
+            Debug.Log("Time to die!");
             FadeOnDeath();
         }
         if(animator.GetBool("FadeOut") && fader.color.a == 1 && beatLevel != true)

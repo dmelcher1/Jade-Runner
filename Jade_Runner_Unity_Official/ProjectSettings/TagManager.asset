@@ -26,6 +26,8 @@ TagManager:
   - Debug
   - DestroyThis
   - Original
+  - Cart
+  - CurrentCart
   layers:
   - Default
   - TransparentFX

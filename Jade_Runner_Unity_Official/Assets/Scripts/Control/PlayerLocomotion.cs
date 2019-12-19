@@ -30,6 +30,7 @@ public class PlayerLocomotion : MonoBehaviour
     private BoxCollider clawRight;
     private BoxCollider clawLeft;
 
+    public GameObject currentCart;
     //IMPORTANT FOR ROTATION
     //private float playerRot = 80.0f;
     //private float rotDeg = 120f;
@@ -626,6 +627,13 @@ public class PlayerLocomotion : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(other.gameObject.CompareTag("Cart"))
+        {
+            Debug.Log("Cart Activated!");
+            currentCart.tag = "Cart";
+            currentCart = other.gameObject;
+            other.gameObject.tag = "CurrentCart";
+        }
         if (other.gameObject.tag == ("Checkpoint"))
         {
             currentCheckpoint = other.gameObject;

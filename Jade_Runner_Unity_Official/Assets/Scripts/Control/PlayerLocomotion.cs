@@ -629,10 +629,21 @@ public class PlayerLocomotion : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Cart"))
         {
-            Debug.Log("Cart Activated!");
-            currentCart.tag = "Cart";
-            currentCart = other.gameObject;
-            other.gameObject.tag = "CurrentCart";
+            if(currentCart == null)
+            {
+                Debug.Log("Cart Activated!");
+                currentCart = other.gameObject;
+                other.gameObject.tag = "CurrentCart";
+            }
+            else
+            {
+                Debug.Log("Cart Activated!");
+                currentCart.tag = "Cart";
+                currentCart = other.gameObject;
+                other.gameObject.tag = "CurrentCart";
+            }
+           
+            
         }
         if (other.gameObject.tag == ("Checkpoint"))
         {
